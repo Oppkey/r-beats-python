@@ -2,13 +2,10 @@ project:
   title: "R Beats Python"
   type: website
 
-site:
+website:
   title: "R Beats Python"
+  favicon: favicon.ico
   description: "Exploring where R excels over Python in data science and statistics"
-  url: "https://r-beats-python.netlify.app"
-  author:
-    name: "Data Science Team"
-    email: "contact@r-beats-python.com"
   navbar:
     left:
       - href: index.qmd
@@ -31,7 +28,7 @@ format:
     link-external-newwindow: true
     html-math-method: katex
     lang: en
-    favicon: favicon.ico
+
 
 execute:
   echo: true
