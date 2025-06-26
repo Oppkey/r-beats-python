@@ -2,9 +2,11 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/statistical-modeling-r-vs-python.html",
       "/blog/in-the-nix-of-time-creating-a-reproducible-analytical-environment-with-nix-and-rix/index.html",
+      "/blog/reproducible-research-r-vs-python.html",
       "/blog/a-framework-for-cohort-building-in-r-nuria-mercade-besora-and-edward-burn/index.html",
-      "/blog/first-steps-with-sql-in-r-making-data-talk/index.html",
+      "/blog/data-visualization-r-vs-python.html",
       "/blog/nonprobsvy-an-r-package-for-modern-methods-for-non-probability-survey/index.html",
       "/blog/an-accelerometry-biomarker-framework-with-application-in-vigilance-in-uk-biobank-data/index.html",
       "/blog/bootstrap-inference-made-easy-p-values-and-confidence-intervals-in-one-line-of-code/index.html",
@@ -19,6 +21,7 @@
       "/blog/no-more-copy-paste-automating-patient-inquiry-tracking-in-pharma-with-shiny/index.html",
       "/blog/optimizing-public-healthcare-cost-recovery-with-r-a-use-case-from-argentina/index.html",
       "/blog/bedside-to-bench-reinventing-medicine-with-ai/index.html",
+      "/blog/first-steps-with-sql-in-r-making-data-talk/index.html",
       "/blog/miipw-an-r-package-for-generalized-estimating-equations-with-missing-data-integration/index.html",
       "/blog/examining-factors-associated-with-depressive-severity-among-cancer-survivors/index.html",
       "/blog/kidneyepi-r-package-for-facilitating-research-in-diabetes-kidney-heart-and-other-diseases/index.html",
@@ -34,10 +37,7 @@
       "/blog/time-series-analysis-r-vs-python.html",
       "/blog/data-manipulation-r-vs-python.html",
       "/blog/academic-research-r-vs-python.html",
-      "/blog/reproducible-research-r-vs-python.html",
-      "/blog/data-visualization-r-vs-python.html",
-      "/blog/bioinformatics-r-vs-python.html",
-      "/blog/statistical-modeling-r-vs-python.html"
+      "/blog/bioinformatics-r-vs-python.html"
     ]
   }
 ]
