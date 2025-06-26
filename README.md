@@ -4,11 +4,11 @@
 
 A Quarto website mockup to explore how content written by Midori AI can be used in content marketing.
 
-The concept is to create a site where R excels over Python in data science and statistics and mix it with content produced from webinars or events.
+The concept is to create an interactive community site that highlights areas where R excels over Python in data science and statistics. Community content from webinars or events is mixed in with AI-generated, human edited, technical content.
 
-## Overview
+## Campaign Concept
 
-This site provides detailed comparisons and analysis of specific areas where R programming language provides superior capabilities compared to Python. While both languages are excellent tools, R has distinct advantages in statistical computing, research, and specialized domains.
+The concept site provides detailed comparisons and analysis of specific areas where R programming language provides superior capabilities compared to Python. While both languages are excellent tools, R has distinct advantages in statistical computing, research, and specialized domains.
 
 ## Site Structure
 
@@ -17,7 +17,7 @@ This site provides detailed comparisons and analysis of specific areas where R p
 - **Home** (`index.qmd`) - Overview of R's strengths and advantages
 - **About** (`about.qmd`) - Information about the site's purpose and approach
 
-### Blog Posts
+### Starter AI-Generated Blog Posts
 
 The site features 10 comprehensive blog posts covering different areas where R excels:
 
@@ -31,6 +31,11 @@ The site features 10 comprehensive blog posts covering different areas where R e
 8. **Finance and Economics** - R's quantitative finance tools
 9. **Social Sciences** - R's research tools for social sciences
 10. **Machine Learning** - R's statistical approach to ML
+
+### Community Real-World Event Content
+
+10 blog posts are AI-generated from real-world R/Medicine sessions. The transcipts are AI-generated and combined with
+session descriptions submitted by the human speaker.
 
 ## Features
 
