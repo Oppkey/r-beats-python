@@ -7,7 +7,7 @@ categories: [R/Medicine 2025, Clinical Research]
 author: "R Consortium" 
 image: "thumbnail-examining-factors-williams.png" 
 image-alt: "Examining factors linked to depressive symptoms in cancer survivors using NHIS data - Andre Williams" 
-date: "06/20/2025" 
+date: "04/20/2025" 
 ---
 
 {{< video https://www.youtube.com/embed/4vQJghIanQg >}}

@@ -7,7 +7,7 @@ categories: [R/Medicine 2025, AI]
 author: "R Consortium" 
 image: "thumbnail-ai-ziad.jpg" 
 image-alt: "Reinventing medicine with AI - Keynote - Ziad Obermeyer" 
-date: "06/22/2025" 
+date: "05/16/2025" 
 ---
 
 {{< video https://www.youtube.com/embed/OPib-OztZQc >}}

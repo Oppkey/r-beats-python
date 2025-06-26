@@ -7,7 +7,7 @@ categories: [R/Medicine 2025, Software Development]
 author: "R Consortium" 
 image: "thumbnail-reproducibility-pearce.jpg" 
 image-alt: "Improve reproducibility in medical research with controlled vocabularies - Jonathan Pearce" 
-date: "06/22/2025" 
+date: "05/14/2025" 
 ---
 
 {{< video https://www.youtube.com/embed/bf8NZTnz6NA >}}

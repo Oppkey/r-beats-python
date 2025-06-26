@@ -6,7 +6,7 @@ author: "R Consortium"
 categories: [R/Medicine 2025, Epidemiology]
 image: "thumbnail-iko-musa-student-competition-winner.png"
 image-alt: "Identifying Measles Immunity Gaps in the US: A Comprehensive Analysis by Iko Musa"
-date: "06/19/2025"
+date: "04/28/2025"
 ---
 
 # Identifying Measles Immunity Gaps in the US: A Comprehensive Analysis by Iko Musa

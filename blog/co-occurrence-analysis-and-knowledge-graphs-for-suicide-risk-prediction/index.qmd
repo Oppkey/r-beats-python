@@ -7,7 +7,7 @@ categories: [R/Medicine 2025, Software Development, Healthcare]
 author: "R Consortium" 
 image: "thumbnail-charlon-co-occurence-analysis.png" 
 image-alt: "Co-occurrence analysis and knowledge graphs for suicide risk prediction - Thomas Charlon" 
-date: "06/22/2025" 
+date: "06/10/2025" 
 ---
 
 {{< video https://www.youtube.com/embed/zy6DD7-H_bg >}}

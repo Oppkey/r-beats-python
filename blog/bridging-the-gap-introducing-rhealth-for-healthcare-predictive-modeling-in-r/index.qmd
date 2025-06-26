@@ -6,7 +6,7 @@ author: "R Consortium"
 categories: [R/Medicine 2025, Clinical Research]
 image: "thumb.jpg"
 image-alt: "RHealth webinar banner, Junyi Gao"
-date: "06/18/2025"
+date: "03/18/2025"
 ---
 
 {{< video https://www.youtube.com/embed/kGcq2YQVWcc >}}

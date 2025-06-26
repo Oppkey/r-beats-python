@@ -7,7 +7,7 @@ categories: [R/Medicine 2025, Clinical Research]
 author: "R Consortium" 
 image: "thumbnail-bootstrap-inference-thulin.png" 
 image-alt: "Bootstrap inference made easy - Måns Thulin" 
-date: "06/22/2025" 
+date: "06/16/2025" 
 ---
 
 {{< video https://www.youtube.com/embed/EeAtvWF3twA >}}

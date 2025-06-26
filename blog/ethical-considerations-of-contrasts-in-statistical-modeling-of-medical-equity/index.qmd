@@ -7,7 +7,7 @@ categories: [R/Medicine 2025, Healthcare]
 author: "R Consortium" 
 image: "thumbnail-ethical-considerations.png" 
 image-alt: "Ethical Considerations of Contrasts in Statistical Modeling of Medical Equity - Dwight Barry and Nicole Chicoine" 
-date: "06/22/2025" 
+date: "06/06/2025" 
 ---
 
 {{< video https://www.youtube.com/embed/pAx92roI3VE >}}

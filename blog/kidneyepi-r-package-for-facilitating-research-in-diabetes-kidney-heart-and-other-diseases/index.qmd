@@ -7,7 +7,7 @@ categories: [R/Medicine 2025, Healthcare, Epidemiology]
 author: "R Consortium" 
 image: "thumbnail-kidney-boris.png" 
 image-alt: "the `kidney.epi` R package for advancing chronic kidney disease research and analysis - Boris Bibkov" 
-date: "06/20/2025" 
+date: "04/18/2025" 
 ---
 
 {{< video https://www.youtube.com/embed/pE3iZBegdr0 >}}

@@ -7,7 +7,7 @@ categories: [R/Medicine 2025, Epidemiology]
 author: "R Consortium" 
 image: "thumbnail-professional-competition-winner.png" 
 image-alt: "Profession Competition Winner at R/Medicine 2025 - Harrison Plate and Shonushka Sawant" 
-date: "06/19/2025" 
+date: "04/10/2025" 
 ---
 
 {{< video https://www.youtube.com/embed/Yk7jGc-E0Ys >}}

@@ -7,7 +7,7 @@ categories: [R/Medicine 2025, Healthcare]
 author: "R Consortium" 
 image: "thumbnail-optimizing-buenos-aires.png" 
 image-alt: "Optimizing Public Healthcare Cost Recovery with R in Argentina - Ariana Bardauil and Dacio Martinez - Ministry of Health - Buenos Aires City Government" 
-date: "06/22/2025" 
+date: "05/18/2025" 
 ---
 
 {{< video https://www.youtube.com/embed/BzYtr9dfHjQ >}}

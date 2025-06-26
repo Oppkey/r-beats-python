@@ -7,7 +7,7 @@ categories: [R/Medicine 2025, Pharma, Healthcare]
 author: "R Consortium" 
 image: "thumbnail-no-more-copy-paste-tanya.jpg" 
 image-alt: "Automating Patient Inquiry Tracking - Tanya Cashorali" 
-date: "06/22/2025" 
+date: "05/20/2025" 
 ---
 
 {{< video https://www.youtube.com/embed/sRNxjGXZ0_0 >}}

@@ -6,7 +6,7 @@ author: "R Consortium"
 categories: [R/Medicine 2025, AI]
 image: "thumbnail-cheng-demystifying-llms-with-ellmer.png"
 image-alt: "Demystifying LLMs with Ellmer - Joe Chenge, CTO, Posit"
-date: "06/18/2025"
+date: "03/28/2025"
 ---
 
 {{< video https://youtu.be/skLmOuNjqEU?feature=shared >}}

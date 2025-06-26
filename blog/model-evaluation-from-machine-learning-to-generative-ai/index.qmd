@@ -7,7 +7,7 @@ categories: [R/Medicine 2025, AI]
 author: "R Consortium" 
 image: "thumbnail-keynote-day2-model-evaluation-ledell.jpg" 
 image-alt: "From Machine Learning to Generative AI - Erin LeDell" 
-date: "06/22/2025" 
+date: "06/14/2025" 
 ---
 
 {{< video https://www.youtube.com/embed/Lq568n0pClc >}}

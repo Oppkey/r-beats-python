@@ -7,7 +7,7 @@ categories: [R/Medicine 2025, Clinical Research]
 author: "R Consortium" 
 image: "thumbnail-AOUSDOHtools-deng.png" 
 image-alt: "AOUSDOHtools: R Package for Social Determinants of Health Survey data in All of Us Research Program - Zhirui Deng" 
-date: "06/20/2025" 
+date: "04/14/2025" 
 ---
 
 {{< video https://www.youtube.com/embed/nQum-dWBM3I >}}

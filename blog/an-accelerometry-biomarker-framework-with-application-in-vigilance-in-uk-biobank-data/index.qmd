@@ -7,7 +7,7 @@ categories: [R/Medicine 2025, Clinical Research]
 author: "R Consortium, Healthcare" 
 image: "thumbnail-kane-accelerometry.png" 
 image-alt: "Accelerometry Biomarker Framework - Michael Kane" 
-date: "06/22/2025" 
+date: "06/18/2025" 
 ---
 
 {{< video https://www.youtube.com/embed/KiQAySB2rF4 >}}

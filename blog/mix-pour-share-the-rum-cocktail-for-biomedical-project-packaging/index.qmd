@@ -7,7 +7,7 @@ categories: [R/Medicine 2025, Software Development, Healthcare]
 author: "R Consortium" 
 image: "thumbnail-rum-gealis-balise.jpg" 
 image-alt: "rUM - biomedical research reproducibility - Gealis and Balise" 
-date: "06/22/2025" 
+date: "06/12/2025" 
 ---
 
 {{< video https://www.youtube.com/embed/03_5KrQA-mo >}}
