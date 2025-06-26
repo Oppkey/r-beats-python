@@ -444,16 +444,16 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>       %IncMSE IncNodePurity
-cyl  12.291074     168.26073
-disp 14.847659     263.69847
-hp   12.490099     171.25187
-drat  4.396558      62.32296
-wt   13.604535     262.75172
-qsec  2.927746      29.99850
-vs    4.338781      30.99639
-am    2.675982      10.56295
-gear  2.653370      18.06236
-carb  5.263450      27.90384</code></pre>
+cyl  10.583247     152.82439
+disp 13.598506     262.22986
+hp   13.590110     190.23481
+drat  5.065241      69.72062
+wt   13.780286     261.05798
+qsec  4.479969      34.21148
+vs    4.165560      31.96913
+am    2.229429      10.75823
+gear  3.194823      20.24397
+carb  5.899983      33.46611</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -508,17 +508,17 @@ carb  5.263450      27.90384</code></pre>
 </div>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>      var     rel.inf
-wt     wt 30.59533184
-hp     hp 30.29353429
-disp disp 21.61820197
-cyl   cyl  9.12043753
-drat drat  4.32243716
-qsec qsec  2.94886408
-gear gear  0.58303771
-carb carb  0.45855503
-vs     vs  0.03565264
-am     am  0.02394774</code></pre>
+<pre><code>      var    rel.inf
+disp disp 35.1758438
+wt     wt 23.0090948
+hp     hp 18.8541314
+cyl   cyl 16.5639366
+drat drat  3.3701830
+qsec qsec  2.4134626
+gear gear  0.3666919
+carb carb  0.2466560
+vs     vs  0.0000000
+am     am  0.0000000</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -656,8 +656,8 @@ W = 0.93455, p-value = 0.05252</code></pre>
 <pre><code>
 SAMPLING FOR MODEL 'continuous' NOW (CHAIN 1).
 Chain 1: 
-Chain 1: Gradient evaluation took 0.001377 seconds
-Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 13.77 seconds.
+Chain 1: Gradient evaluation took 0.000819 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 8.19 seconds.
 Chain 1: Adjust your expectations accordingly!
 Chain 1: 
 Chain 1: 
@@ -674,9 +674,9 @@ Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 1: 
-Chain 1:  Elapsed Time: 0.025 seconds (Warm-up)
-Chain 1:                0.02 seconds (Sampling)
-Chain 1:                0.045 seconds (Total)
+Chain 1:  Elapsed Time: 0.042 seconds (Warm-up)
+Chain 1:                0.031 seconds (Sampling)
+Chain 1:                0.073 seconds (Total)
 Chain 1: 
 
 SAMPLING FOR MODEL 'continuous' NOW (CHAIN 2).
@@ -699,9 +699,9 @@ Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 2: 
-Chain 2:  Elapsed Time: 0.024 seconds (Warm-up)
-Chain 2:                0.024 seconds (Sampling)
-Chain 2:                0.048 seconds (Total)
+Chain 2:  Elapsed Time: 0.031 seconds (Warm-up)
+Chain 2:                0.025 seconds (Sampling)
+Chain 2:                0.056 seconds (Total)
 Chain 2: 
 
 SAMPLING FOR MODEL 'continuous' NOW (CHAIN 3).
@@ -724,15 +724,15 @@ Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 3: 
-Chain 3:  Elapsed Time: 0.024 seconds (Warm-up)
-Chain 3:                0.022 seconds (Sampling)
-Chain 3:                0.046 seconds (Total)
+Chain 3:  Elapsed Time: 0.033 seconds (Warm-up)
+Chain 3:                0.035 seconds (Sampling)
+Chain 3:                0.068 seconds (Total)
 Chain 3: 
 
 SAMPLING FOR MODEL 'continuous' NOW (CHAIN 4).
 Chain 4: 
-Chain 4: Gradient evaluation took 2e-06 seconds
-Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.02 seconds.
+Chain 4: Gradient evaluation took 3e-06 seconds
+Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
 Chain 4: Adjust your expectations accordingly!
 Chain 4: 
 Chain 4: 
@@ -749,9 +749,9 @@ Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 4: 
-Chain 4:  Elapsed Time: 0.022 seconds (Warm-up)
-Chain 4:                0.025 seconds (Sampling)
-Chain 4:                0.047 seconds (Total)
+Chain 4:  Elapsed Time: 0.034 seconds (Warm-up)
+Chain 4:                0.028 seconds (Sampling)
+Chain 4:                0.062 seconds (Total)
 Chain 4: </code></pre>
 </div>
 <details class="code-fold">
@@ -761,10 +761,10 @@ Chain 4: </code></pre>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>                   5%        95%
-(Intercept) 36.690793 42.5952202
-wt          -4.461645 -1.9083711
-cyl         -2.228981 -0.8025244
-sigma        2.138324  3.3448667</code></pre>
+(Intercept) 36.814744 42.5701420
+wt          -4.436803 -1.8748634
+cyl         -2.206700 -0.8214832
+sigma        2.149609  3.2630731</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
