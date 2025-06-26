@@ -7,7 +7,7 @@ categories: [R/Medicine 2025, Software Development]
 author: "R Consortium, Software Development" 
 image: "thumbnail-advanced-distance-metrics-lee.png" 
 image-alt: "Advanced Distance Metrics for High-Dimensional Clustering: introducing 'distanceHD' R-package - Jung Ae Lee" 
-date: "06/22/2025" 
+date: "04/17/2025" 
 ---
 
 {{< video https://www.youtube.com/embed/EC_vTG-_XCQ >}}
