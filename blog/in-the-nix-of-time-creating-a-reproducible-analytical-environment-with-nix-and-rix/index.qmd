@@ -7,7 +7,7 @@ categories: [R/Medicine 2025, Clinical Research, Software Development]
 author: "R Consortium" 
 image: "thumbnail-rix-and-nix-nantz.png" 
 image-alt: "thumbnail for video on In the Nix of Time: Creating a reproducible analytical environment with Nix and {rix}" 
-date: "06/24/2025" 
+date: "06/25/2025" 
 ---
 
 {{< video https://www.youtube.com/embed/-NARVwViEwA >}}

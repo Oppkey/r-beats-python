@@ -1,7 +1,7 @@
 ---
 title: "Statistical Modeling: Why R Outperforms Python"
 description: "A deep dive into R's superior statistical modeling capabilities, from GLMs to mixed models"
-date: 2025-01-15
+date: 2025-06-26
 categories: [statistics, modeling, comparison]
 ---
 
