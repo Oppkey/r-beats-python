@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2024-01-30">
+<meta name="description" content="Why R remains the standard in academic research, statistics education, and peer-reviewed publications">
+
+<title>Academic Research: R’s Dominance in Statistics – R Beats Python</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R Beats Python</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog/"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#rs-academic-foundation" id="toc-rs-academic-foundation" class="nav-link" data-scroll-target="#rs-academic-foundation"><span class="header-section-number">2</span> R’s Academic Foundation</a>
+  <ul class="collapse">
+  <li><a href="#built-by-statisticians-for-statisticians" id="toc-built-by-statisticians-for-statisticians" class="nav-link" data-scroll-target="#built-by-statisticians-for-statisticians"><span class="header-section-number">2.1</span> Built by Statisticians, for Statisticians</a></li>
+  <li><a href="#statistical-society-endorsements" id="toc-statistical-society-endorsements" class="nav-link" data-scroll-target="#statistical-society-endorsements"><span class="header-section-number">2.2</span> Statistical Society Endorsements</a></li>
+  </ul></li>
+  <li><a href="#peer-reviewed-packages" id="toc-peer-reviewed-packages" class="nav-link" data-scroll-target="#peer-reviewed-packages"><span class="header-section-number">3</span> Peer-Reviewed Packages</a>
+  <ul class="collapse">
+  <li><a href="#crans-quality-control" id="toc-crans-quality-control" class="nav-link" data-scroll-target="#crans-quality-control"><span class="header-section-number">3.1</span> CRAN’s Quality Control</a></li>
+  <li><a href="#publication-in-statistical-journals" id="toc-publication-in-statistical-journals" class="nav-link" data-scroll-target="#publication-in-statistical-journals"><span class="header-section-number">3.2</span> Publication in Statistical Journals</a></li>
+  </ul></li>
+  <li><a href="#academic-teaching-and-education" id="toc-academic-teaching-and-education" class="nav-link" data-scroll-target="#academic-teaching-and-education"><span class="header-section-number">4</span> Academic Teaching and Education</a>
+  <ul class="collapse">
+  <li><a href="#statistics-education-standard" id="toc-statistics-education-standard" class="nav-link" data-scroll-target="#statistics-education-standard"><span class="header-section-number">4.1</span> Statistics Education Standard</a></li>
+  <li><a href="#textbook-integration" id="toc-textbook-integration" class="nav-link" data-scroll-target="#textbook-integration"><span class="header-section-number">4.2</span> Textbook Integration</a></li>
+  </ul></li>
+  <li><a href="#research-applications" id="toc-research-applications" class="nav-link" data-scroll-target="#research-applications"><span class="header-section-number">5</span> Research Applications</a>
+  <ul class="collapse">
+  <li><a href="#clinical-trials-and-medical-research" id="toc-clinical-trials-and-medical-research" class="nav-link" data-scroll-target="#clinical-trials-and-medical-research"><span class="header-section-number">5.1</span> Clinical Trials and Medical Research</a></li>
+  <li><a href="#social-sciences-research" id="toc-social-sciences-research" class="nav-link" data-scroll-target="#social-sciences-research"><span class="header-section-number">5.2</span> Social Sciences Research</a></li>
+  <li><a href="#economics-and-finance" id="toc-economics-and-finance" class="nav-link" data-scroll-target="#economics-and-finance"><span class="header-section-number">5.3</span> Economics and Finance</a></li>
+  </ul></li>
+  <li><a href="#publication-quality-output" id="toc-publication-quality-output" class="nav-link" data-scroll-target="#publication-quality-output"><span class="header-section-number">6</span> Publication-Quality Output</a>
+  <ul class="collapse">
+  <li><a href="#statistical-reporting-standards" id="toc-statistical-reporting-standards" class="nav-link" data-scroll-target="#statistical-reporting-standards"><span class="header-section-number">6.1</span> Statistical Reporting Standards</a></li>
+  <li><a href="#latex-integration" id="toc-latex-integration" class="nav-link" data-scroll-target="#latex-integration"><span class="header-section-number">6.2</span> LaTeX Integration</a></li>
+  </ul></li>
+  <li><a href="#research-workflows" id="toc-research-workflows" class="nav-link" data-scroll-target="#research-workflows"><span class="header-section-number">7</span> Research Workflows</a>
+  <ul class="collapse">
+  <li><a href="#reproducible-research" id="toc-reproducible-research" class="nav-link" data-scroll-target="#reproducible-research"><span class="header-section-number">7.1</span> Reproducible Research</a></li>
+  <li><a href="#collaborative-research" id="toc-collaborative-research" class="nav-link" data-scroll-target="#collaborative-research"><span class="header-section-number">7.2</span> Collaborative Research</a></li>
+  </ul></li>
+  <li><a href="#domain-specific-research" id="toc-domain-specific-research" class="nav-link" data-scroll-target="#domain-specific-research"><span class="header-section-number">8</span> Domain-Specific Research</a>
+  <ul class="collapse">
+  <li><a href="#bioinformatics" id="toc-bioinformatics" class="nav-link" data-scroll-target="#bioinformatics"><span class="header-section-number">8.1</span> Bioinformatics</a></li>
+  <li><a href="#psychometrics" id="toc-psychometrics" class="nav-link" data-scroll-target="#psychometrics"><span class="header-section-number">8.2</span> Psychometrics</a></li>
+  <li><a href="#epidemiology" id="toc-epidemiology" class="nav-link" data-scroll-target="#epidemiology"><span class="header-section-number">8.3</span> Epidemiology</a></li>
+  </ul></li>
+  <li><a href="#academic-job-market" id="toc-academic-job-market" class="nav-link" data-scroll-target="#academic-job-market"><span class="header-section-number">9</span> Academic Job Market</a>
+  <ul class="collapse">
+  <li><a href="#statistics-and-biostatistics" id="toc-statistics-and-biostatistics" class="nav-link" data-scroll-target="#statistics-and-biostatistics"><span class="header-section-number">9.1</span> Statistics and Biostatistics</a></li>
+  <li><a href="#research-funding" id="toc-research-funding" class="nav-link" data-scroll-target="#research-funding"><span class="header-section-number">9.2</span> Research Funding</a></li>
+  </ul></li>
+  <li><a href="#performance-comparison" id="toc-performance-comparison" class="nav-link" data-scroll-target="#performance-comparison"><span class="header-section-number">10</span> Performance Comparison</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">11</span> Conclusion</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Academic Research: R’s Dominance in Statistics</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+  <div class="quarto-categories">
+    <div class="quarto-category">academic</div>
+    <div class="quarto-category">research</div>
+    <div class="quarto-category">statistics</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Why R remains the standard in academic research, statistics education, and peer-reviewed publications
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 30, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>In academic research, particularly in statistics, biostatistics, and social sciences, R is the undisputed leader. While Python has gained popularity in machine learning and computer science, R continues to dominate in traditional statistical research and peer-reviewed publications.</p>
+</section>
+<section id="rs-academic-foundation" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="rs-academic-foundation"><span class="header-section-number">2</span> R’s Academic Foundation</h2>
+<section id="built-by-statisticians-for-statisticians" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="built-by-statisticians-for-statisticians"><span class="header-section-number">2.1</span> Built by Statisticians, for Statisticians</h3>
+<p>R was created by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand, specifically for statistical computing. This academic origin has shaped R’s development and adoption in research communities worldwide.</p>
+</section>
+<section id="statistical-society-endorsements" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="statistical-society-endorsements"><span class="header-section-number">2.2</span> Statistical Society Endorsements</h3>
+<p>Major statistical societies and journals recognize R’s importance:</p>
+<ul>
+<li><strong>American Statistical Association (ASA)</strong>: Official R support and workshops</li>
+<li><strong>Royal Statistical Society (RSS)</strong>: R-focused conferences and publications</li>
+<li><strong>Journal of Statistical Software</strong>: Many R packages are peer-reviewed</li>
+<li><strong>Biometrics</strong>: Standard tool for biostatistical research</li>
+</ul>
+</section>
+</section>
+<section id="peer-reviewed-packages" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="peer-reviewed-packages"><span class="header-section-number">3</span> Peer-Reviewed Packages</h2>
+<section id="crans-quality-control" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="crans-quality-control"><span class="header-section-number">3.1</span> CRAN’s Quality Control</h3>
+<p>R’s Comprehensive R Archive Network (CRAN) hosts over 18,000 packages, many of which are peer-reviewed:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Examples of peer-reviewed R packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>peer_reviewed_packages <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"lme4"</span>,      <span class="co"># Mixed effects models</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"survival"</span>,  <span class="co"># Survival analysis</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"nlme"</span>,      <span class="co"># Nonlinear mixed effects</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"mgcv"</span>,      <span class="co"># Generalized additive models</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"brms"</span>,      <span class="co"># Bayesian regression</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"rstan"</span>      <span class="co"># Stan integration</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># These packages are published in statistical journals</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># and undergo rigorous peer review</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="publication-in-statistical-journals" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="publication-in-statistical-journals"><span class="header-section-number">3.2</span> Publication in Statistical Journals</h3>
+<p>Many R packages are published in prestigious statistical journals:</p>
+<ul>
+<li><strong>Journal of Statistical Software</strong>: Dedicated to R package publications</li>
+<li><strong>R Journal</strong>: Official R Foundation journal</li>
+<li><strong>Computational Statistics</strong>: R-focused research</li>
+<li><strong>Biostatistics</strong>: R packages for medical research</li>
+</ul>
+</section>
+</section>
+<section id="academic-teaching-and-education" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="academic-teaching-and-education"><span class="header-section-number">4</span> Academic Teaching and Education</h2>
+<section id="statistics-education-standard" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="statistics-education-standard"><span class="header-section-number">4.1</span> Statistics Education Standard</h3>
+<p>R is the standard tool in statistics education:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R is taught in:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>universities <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Harvard University - Statistics Department"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Stanford University - Statistics"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"University of California, Berkeley"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"University of Oxford - Statistics"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"University of Cambridge - Statistical Laboratory"</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"MIT - Statistics and Data Science"</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Most statistics PhD programs require R proficiency</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="textbook-integration" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="textbook-integration"><span class="header-section-number">4.2</span> Textbook Integration</h3>
+<p>Leading statistics textbooks use R:</p>
+<ul>
+<li><strong>“Introduction to Statistical Learning”</strong> by James, Witten, Hastie, and Tibshirani</li>
+<li><strong>“R for Data Science”</strong> by Wickham and Grolemund</li>
+<li><strong>“Modern Applied Statistics with S”</strong> by Venables and Ripley</li>
+<li><strong>“Mixed Effects Models and Extensions in Ecology with R”</strong> by Zuur et al.</li>
+</ul>
+</section>
+</section>
+<section id="research-applications" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="research-applications"><span class="header-section-number">5</span> Research Applications</h2>
+<section id="clinical-trials-and-medical-research" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="clinical-trials-and-medical-research"><span class="header-section-number">5.1</span> Clinical Trials and Medical Research</h3>
+<p>R dominates in clinical trial analysis:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survminer)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Clinical trial data analysis</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># R provides comprehensive tools for:</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Survival analysis</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># - Clinical trial design</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># - Safety monitoring</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># - Regulatory compliance</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="social-sciences-research" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="social-sciences-research"><span class="header-section-number">5.2</span> Social Sciences Research</h3>
+<p>R is essential in social sciences:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lavaan)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(semPlot)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Structural equation modeling</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># R provides advanced tools for:</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Confirmatory factor analysis</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># - Path analysis</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># - Latent variable modeling</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># - Psychometric analysis</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="economics-and-finance" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="economics-and-finance"><span class="header-section-number">5.3</span> Economics and Finance</h3>
+<p>R excels in econometric research:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plm)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forecast)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tseries)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Econometric analysis</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># R provides specialized tools for:</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># - Panel data analysis</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># - Time series econometrics</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># - Financial modeling</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># - Risk assessment</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="publication-quality-output" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="publication-quality-output"><span class="header-section-number">6</span> Publication-Quality Output</h2>
+<section id="statistical-reporting-standards" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="statistical-reporting-standards"><span class="header-section-number">6.1</span> Statistical Reporting Standards</h3>
+<p>R produces publication-ready statistical output:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Linear regression with publication-quality output</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mpg <span class="sc">~</span> wt <span class="sc">+</span> cyl <span class="sc">+</span> hp, <span class="at">data =</span> mtcars)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Comprehensive model summary</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mpg ~ wt + cyl + hp, data = mtcars)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.9290 -1.5598 -0.5311  1.1850  5.8986 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 38.75179    1.78686  21.687  &lt; 2e-16 ***
+wt          -3.16697    0.74058  -4.276 0.000199 ***
+cyl         -0.94162    0.55092  -1.709 0.098480 .  
+hp          -0.01804    0.01188  -1.519 0.140015    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 2.512 on 28 degrees of freedom
+Multiple R-squared:  0.8431,    Adjusted R-squared:  0.8263 
+F-statistic: 50.17 on 3 and 28 DF,  p-value: 2.184e-11</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ANOVA table</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Variance Table
+
+Response: mpg
+          Df Sum Sq Mean Sq  F value    Pr(&gt;F)    
+wt         1 847.73  847.73 134.3916 3.349e-12 ***
+cyl        1  87.15   87.15  13.8161 0.0008926 ***
+hp         1  14.55   14.55   2.3069 0.1400152    
+Residuals 28 176.62    6.31                       
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Model diagnostics</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(model)  <span class="co"># Variance inflation factors</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>      wt      cyl       hp 
+2.580486 4.757456 3.258481 </code></pre>
+</div>
+</div>
+</section>
+<section id="latex-integration" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="latex-integration"><span class="header-section-number">6.2</span> LaTeX Integration</h3>
+<p>R integrates seamlessly with LaTeX for academic writing:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xtable)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stargazer)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create LaTeX tables</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>latex_table <span class="ot">&lt;-</span> <span class="fu">xtable</span>(<span class="fu">summary</span>(model)<span class="sc">$</span>coefficients)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(latex_table, <span class="at">include.rownames =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>% latex table generated in R 4.5.0 by xtable 1.8-4 package
+% Wed Jun 25 18:22:55 2025
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrr}
+  \hline
+ &amp; Estimate &amp; Std. Error &amp; t value &amp; Pr($&gt;$$|$t$|$) \\ 
+  \hline
+(Intercept) &amp; 38.75 &amp; 1.79 &amp; 21.69 &amp; 0.00 \\ 
+  wt &amp; -3.17 &amp; 0.74 &amp; -4.28 &amp; 0.00 \\ 
+  cyl &amp; -0.94 &amp; 0.55 &amp; -1.71 &amp; 0.10 \\ 
+  hp &amp; -0.02 &amp; 0.01 &amp; -1.52 &amp; 0.14 \\ 
+   \hline
+\end{tabular}
+\end{table}</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Publication-ready regression tables</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span>(model, <span class="at">type =</span> <span class="st">"latex"</span>, </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="st">"Regression Results"</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">column.labels =</span> <span class="fu">c</span>(<span class="st">"Model 1"</span>),</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">dep.var.labels =</span> <span class="st">"Miles per Gallon"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Wed, Jun 25, 2025 - 18:22:55
+\begin{table}[!htbp] \centering 
+  \caption{Regression Results} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ &amp; \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] &amp; Miles per Gallon \\ 
+ &amp; Model 1 \\ 
+\hline \\[-1.8ex] 
+ wt &amp; $-$3.167$^{***}$ \\ 
+  &amp; (0.741) \\ 
+  &amp; \\ 
+ cyl &amp; $-$0.942$^{*}$ \\ 
+  &amp; (0.551) \\ 
+  &amp; \\ 
+ hp &amp; $-$0.018 \\ 
+  &amp; (0.012) \\ 
+  &amp; \\ 
+ Constant &amp; 38.752$^{***}$ \\ 
+  &amp; (1.787) \\ 
+  &amp; \\ 
+\hline \\[-1.8ex] 
+Observations &amp; 32 \\ 
+R$^{2}$ &amp; 0.843 \\ 
+Adjusted R$^{2}$ &amp; 0.826 \\ 
+Residual Std. Error &amp; 2.512 (df = 28) \\ 
+F Statistic &amp; 50.171$^{***}$ (df = 3; 28) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  &amp; \multicolumn{1}{r}{$^{*}$p$&lt;$0.1; $^{**}$p$&lt;$0.05; $^{***}$p$&lt;$0.01} \\ 
+\end{tabular} 
+\end{table} </code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="research-workflows" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="research-workflows"><span class="header-section-number">7</span> Research Workflows</h2>
+<section id="reproducible-research" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="reproducible-research"><span class="header-section-number">7.1</span> Reproducible Research</h3>
+<p>R excels in reproducible research workflows:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R Markdown for reproducible research</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Code and narrative in one document</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - Automatic figure and table generation</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># - Citation management</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Version control integration</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Multiple output formats</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="collaborative-research" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="collaborative-research"><span class="header-section-number">7.2</span> Collaborative Research</h3>
+<p>R supports collaborative research:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R supports:</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Git integration for version control</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - RStudio Connect for sharing</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># - Package development for research tools</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - CRAN for package distribution</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - GitHub for open-source collaboration</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="domain-specific-research" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="domain-specific-research"><span class="header-section-number">8</span> Domain-Specific Research</h2>
+<section id="bioinformatics" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="bioinformatics"><span class="header-section-number">8.1</span> Bioinformatics</h3>
+<p>R’s Bioconductor project dominates bioinformatics:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bioconductor provides 2,000+ packages for:</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Gene expression analysis</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - Sequence analysis</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># - Proteomics</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Metabolomics</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Clinical genomics</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="psychometrics" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="psychometrics"><span class="header-section-number">8.2</span> Psychometrics</h3>
+<p>R leads in psychometric research:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(psych)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mirt)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Psychometric analysis tools:</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Item response theory</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Factor analysis</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co"># - Reliability analysis</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="co"># - Validity assessment</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co"># - Scale development</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="epidemiology" class="level3" data-number="8.3">
+<h3 data-number="8.3" class="anchored" data-anchor-id="epidemiology"><span class="header-section-number">8.3</span> Epidemiology</h3>
+<p>R is standard in epidemiological research:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(epiR)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Epidemiological analysis:</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Cohort studies</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Case-control studies</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co"># - Survival analysis</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="co"># - Risk assessment</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="co"># - Public health modeling</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="academic-job-market" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="academic-job-market"><span class="header-section-number">9</span> Academic Job Market</h2>
+<section id="statistics-and-biostatistics" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="statistics-and-biostatistics"><span class="header-section-number">9.1</span> Statistics and Biostatistics</h3>
+<p>R proficiency is required for academic positions:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Academic job requirements typically include:</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>academic_requirements <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"R programming proficiency"</span>,</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Statistical modeling experience"</span>,</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Publication record with R"</span>,</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Teaching experience with R"</span>,</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Research methodology expertise"</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="research-funding" class="level3" data-number="9.2">
+<h3 data-number="9.2" class="anchored" data-anchor-id="research-funding"><span class="header-section-number">9.2</span> Research Funding</h3>
+<p>R skills enhance research funding opportunities:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Funding agencies recognize R:</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>funding_agencies <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"National Institutes of Health (NIH)"</span>,</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"National Science Foundation (NSF)"</span>,</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"European Research Council (ERC)"</span>,</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Wellcome Trust"</span>,</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Bill &amp; Melinda Gates Foundation"</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="performance-comparison" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="performance-comparison"><span class="header-section-number">10</span> Performance Comparison</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>R</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Academic Adoption</td>
+<td>Dominant</td>
+<td>Growing</td>
+</tr>
+<tr class="even">
+<td>Peer-Reviewed Packages</td>
+<td>Extensive</td>
+<td>Limited</td>
+</tr>
+<tr class="odd">
+<td>Statistics Education</td>
+<td>Standard</td>
+<td>Emerging</td>
+</tr>
+<tr class="even">
+<td>Research Publications</td>
+<td>Widespread</td>
+<td>Limited</td>
+</tr>
+<tr class="odd">
+<td>Clinical Trials</td>
+<td>Industry Standard</td>
+<td>Rare</td>
+</tr>
+<tr class="even">
+<td>Social Sciences</td>
+<td>Dominant</td>
+<td>Limited</td>
+</tr>
+<tr class="odd">
+<td>Bioinformatics</td>
+<td>Bioconductor</td>
+<td>Growing</td>
+</tr>
+<tr class="even">
+<td>Textbook Integration</td>
+<td>Extensive</td>
+<td>Limited</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="conclusion" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">11</span> Conclusion</h2>
+<p>R’s dominance in academic research stems from:</p>
+<ul>
+<li><strong>Statistical foundation</strong> built by statisticians</li>
+<li><strong>Peer-reviewed packages</strong> with rigorous quality control</li>
+<li><strong>Educational integration</strong> in statistics programs</li>
+<li><strong>Publication standards</strong> for research output</li>
+<li><strong>Domain-specific tools</strong> for specialized research</li>
+<li><strong>Reproducible workflows</strong> for scientific integrity</li>
+</ul>
+<p>While Python excels in machine learning and computer science, R remains the superior choice for traditional statistical research and academic applications.</p>
+<hr>
+<p><em>Next: <a href="../blog/data-manipulation-r-vs-python.html">Data Manipulation: dplyr vs pandas</a></em></p>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb23" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Academic Research: R's Dominance in Statistics"</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Why R remains the standard in academic research, statistics education, and peer-reviewed publications"</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2024-01-30</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [academic, research, statistics]</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>In academic research, particularly in statistics, biostatistics, and social sciences, R is the undisputed leader. While Python has gained popularity in machine learning and computer science, R continues to dominate in traditional statistical research and peer-reviewed publications.</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## R's Academic Foundation</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="fu">### Built by Statisticians, for Statisticians</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>R was created by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand, specifically for statistical computing. This academic origin has shaped R's development and adoption in research communities worldwide.</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="fu">### Statistical Society Endorsements</span></span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>Major statistical societies and journals recognize R's importance:</span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**American Statistical Association (ASA)**: Official R support and workshops</span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Royal Statistical Society (RSS)**: R-focused conferences and publications</span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Journal of Statistical Software**: Many R packages are peer-reviewed</span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Biometrics**: Standard tool for biostatistical research</span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Peer-Reviewed Packages</span></span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a><span class="fu">### CRAN's Quality Control</span></span>
+<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-31"><a href="#cb23-31" aria-hidden="true" tabindex="-1"></a>R's Comprehensive R Archive Network (CRAN) hosts over 18,000 packages, many of which are peer-reviewed:</span>
+<span id="cb23-32"><a href="#cb23-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-35"><a href="#cb23-35" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-36"><a href="#cb23-36" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb23-37"><a href="#cb23-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-38"><a href="#cb23-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Examples of peer-reviewed R packages</span></span>
+<span id="cb23-39"><a href="#cb23-39" aria-hidden="true" tabindex="-1"></a>peer_reviewed_packages <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb23-40"><a href="#cb23-40" aria-hidden="true" tabindex="-1"></a>  <span class="st">"lme4"</span>,      <span class="co"># Mixed effects models</span></span>
+<span id="cb23-41"><a href="#cb23-41" aria-hidden="true" tabindex="-1"></a>  <span class="st">"survival"</span>,  <span class="co"># Survival analysis</span></span>
+<span id="cb23-42"><a href="#cb23-42" aria-hidden="true" tabindex="-1"></a>  <span class="st">"nlme"</span>,      <span class="co"># Nonlinear mixed effects</span></span>
+<span id="cb23-43"><a href="#cb23-43" aria-hidden="true" tabindex="-1"></a>  <span class="st">"mgcv"</span>,      <span class="co"># Generalized additive models</span></span>
+<span id="cb23-44"><a href="#cb23-44" aria-hidden="true" tabindex="-1"></a>  <span class="st">"brms"</span>,      <span class="co"># Bayesian regression</span></span>
+<span id="cb23-45"><a href="#cb23-45" aria-hidden="true" tabindex="-1"></a>  <span class="st">"rstan"</span>      <span class="co"># Stan integration</span></span>
+<span id="cb23-46"><a href="#cb23-46" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-47"><a href="#cb23-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-48"><a href="#cb23-48" aria-hidden="true" tabindex="-1"></a><span class="co"># These packages are published in statistical journals</span></span>
+<span id="cb23-49"><a href="#cb23-49" aria-hidden="true" tabindex="-1"></a><span class="co"># and undergo rigorous peer review</span></span>
+<span id="cb23-50"><a href="#cb23-50" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-51"><a href="#cb23-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-52"><a href="#cb23-52" aria-hidden="true" tabindex="-1"></a><span class="fu">### Publication in Statistical Journals</span></span>
+<span id="cb23-53"><a href="#cb23-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-54"><a href="#cb23-54" aria-hidden="true" tabindex="-1"></a>Many R packages are published in prestigious statistical journals:</span>
+<span id="cb23-55"><a href="#cb23-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-56"><a href="#cb23-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Journal of Statistical Software**: Dedicated to R package publications</span>
+<span id="cb23-57"><a href="#cb23-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**R Journal**: Official R Foundation journal</span>
+<span id="cb23-58"><a href="#cb23-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Computational Statistics**: R-focused research</span>
+<span id="cb23-59"><a href="#cb23-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Biostatistics**: R packages for medical research</span>
+<span id="cb23-60"><a href="#cb23-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-61"><a href="#cb23-61" aria-hidden="true" tabindex="-1"></a><span class="fu">## Academic Teaching and Education</span></span>
+<span id="cb23-62"><a href="#cb23-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-63"><a href="#cb23-63" aria-hidden="true" tabindex="-1"></a><span class="fu">### Statistics Education Standard</span></span>
+<span id="cb23-64"><a href="#cb23-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-65"><a href="#cb23-65" aria-hidden="true" tabindex="-1"></a>R is the standard tool in statistics education:</span>
+<span id="cb23-66"><a href="#cb23-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-69"><a href="#cb23-69" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-70"><a href="#cb23-70" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb23-71"><a href="#cb23-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-72"><a href="#cb23-72" aria-hidden="true" tabindex="-1"></a><span class="co"># R is taught in:</span></span>
+<span id="cb23-73"><a href="#cb23-73" aria-hidden="true" tabindex="-1"></a>universities <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb23-74"><a href="#cb23-74" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Harvard University - Statistics Department"</span>,</span>
+<span id="cb23-75"><a href="#cb23-75" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Stanford University - Statistics"</span>,</span>
+<span id="cb23-76"><a href="#cb23-76" aria-hidden="true" tabindex="-1"></a>  <span class="st">"University of California, Berkeley"</span>,</span>
+<span id="cb23-77"><a href="#cb23-77" aria-hidden="true" tabindex="-1"></a>  <span class="st">"University of Oxford - Statistics"</span>,</span>
+<span id="cb23-78"><a href="#cb23-78" aria-hidden="true" tabindex="-1"></a>  <span class="st">"University of Cambridge - Statistical Laboratory"</span>,</span>
+<span id="cb23-79"><a href="#cb23-79" aria-hidden="true" tabindex="-1"></a>  <span class="st">"MIT - Statistics and Data Science"</span></span>
+<span id="cb23-80"><a href="#cb23-80" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-81"><a href="#cb23-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-82"><a href="#cb23-82" aria-hidden="true" tabindex="-1"></a><span class="co"># Most statistics PhD programs require R proficiency</span></span>
+<span id="cb23-83"><a href="#cb23-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-84"><a href="#cb23-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-85"><a href="#cb23-85" aria-hidden="true" tabindex="-1"></a><span class="fu">### Textbook Integration</span></span>
+<span id="cb23-86"><a href="#cb23-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-87"><a href="#cb23-87" aria-hidden="true" tabindex="-1"></a>Leading statistics textbooks use R:</span>
+<span id="cb23-88"><a href="#cb23-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-89"><a href="#cb23-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**"Introduction to Statistical Learning"** by James, Witten, Hastie, and Tibshirani</span>
+<span id="cb23-90"><a href="#cb23-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**"R for Data Science"** by Wickham and Grolemund</span>
+<span id="cb23-91"><a href="#cb23-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**"Modern Applied Statistics with S"** by Venables and Ripley</span>
+<span id="cb23-92"><a href="#cb23-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**"Mixed Effects Models and Extensions in Ecology with R"** by Zuur et al.</span>
+<span id="cb23-93"><a href="#cb23-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-94"><a href="#cb23-94" aria-hidden="true" tabindex="-1"></a><span class="fu">## Research Applications</span></span>
+<span id="cb23-95"><a href="#cb23-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-96"><a href="#cb23-96" aria-hidden="true" tabindex="-1"></a><span class="fu">### Clinical Trials and Medical Research</span></span>
+<span id="cb23-97"><a href="#cb23-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-98"><a href="#cb23-98" aria-hidden="true" tabindex="-1"></a>R dominates in clinical trial analysis:</span>
+<span id="cb23-99"><a href="#cb23-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-102"><a href="#cb23-102" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-103"><a href="#cb23-103" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb23-104"><a href="#cb23-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-105"><a href="#cb23-105" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span>
+<span id="cb23-106"><a href="#cb23-106" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survminer)</span>
+<span id="cb23-107"><a href="#cb23-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-108"><a href="#cb23-108" aria-hidden="true" tabindex="-1"></a><span class="co"># Clinical trial data analysis</span></span>
+<span id="cb23-109"><a href="#cb23-109" aria-hidden="true" tabindex="-1"></a><span class="co"># R provides comprehensive tools for:</span></span>
+<span id="cb23-110"><a href="#cb23-110" aria-hidden="true" tabindex="-1"></a><span class="co"># - Survival analysis</span></span>
+<span id="cb23-111"><a href="#cb23-111" aria-hidden="true" tabindex="-1"></a><span class="co"># - Clinical trial design</span></span>
+<span id="cb23-112"><a href="#cb23-112" aria-hidden="true" tabindex="-1"></a><span class="co"># - Safety monitoring</span></span>
+<span id="cb23-113"><a href="#cb23-113" aria-hidden="true" tabindex="-1"></a><span class="co"># - Regulatory compliance</span></span>
+<span id="cb23-114"><a href="#cb23-114" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-115"><a href="#cb23-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-116"><a href="#cb23-116" aria-hidden="true" tabindex="-1"></a><span class="fu">### Social Sciences Research</span></span>
+<span id="cb23-117"><a href="#cb23-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-118"><a href="#cb23-118" aria-hidden="true" tabindex="-1"></a>R is essential in social sciences:</span>
+<span id="cb23-119"><a href="#cb23-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-122"><a href="#cb23-122" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-123"><a href="#cb23-123" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb23-124"><a href="#cb23-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-125"><a href="#cb23-125" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lavaan)</span>
+<span id="cb23-126"><a href="#cb23-126" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(semPlot)</span>
+<span id="cb23-127"><a href="#cb23-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-128"><a href="#cb23-128" aria-hidden="true" tabindex="-1"></a><span class="co"># Structural equation modeling</span></span>
+<span id="cb23-129"><a href="#cb23-129" aria-hidden="true" tabindex="-1"></a><span class="co"># R provides advanced tools for:</span></span>
+<span id="cb23-130"><a href="#cb23-130" aria-hidden="true" tabindex="-1"></a><span class="co"># - Confirmatory factor analysis</span></span>
+<span id="cb23-131"><a href="#cb23-131" aria-hidden="true" tabindex="-1"></a><span class="co"># - Path analysis</span></span>
+<span id="cb23-132"><a href="#cb23-132" aria-hidden="true" tabindex="-1"></a><span class="co"># - Latent variable modeling</span></span>
+<span id="cb23-133"><a href="#cb23-133" aria-hidden="true" tabindex="-1"></a><span class="co"># - Psychometric analysis</span></span>
+<span id="cb23-134"><a href="#cb23-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-135"><a href="#cb23-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-136"><a href="#cb23-136" aria-hidden="true" tabindex="-1"></a><span class="fu">### Economics and Finance</span></span>
+<span id="cb23-137"><a href="#cb23-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-138"><a href="#cb23-138" aria-hidden="true" tabindex="-1"></a>R excels in econometric research:</span>
+<span id="cb23-139"><a href="#cb23-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-142"><a href="#cb23-142" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-143"><a href="#cb23-143" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb23-144"><a href="#cb23-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-145"><a href="#cb23-145" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plm)</span>
+<span id="cb23-146"><a href="#cb23-146" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forecast)</span>
+<span id="cb23-147"><a href="#cb23-147" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tseries)</span>
+<span id="cb23-148"><a href="#cb23-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-149"><a href="#cb23-149" aria-hidden="true" tabindex="-1"></a><span class="co"># Econometric analysis</span></span>
+<span id="cb23-150"><a href="#cb23-150" aria-hidden="true" tabindex="-1"></a><span class="co"># R provides specialized tools for:</span></span>
+<span id="cb23-151"><a href="#cb23-151" aria-hidden="true" tabindex="-1"></a><span class="co"># - Panel data analysis</span></span>
+<span id="cb23-152"><a href="#cb23-152" aria-hidden="true" tabindex="-1"></a><span class="co"># - Time series econometrics</span></span>
+<span id="cb23-153"><a href="#cb23-153" aria-hidden="true" tabindex="-1"></a><span class="co"># - Financial modeling</span></span>
+<span id="cb23-154"><a href="#cb23-154" aria-hidden="true" tabindex="-1"></a><span class="co"># - Risk assessment</span></span>
+<span id="cb23-155"><a href="#cb23-155" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-156"><a href="#cb23-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-157"><a href="#cb23-157" aria-hidden="true" tabindex="-1"></a><span class="fu">## Publication-Quality Output</span></span>
+<span id="cb23-158"><a href="#cb23-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-159"><a href="#cb23-159" aria-hidden="true" tabindex="-1"></a><span class="fu">### Statistical Reporting Standards</span></span>
+<span id="cb23-160"><a href="#cb23-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-161"><a href="#cb23-161" aria-hidden="true" tabindex="-1"></a>R produces publication-ready statistical output:</span>
+<span id="cb23-162"><a href="#cb23-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-165"><a href="#cb23-165" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-166"><a href="#cb23-166" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb23-167"><a href="#cb23-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-168"><a href="#cb23-168" aria-hidden="true" tabindex="-1"></a><span class="co"># Linear regression with publication-quality output</span></span>
+<span id="cb23-169"><a href="#cb23-169" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mpg <span class="sc">~</span> wt <span class="sc">+</span> cyl <span class="sc">+</span> hp, <span class="at">data =</span> mtcars)</span>
+<span id="cb23-170"><a href="#cb23-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-171"><a href="#cb23-171" aria-hidden="true" tabindex="-1"></a><span class="co"># Comprehensive model summary</span></span>
+<span id="cb23-172"><a href="#cb23-172" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span>
+<span id="cb23-173"><a href="#cb23-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-174"><a href="#cb23-174" aria-hidden="true" tabindex="-1"></a><span class="co"># ANOVA table</span></span>
+<span id="cb23-175"><a href="#cb23-175" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(model)</span>
+<span id="cb23-176"><a href="#cb23-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-177"><a href="#cb23-177" aria-hidden="true" tabindex="-1"></a><span class="co"># Model diagnostics</span></span>
+<span id="cb23-178"><a href="#cb23-178" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
+<span id="cb23-179"><a href="#cb23-179" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(model)  <span class="co"># Variance inflation factors</span></span>
+<span id="cb23-180"><a href="#cb23-180" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-181"><a href="#cb23-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-182"><a href="#cb23-182" aria-hidden="true" tabindex="-1"></a><span class="fu">### LaTeX Integration</span></span>
+<span id="cb23-183"><a href="#cb23-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-184"><a href="#cb23-184" aria-hidden="true" tabindex="-1"></a>R integrates seamlessly with LaTeX for academic writing:</span>
+<span id="cb23-185"><a href="#cb23-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-188"><a href="#cb23-188" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-189"><a href="#cb23-189" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb23-190"><a href="#cb23-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-191"><a href="#cb23-191" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xtable)</span>
+<span id="cb23-192"><a href="#cb23-192" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stargazer)</span>
+<span id="cb23-193"><a href="#cb23-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-194"><a href="#cb23-194" aria-hidden="true" tabindex="-1"></a><span class="co"># Create LaTeX tables</span></span>
+<span id="cb23-195"><a href="#cb23-195" aria-hidden="true" tabindex="-1"></a>latex_table <span class="ot">&lt;-</span> <span class="fu">xtable</span>(<span class="fu">summary</span>(model)<span class="sc">$</span>coefficients)</span>
+<span id="cb23-196"><a href="#cb23-196" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(latex_table, <span class="at">include.rownames =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb23-197"><a href="#cb23-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-198"><a href="#cb23-198" aria-hidden="true" tabindex="-1"></a><span class="co"># Publication-ready regression tables</span></span>
+<span id="cb23-199"><a href="#cb23-199" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span>(model, <span class="at">type =</span> <span class="st">"latex"</span>, </span>
+<span id="cb23-200"><a href="#cb23-200" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="st">"Regression Results"</span>,</span>
+<span id="cb23-201"><a href="#cb23-201" aria-hidden="true" tabindex="-1"></a>          <span class="at">column.labels =</span> <span class="fu">c</span>(<span class="st">"Model 1"</span>),</span>
+<span id="cb23-202"><a href="#cb23-202" aria-hidden="true" tabindex="-1"></a>          <span class="at">dep.var.labels =</span> <span class="st">"Miles per Gallon"</span>)</span>
+<span id="cb23-203"><a href="#cb23-203" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-204"><a href="#cb23-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-205"><a href="#cb23-205" aria-hidden="true" tabindex="-1"></a><span class="fu">## Research Workflows</span></span>
+<span id="cb23-206"><a href="#cb23-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-207"><a href="#cb23-207" aria-hidden="true" tabindex="-1"></a><span class="fu">### Reproducible Research</span></span>
+<span id="cb23-208"><a href="#cb23-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-209"><a href="#cb23-209" aria-hidden="true" tabindex="-1"></a>R excels in reproducible research workflows:</span>
+<span id="cb23-210"><a href="#cb23-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-213"><a href="#cb23-213" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-214"><a href="#cb23-214" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb23-215"><a href="#cb23-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-216"><a href="#cb23-216" aria-hidden="true" tabindex="-1"></a><span class="co"># R Markdown for reproducible research</span></span>
+<span id="cb23-217"><a href="#cb23-217" aria-hidden="true" tabindex="-1"></a><span class="co"># - Code and narrative in one document</span></span>
+<span id="cb23-218"><a href="#cb23-218" aria-hidden="true" tabindex="-1"></a><span class="co"># - Automatic figure and table generation</span></span>
+<span id="cb23-219"><a href="#cb23-219" aria-hidden="true" tabindex="-1"></a><span class="co"># - Citation management</span></span>
+<span id="cb23-220"><a href="#cb23-220" aria-hidden="true" tabindex="-1"></a><span class="co"># - Version control integration</span></span>
+<span id="cb23-221"><a href="#cb23-221" aria-hidden="true" tabindex="-1"></a><span class="co"># - Multiple output formats</span></span>
+<span id="cb23-222"><a href="#cb23-222" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-223"><a href="#cb23-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-224"><a href="#cb23-224" aria-hidden="true" tabindex="-1"></a><span class="fu">### Collaborative Research</span></span>
+<span id="cb23-225"><a href="#cb23-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-226"><a href="#cb23-226" aria-hidden="true" tabindex="-1"></a>R supports collaborative research:</span>
+<span id="cb23-227"><a href="#cb23-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-230"><a href="#cb23-230" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-231"><a href="#cb23-231" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb23-232"><a href="#cb23-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-233"><a href="#cb23-233" aria-hidden="true" tabindex="-1"></a><span class="co"># R supports:</span></span>
+<span id="cb23-234"><a href="#cb23-234" aria-hidden="true" tabindex="-1"></a><span class="co"># - Git integration for version control</span></span>
+<span id="cb23-235"><a href="#cb23-235" aria-hidden="true" tabindex="-1"></a><span class="co"># - RStudio Connect for sharing</span></span>
+<span id="cb23-236"><a href="#cb23-236" aria-hidden="true" tabindex="-1"></a><span class="co"># - Package development for research tools</span></span>
+<span id="cb23-237"><a href="#cb23-237" aria-hidden="true" tabindex="-1"></a><span class="co"># - CRAN for package distribution</span></span>
+<span id="cb23-238"><a href="#cb23-238" aria-hidden="true" tabindex="-1"></a><span class="co"># - GitHub for open-source collaboration</span></span>
+<span id="cb23-239"><a href="#cb23-239" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-240"><a href="#cb23-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-241"><a href="#cb23-241" aria-hidden="true" tabindex="-1"></a><span class="fu">## Domain-Specific Research</span></span>
+<span id="cb23-242"><a href="#cb23-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-243"><a href="#cb23-243" aria-hidden="true" tabindex="-1"></a><span class="fu">### Bioinformatics</span></span>
+<span id="cb23-244"><a href="#cb23-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-245"><a href="#cb23-245" aria-hidden="true" tabindex="-1"></a>R's Bioconductor project dominates bioinformatics:</span>
+<span id="cb23-246"><a href="#cb23-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-249"><a href="#cb23-249" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-250"><a href="#cb23-250" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb23-251"><a href="#cb23-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-252"><a href="#cb23-252" aria-hidden="true" tabindex="-1"></a><span class="co"># Bioconductor provides 2,000+ packages for:</span></span>
+<span id="cb23-253"><a href="#cb23-253" aria-hidden="true" tabindex="-1"></a><span class="co"># - Gene expression analysis</span></span>
+<span id="cb23-254"><a href="#cb23-254" aria-hidden="true" tabindex="-1"></a><span class="co"># - Sequence analysis</span></span>
+<span id="cb23-255"><a href="#cb23-255" aria-hidden="true" tabindex="-1"></a><span class="co"># - Proteomics</span></span>
+<span id="cb23-256"><a href="#cb23-256" aria-hidden="true" tabindex="-1"></a><span class="co"># - Metabolomics</span></span>
+<span id="cb23-257"><a href="#cb23-257" aria-hidden="true" tabindex="-1"></a><span class="co"># - Clinical genomics</span></span>
+<span id="cb23-258"><a href="#cb23-258" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-259"><a href="#cb23-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-260"><a href="#cb23-260" aria-hidden="true" tabindex="-1"></a><span class="fu">### Psychometrics</span></span>
+<span id="cb23-261"><a href="#cb23-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-262"><a href="#cb23-262" aria-hidden="true" tabindex="-1"></a>R leads in psychometric research:</span>
+<span id="cb23-263"><a href="#cb23-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-266"><a href="#cb23-266" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-267"><a href="#cb23-267" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb23-268"><a href="#cb23-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-269"><a href="#cb23-269" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(psych)</span>
+<span id="cb23-270"><a href="#cb23-270" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mirt)</span>
+<span id="cb23-271"><a href="#cb23-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-272"><a href="#cb23-272" aria-hidden="true" tabindex="-1"></a><span class="co"># Psychometric analysis tools:</span></span>
+<span id="cb23-273"><a href="#cb23-273" aria-hidden="true" tabindex="-1"></a><span class="co"># - Item response theory</span></span>
+<span id="cb23-274"><a href="#cb23-274" aria-hidden="true" tabindex="-1"></a><span class="co"># - Factor analysis</span></span>
+<span id="cb23-275"><a href="#cb23-275" aria-hidden="true" tabindex="-1"></a><span class="co"># - Reliability analysis</span></span>
+<span id="cb23-276"><a href="#cb23-276" aria-hidden="true" tabindex="-1"></a><span class="co"># - Validity assessment</span></span>
+<span id="cb23-277"><a href="#cb23-277" aria-hidden="true" tabindex="-1"></a><span class="co"># - Scale development</span></span>
+<span id="cb23-278"><a href="#cb23-278" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-279"><a href="#cb23-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-280"><a href="#cb23-280" aria-hidden="true" tabindex="-1"></a><span class="fu">### Epidemiology</span></span>
+<span id="cb23-281"><a href="#cb23-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-282"><a href="#cb23-282" aria-hidden="true" tabindex="-1"></a>R is standard in epidemiological research:</span>
+<span id="cb23-283"><a href="#cb23-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-286"><a href="#cb23-286" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-287"><a href="#cb23-287" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb23-288"><a href="#cb23-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-289"><a href="#cb23-289" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(epiR)</span>
+<span id="cb23-290"><a href="#cb23-290" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span>
+<span id="cb23-291"><a href="#cb23-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-292"><a href="#cb23-292" aria-hidden="true" tabindex="-1"></a><span class="co"># Epidemiological analysis:</span></span>
+<span id="cb23-293"><a href="#cb23-293" aria-hidden="true" tabindex="-1"></a><span class="co"># - Cohort studies</span></span>
+<span id="cb23-294"><a href="#cb23-294" aria-hidden="true" tabindex="-1"></a><span class="co"># - Case-control studies</span></span>
+<span id="cb23-295"><a href="#cb23-295" aria-hidden="true" tabindex="-1"></a><span class="co"># - Survival analysis</span></span>
+<span id="cb23-296"><a href="#cb23-296" aria-hidden="true" tabindex="-1"></a><span class="co"># - Risk assessment</span></span>
+<span id="cb23-297"><a href="#cb23-297" aria-hidden="true" tabindex="-1"></a><span class="co"># - Public health modeling</span></span>
+<span id="cb23-298"><a href="#cb23-298" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-299"><a href="#cb23-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-300"><a href="#cb23-300" aria-hidden="true" tabindex="-1"></a><span class="fu">## Academic Job Market</span></span>
+<span id="cb23-301"><a href="#cb23-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-302"><a href="#cb23-302" aria-hidden="true" tabindex="-1"></a><span class="fu">### Statistics and Biostatistics</span></span>
+<span id="cb23-303"><a href="#cb23-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-304"><a href="#cb23-304" aria-hidden="true" tabindex="-1"></a>R proficiency is required for academic positions:</span>
+<span id="cb23-305"><a href="#cb23-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-308"><a href="#cb23-308" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-309"><a href="#cb23-309" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb23-310"><a href="#cb23-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-311"><a href="#cb23-311" aria-hidden="true" tabindex="-1"></a><span class="co"># Academic job requirements typically include:</span></span>
+<span id="cb23-312"><a href="#cb23-312" aria-hidden="true" tabindex="-1"></a>academic_requirements <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb23-313"><a href="#cb23-313" aria-hidden="true" tabindex="-1"></a>  <span class="st">"R programming proficiency"</span>,</span>
+<span id="cb23-314"><a href="#cb23-314" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Statistical modeling experience"</span>,</span>
+<span id="cb23-315"><a href="#cb23-315" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Publication record with R"</span>,</span>
+<span id="cb23-316"><a href="#cb23-316" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Teaching experience with R"</span>,</span>
+<span id="cb23-317"><a href="#cb23-317" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Research methodology expertise"</span></span>
+<span id="cb23-318"><a href="#cb23-318" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-319"><a href="#cb23-319" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-320"><a href="#cb23-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-321"><a href="#cb23-321" aria-hidden="true" tabindex="-1"></a><span class="fu">### Research Funding</span></span>
+<span id="cb23-322"><a href="#cb23-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-323"><a href="#cb23-323" aria-hidden="true" tabindex="-1"></a>R skills enhance research funding opportunities:</span>
+<span id="cb23-324"><a href="#cb23-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-327"><a href="#cb23-327" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-328"><a href="#cb23-328" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb23-329"><a href="#cb23-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-330"><a href="#cb23-330" aria-hidden="true" tabindex="-1"></a><span class="co"># Funding agencies recognize R:</span></span>
+<span id="cb23-331"><a href="#cb23-331" aria-hidden="true" tabindex="-1"></a>funding_agencies <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb23-332"><a href="#cb23-332" aria-hidden="true" tabindex="-1"></a>  <span class="st">"National Institutes of Health (NIH)"</span>,</span>
+<span id="cb23-333"><a href="#cb23-333" aria-hidden="true" tabindex="-1"></a>  <span class="st">"National Science Foundation (NSF)"</span>,</span>
+<span id="cb23-334"><a href="#cb23-334" aria-hidden="true" tabindex="-1"></a>  <span class="st">"European Research Council (ERC)"</span>,</span>
+<span id="cb23-335"><a href="#cb23-335" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Wellcome Trust"</span>,</span>
+<span id="cb23-336"><a href="#cb23-336" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Bill &amp; Melinda Gates Foundation"</span></span>
+<span id="cb23-337"><a href="#cb23-337" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-338"><a href="#cb23-338" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-339"><a href="#cb23-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-340"><a href="#cb23-340" aria-hidden="true" tabindex="-1"></a><span class="fu">## Performance Comparison</span></span>
+<span id="cb23-341"><a href="#cb23-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-342"><a href="#cb23-342" aria-hidden="true" tabindex="-1"></a>| Aspect | R | Python |</span>
+<span id="cb23-343"><a href="#cb23-343" aria-hidden="true" tabindex="-1"></a>|--------|---|--------|</span>
+<span id="cb23-344"><a href="#cb23-344" aria-hidden="true" tabindex="-1"></a>| Academic Adoption | Dominant | Growing |</span>
+<span id="cb23-345"><a href="#cb23-345" aria-hidden="true" tabindex="-1"></a>| Peer-Reviewed Packages | Extensive | Limited |</span>
+<span id="cb23-346"><a href="#cb23-346" aria-hidden="true" tabindex="-1"></a>| Statistics Education | Standard | Emerging |</span>
+<span id="cb23-347"><a href="#cb23-347" aria-hidden="true" tabindex="-1"></a>| Research Publications | Widespread | Limited |</span>
+<span id="cb23-348"><a href="#cb23-348" aria-hidden="true" tabindex="-1"></a>| Clinical Trials | Industry Standard | Rare |</span>
+<span id="cb23-349"><a href="#cb23-349" aria-hidden="true" tabindex="-1"></a>| Social Sciences | Dominant | Limited |</span>
+<span id="cb23-350"><a href="#cb23-350" aria-hidden="true" tabindex="-1"></a>| Bioinformatics | Bioconductor | Growing |</span>
+<span id="cb23-351"><a href="#cb23-351" aria-hidden="true" tabindex="-1"></a>| Textbook Integration | Extensive | Limited |</span>
+<span id="cb23-352"><a href="#cb23-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-353"><a href="#cb23-353" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusion</span></span>
+<span id="cb23-354"><a href="#cb23-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-355"><a href="#cb23-355" aria-hidden="true" tabindex="-1"></a>R's dominance in academic research stems from:</span>
+<span id="cb23-356"><a href="#cb23-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-357"><a href="#cb23-357" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Statistical foundation** built by statisticians</span>
+<span id="cb23-358"><a href="#cb23-358" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Peer-reviewed packages** with rigorous quality control</span>
+<span id="cb23-359"><a href="#cb23-359" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Educational integration** in statistics programs</span>
+<span id="cb23-360"><a href="#cb23-360" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Publication standards** for research output</span>
+<span id="cb23-361"><a href="#cb23-361" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Domain-specific tools** for specialized research</span>
+<span id="cb23-362"><a href="#cb23-362" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Reproducible workflows** for scientific integrity</span>
+<span id="cb23-363"><a href="#cb23-363" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-364"><a href="#cb23-364" aria-hidden="true" tabindex="-1"></a>While Python excels in machine learning and computer science, R remains the superior choice for traditional statistical research and academic applications.</span>
+<span id="cb23-365"><a href="#cb23-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-366"><a href="#cb23-366" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb23-367"><a href="#cb23-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-368"><a href="#cb23-368" aria-hidden="true" tabindex="-1"></a>*Next: [Data Manipulation: dplyr vs pandas](/blog/data-manipulation-r-vs-python.qmd)* </span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

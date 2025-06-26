@@ -1,0 +1,17 @@
+[
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/machine-learning-r-vs-python.html",
+      "/blog/social-sciences-r-vs-python.html",
+      "/blog/finance-economics-r-vs-python.html",
+      "/blog/time-series-analysis-r-vs-python.html",
+      "/blog/data-manipulation-r-vs-python.html",
+      "/blog/academic-research-r-vs-python.html",
+      "/blog/reproducible-research-r-vs-python.html",
+      "/blog/data-visualization-r-vs-python.html",
+      "/blog/bioinformatics-r-vs-python.html",
+      "/blog/statistical-modeling-r-vs-python.html"
+    ]
+  }
+]

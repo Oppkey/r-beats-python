@@ -1,0 +1,438 @@
+/* Custom styles for R Beats Python site */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Color scheme */
+:root {
+  --r-blue: #276DC3;
+  --r-dark-blue: #1B4F72;
+  --python-yellow: #FFD43B;
+  --python-blue: #306998;
+  --text-dark: #2C3E50;
+  --text-light: #7F8C8D;
+  --background-light: #F8F9FA;
+  --border-light: #E9ECEF;
+}
+
+/* Typography */
+body {
+  background: #232323;
+  color: #f5f5f5;
+  font-family: 'Montserrat', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+h1 {
+  border-bottom: 3px solid var(--r-blue);
+  padding-bottom: 10px;
+}
+
+/* Navigation */
+.navbar {
+  background: #232323 !important;
+  border-bottom: 2px solid #444;
+  box-shadow: 0 2px 8px rgba(160, 132, 232, 0.08);
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffb300 !important;
+  background: none;
+}
+
+/* Code blocks */
+pre {
+  background-color: var(--background-light);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 15px;
+}
+
+code {
+  color: var(--r-blue);
+  background-color: rgba(39, 109, 195, 0.1);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+  background: #fffafc;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(160, 132, 232, 0.04);
+}
+
+th, td {
+  border: 1px solid var(--border-light);
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background: #a3cef1;
+  color: #fff;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f9dcc4;
+}
+
+/* Buttons and links */
+.btn-primary {
+  background: linear-gradient(90deg, #a3cef1 0%, #f9dcc4 100%);
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(160, 132, 232, 0.08);
+}
+
+.btn-primary:hover {
+  background: #a084e8;
+  color: #fff;
+}
+
+a {
+  color: #4fc3f7;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #ffb300;
+  text-decoration: underline;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #292929;
+  border-right: 1px solid #444;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(160, 132, 232, 0.06);
+}
+
+.sidebar .nav-link {
+  color: var(--text-dark);
+  padding: 8px 15px;
+  border-radius: 4px;
+  margin: 2px 0;
+}
+
+.sidebar .nav-link:hover {
+  background: #333 !important;
+  color: #ffb300 !important;
+  border-radius: 0;
+}
+
+.sidebar .nav-link.active {
+  background: #333 !important;
+  color: #ffb300 !important;
+  border-radius: 0;
+}
+
+/* Content area */
+.main {
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(160, 132, 232, 0.06);
+  background: #292929;
+  color: #f5f5f5;
+}
+
+/* Cards */
+.card {
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  background: #292929;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.card-header {
+  background-color: var(--r-blue);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Alerts and callouts */
+.alert-info {
+  background-color: #e0f7fa;
+  border-color: #a3cef1;
+  color: #a084e8;
+  border-radius: 16px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--text-dark);
+  color: white;
+  padding: 20px 0;
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .navbar, .sidebar, .footer {
+    display: none;
+  }
+  
+  .main {
+    margin: 0;
+    padding: 0;
+  }
+  
+  pre {
+    white-space: pre-wrap;
+    border: 1px solid #ccc;
+  }
+}
+
+/* Custom classes */
+.r-advantage {
+  background-color: rgba(39, 109, 195, 0.1);
+  border-left: 4px solid var(--r-blue);
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.python-limitation {
+  background-color: rgba(255, 212, 59, 0.1);
+  border-left: 4px solid var(--python-yellow);
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.comparison-table {
+  font-size: 0.9rem;
+}
+
+.comparison-table th {
+  background-color: var(--r-blue);
+  color: white;
+  font-weight: 600;
+}
+
+.comparison-table td:first-child {
+  font-weight: 600;
+  background-color: var(--background-light);
+}
+
+/* Code highlighting */
+.hljs-keyword {
+  color: var(--r-blue);
+}
+
+.hljs-string {
+  color: #28a745;
+}
+
+.hljs-comment {
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* Blog post styling */
+.blog-post {
+  margin-bottom: 40px;
+}
+
+.blog-post h2 {
+  color: var(--r-blue);
+  border-bottom: 2px solid var(--r-blue);
+  padding-bottom: 5px;
+}
+
+.blog-post .date {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.blog-post .categories {
+  margin-bottom: 20px;
+}
+
+.blog-post .categories span {
+  background-color: var(--r-blue);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+/* Improve sidebar TOC (On this page) styling */
+.sidebar .nav-link,
+.toc-active .nav-link {
+  color: var(--text-dark) !important;
+  background: none !important;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:focus,
+.sidebar .nav-link:hover,
+.toc-active .nav-link.active,
+.toc-active .nav-link:focus,
+.toc-active .nav-link:hover {
+  background-color: var(--r-blue) !important;
+  color: #fff !important;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Force sidebar TOC highlight for Quarto */
+nav#TOC ul li a,
+nav#TOC ul li .nav-link {
+  color: var(--text-dark) !important;
+  background: none !important;
+}
+
+nav#TOC ul li a.active,
+nav#TOC ul li a:focus,
+nav#TOC ul li a:hover,
+nav#TOC ul li .nav-link.active,
+nav#TOC ul li .nav-link:focus,
+nav#TOC ul li .nav-link:hover {
+  background-color: var(--r-blue) !important;
+  color: #fff !important;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Remove emoji from section headers */
+h2::before, h3::before {
+  content: '';
+}
+
+/* Hero section styles */
+.hero {
+  background: #232323;
+  padding: 48px 0 32px 0;
+  text-align: center;
+  border-bottom: 2px solid #444;
+}
+.hero-svg {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.hero-title {
+  font-size: 2.8rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #bdbdbd;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+/* Stronger contrast for blog listing on dark background */
+.quarto-listing-container,
+.quarto-listing-container .listing-block,
+.quarto-listing-container .card,
+.quarto-listing-container .card-body {
+  background: transparent !important;
+  color: #fff !important;
+}
+
+.quarto-listing-container .listing-title,
+.quarto-listing-container .card-title,
+.quarto-listing-container .listing-block-title {
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.quarto-listing-container .listing-description,
+.quarto-listing-container .card-text,
+.quarto-listing-container .listing-block-description {
+  color: #e0e0e0 !important;
+}
+
+.quarto-listing-container .listing-date,
+.quarto-listing-container .card-date,
+.quarto-listing-container .listing-block-date {
+  color: #ffd54f !important;
+  font-weight: 500;
+}
+
+.quarto-listing-container .listing-title:hover,
+.quarto-listing-container .card-title:hover {
+  color: #ffb300 !important;
+  text-decoration: underline;
+}
+
+.quarto-listing-container hr {
+  border-color: #444 !important;
+}
+
+/* Force strong contrast for Quarto blog listing */
+.quarto-listing .quarto-post {
+  background: transparent !important;
+  color: #fff !important;
+}
+
+.quarto-listing .quarto-post .listing-title,
+.quarto-listing .quarto-post .listing-title a {
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+.quarto-listing .quarto-post .listing-description,
+.quarto-listing .quarto-post .listing-description a {
+  color: #e0e0e0 !important;
+}
+
+.quarto-listing .quarto-post .listing-date {
+  color: #ffd54f !important;
+  font-weight: 600 !important;
+}
+
+.quarto-listing .quarto-post .listing-title a:hover {
+  color: #ffb300 !important;
+  text-decoration: underline;
+}
+
+.quarto-listing .quarto-post hr {
+  border-color: #444 !important;
+} 

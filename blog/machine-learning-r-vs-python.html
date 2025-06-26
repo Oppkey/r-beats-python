@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2024-03-01">
+<meta name="description" content="How R’s statistical foundation provides unique advantages for machine learning compared to Python’s engineering-focused approach">
+
+<title>Machine Learning: R’s Statistical Approach – R Beats Python</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R Beats Python</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog/"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#rs-statistical-ml-foundation" id="toc-rs-statistical-ml-foundation" class="nav-link" data-scroll-target="#rs-statistical-ml-foundation"><span class="header-section-number">2</span> R’s Statistical ML Foundation</a>
+  <ul class="collapse">
+  <li><a href="#built-on-statistical-theory" id="toc-built-on-statistical-theory" class="nav-link" data-scroll-target="#built-on-statistical-theory"><span class="header-section-number">2.1</span> Built on Statistical Theory</a></li>
+  <li><a href="#research-grade-implementations" id="toc-research-grade-implementations" class="nav-link" data-scroll-target="#research-grade-implementations"><span class="header-section-number">2.2</span> Research-Grade Implementations</a></li>
+  </ul></li>
+  <li><a href="#statistical-learning-with-r" id="toc-statistical-learning-with-r" class="nav-link" data-scroll-target="#statistical-learning-with-r"><span class="header-section-number">3</span> Statistical Learning with R</a>
+  <ul class="collapse">
+  <li><a href="#linear-and-generalized-linear-models" id="toc-linear-and-generalized-linear-models" class="nav-link" data-scroll-target="#linear-and-generalized-linear-models"><span class="header-section-number">3.1</span> Linear and Generalized Linear Models</a></li>
+  <li><a href="#generalized-additive-models" id="toc-generalized-additive-models" class="nav-link" data-scroll-target="#generalized-additive-models"><span class="header-section-number">3.2</span> Generalized Additive Models</a></li>
+  </ul></li>
+  <li><a href="#ensemble-methods" id="toc-ensemble-methods" class="nav-link" data-scroll-target="#ensemble-methods"><span class="header-section-number">4</span> Ensemble Methods</a>
+  <ul class="collapse">
+  <li><a href="#random-forests" id="toc-random-forests" class="nav-link" data-scroll-target="#random-forests"><span class="header-section-number">4.1</span> Random Forests</a></li>
+  <li><a href="#gradient-boosting" id="toc-gradient-boosting" class="nav-link" data-scroll-target="#gradient-boosting"><span class="header-section-number">4.2</span> Gradient Boosting</a></li>
+  </ul></li>
+  <li><a href="#model-diagnostics-and-validation" id="toc-model-diagnostics-and-validation" class="nav-link" data-scroll-target="#model-diagnostics-and-validation"><span class="header-section-number">5</span> Model Diagnostics and Validation</a>
+  <ul class="collapse">
+  <li><a href="#cross-validation" id="toc-cross-validation" class="nav-link" data-scroll-target="#cross-validation"><span class="header-section-number">5.1</span> Cross-Validation</a></li>
+  <li><a href="#model-diagnostics" id="toc-model-diagnostics" class="nav-link" data-scroll-target="#model-diagnostics"><span class="header-section-number">5.2</span> Model Diagnostics</a></li>
+  </ul></li>
+  <li><a href="#bayesian-machine-learning" id="toc-bayesian-machine-learning" class="nav-link" data-scroll-target="#bayesian-machine-learning"><span class="header-section-number">6</span> Bayesian Machine Learning</a>
+  <ul class="collapse">
+  <li><a href="#bayesian-models" id="toc-bayesian-models" class="nav-link" data-scroll-target="#bayesian-models"><span class="header-section-number">6.1</span> Bayesian Models</a></li>
+  <li><a href="#probabilistic-programming" id="toc-probabilistic-programming" class="nav-link" data-scroll-target="#probabilistic-programming"><span class="header-section-number">6.2</span> Probabilistic Programming</a></li>
+  </ul></li>
+  <li><a href="#interpretable-machine-learning" id="toc-interpretable-machine-learning" class="nav-link" data-scroll-target="#interpretable-machine-learning"><span class="header-section-number">7</span> Interpretable Machine Learning</a>
+  <ul class="collapse">
+  <li><a href="#model-interpretability" id="toc-model-interpretability" class="nav-link" data-scroll-target="#model-interpretability"><span class="header-section-number">7.1</span> Model Interpretability</a></li>
+  <li><a href="#explainable-ai" id="toc-explainable-ai" class="nav-link" data-scroll-target="#explainable-ai"><span class="header-section-number">7.2</span> Explainable AI</a></li>
+  </ul></li>
+  <li><a href="#pythons-ml-limitations" id="toc-pythons-ml-limitations" class="nav-link" data-scroll-target="#pythons-ml-limitations"><span class="header-section-number">8</span> Python’s ML Limitations</a>
+  <ul class="collapse">
+  <li><a href="#engineering-focus" id="toc-engineering-focus" class="nav-link" data-scroll-target="#engineering-focus"><span class="header-section-number">8.1</span> Engineering Focus</a></li>
+  <li><a href="#limited-statistical-depth" id="toc-limited-statistical-depth" class="nav-link" data-scroll-target="#limited-statistical-depth"><span class="header-section-number">8.2</span> Limited Statistical Depth</a></li>
+  </ul></li>
+  <li><a href="#performance-comparison" id="toc-performance-comparison" class="nav-link" data-scroll-target="#performance-comparison"><span class="header-section-number">9</span> Performance Comparison</a></li>
+  <li><a href="#key-advantages-of-r-for-ml" id="toc-key-advantages-of-r-for-ml" class="nav-link" data-scroll-target="#key-advantages-of-r-for-ml"><span class="header-section-number">10</span> Key Advantages of R for ML</a>
+  <ul class="collapse">
+  <li><a href="#statistical-rigor" id="toc-statistical-rigor" class="nav-link" data-scroll-target="#statistical-rigor"><span class="header-section-number">10.1</span> 1. <strong>Statistical Rigor</strong></a></li>
+  <li><a href="#interpretability-focus" id="toc-interpretability-focus" class="nav-link" data-scroll-target="#interpretability-focus"><span class="header-section-number">10.2</span> 2. <strong>Interpretability Focus</strong></a></li>
+  <li><a href="#research-integration" id="toc-research-integration" class="nav-link" data-scroll-target="#research-integration"><span class="header-section-number">10.3</span> 3. <strong>Research Integration</strong></a></li>
+  </ul></li>
+  <li><a href="#complementary-approaches" id="toc-complementary-approaches" class="nav-link" data-scroll-target="#complementary-approaches"><span class="header-section-number">11</span> Complementary Approaches</a>
+  <ul class="collapse">
+  <li><a href="#r-python-integration" id="toc-r-python-integration" class="nav-link" data-scroll-target="#r-python-integration"><span class="header-section-number">11.1</span> R + Python Integration</a></li>
+  <li><a href="#best-of-both-worlds" id="toc-best-of-both-worlds" class="nav-link" data-scroll-target="#best-of-both-worlds"><span class="header-section-number">11.2</span> Best of Both Worlds</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">12</span> Conclusion</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Machine Learning: R’s Statistical Approach</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+  <div class="quarto-categories">
+    <div class="quarto-category">machine-learning</div>
+    <div class="quarto-category">statistics</div>
+    <div class="quarto-category">modeling</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    How R’s statistical foundation provides unique advantages for machine learning compared to Python’s engineering-focused approach
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 1, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>While Python dominates in deep learning and engineering-focused machine learning, R provides unique advantages through its statistical foundation. R’s approach to machine learning emphasizes interpretability, statistical rigor, and research-grade implementations that complement Python’s strengths.</p>
+</section>
+<section id="rs-statistical-ml-foundation" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="rs-statistical-ml-foundation"><span class="header-section-number">2</span> R’s Statistical ML Foundation</h2>
+<section id="built-on-statistical-theory" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="built-on-statistical-theory"><span class="header-section-number">2.1</span> Built on Statistical Theory</h3>
+<p>R’s machine learning is grounded in statistical theory:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R's ML approach emphasizes:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Statistical interpretability</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - Model diagnostics</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># - Uncertainty quantification</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Research reproducibility</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Academic rigor</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="research-grade-implementations" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="research-grade-implementations"><span class="header-section-number">2.2</span> Research-Grade Implementations</h3>
+<p>R provides peer-reviewed machine learning packages:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R's ML packages are:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Peer-reviewed</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - Published in statistical journals</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># - Used in academic research</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Well-documented</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Statistically validated</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="statistical-learning-with-r" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="statistical-learning-with-r"><span class="header-section-number">3</span> Statistical Learning with R</h2>
+<section id="linear-and-generalized-linear-models" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="linear-and-generalized-linear-models"><span class="header-section-number">3.1</span> Linear and Generalized Linear Models</h3>
+<p>R excels in statistical learning:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stats)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Linear models with comprehensive diagnostics</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>lm_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mpg <span class="sc">~</span> wt <span class="sc">+</span> cyl <span class="sc">+</span> hp, <span class="at">data =</span> mtcars)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mpg ~ wt + cyl + hp, data = mtcars)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.9290 -1.5598 -0.5311  1.1850  5.8986 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 38.75179    1.78686  21.687  &lt; 2e-16 ***
+wt          -3.16697    0.74058  -4.276 0.000199 ***
+cyl         -0.94162    0.55092  -1.709 0.098480 .  
+hp          -0.01804    0.01188  -1.519 0.140015    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 2.512 on 28 degrees of freedom
+Multiple R-squared:  0.8431,    Adjusted R-squared:  0.8263 
+F-statistic: 50.17 on 3 and 28 DF,  p-value: 2.184e-11</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Model diagnostics</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(lm_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="machine-learning-r-vs-python_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stepwise selection</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>step_model <span class="ot">&lt;-</span> <span class="fu">stepAIC</span>(lm_model, <span class="at">direction =</span> <span class="st">"both"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Start:  AIC=62.66
+mpg ~ wt + cyl + hp
+
+       Df Sum of Sq    RSS    AIC
+&lt;none&gt;              176.62 62.665
+- hp    1    14.551 191.17 63.198
+- cyl   1    18.427 195.05 63.840
+- wt    1   115.354 291.98 76.750</code></pre>
+</div>
+</div>
+</section>
+<section id="generalized-additive-models" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="generalized-additive-models"><span class="header-section-number">3.2</span> Generalized Additive Models</h3>
+<p>R provides sophisticated GAM implementations:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mgcv)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gam)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Generalized additive models</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>gam_model <span class="ot">&lt;-</span> <span class="fu">gam</span>(mpg <span class="sc">~</span> <span class="fu">s</span>(wt) <span class="sc">+</span> <span class="fu">s</span>(hp) <span class="sc">+</span> cyl, <span class="at">data =</span> mtcars)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Model summary with significance tests</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gam_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call: gam(formula = mpg ~ s(wt) + s(hp) + cyl, data = mtcars)
+Deviance Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.4914 -1.3267 -0.1171  0.9720  4.4302 
+
+(Dispersion Parameter for gaussian family taken to be 4.5484)
+
+    Null Deviance: 1126.047 on 31 degrees of freedom
+Residual Deviance: 100.0641 on 22 degrees of freedom
+AIC: 149.2945 
+
+Number of Local Scoring Iterations: NA 
+
+Anova for Parametric Effects
+          Df Sum Sq Mean Sq  F value    Pr(&gt;F)    
+s(wt)      1 777.91  777.91 171.0300 7.491e-12 ***
+s(hp)      1  97.78   97.78  21.4982 0.0001274 ***
+cyl        1   5.16    5.16   1.1351 0.2982414    
+Residuals 22 100.06    4.55                       
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Anova for Nonparametric Effects
+            Npar Df Npar F  Pr(F)  
+(Intercept)                        
+s(wt)             3 2.4696 0.0887 .
+s(hp)             3 2.0110 0.1418  
+cyl                                
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualization of smooth terms</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(gam_model, <span class="at">residuals =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="machine-learning-r-vs-python_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="machine-learning-r-vs-python_files/figure-html/unnamed-chunk-4-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="machine-learning-r-vs-python_files/figure-html/unnamed-chunk-4-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="ensemble-methods" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="ensemble-methods"><span class="header-section-number">4</span> Ensemble Methods</h2>
+<section id="random-forests" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="random-forests"><span class="header-section-number">4.1</span> Random Forests</h3>
+<p>R provides statistical random forest implementations:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(randomForest)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Random forest with statistical output</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>rf_model <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(mpg <span class="sc">~</span> ., <span class="at">data =</span> mtcars, <span class="at">importance =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Variable importance with statistical significance</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">importance</span>(rf_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>       %IncMSE IncNodePurity
+cyl  12.001750     179.54298
+disp 14.359291     272.27865
+hp   12.457820     192.09170
+drat  4.117111      42.91748
+wt   13.253130     248.41530
+qsec  3.104048      32.55921
+vs    3.509571      29.21183
+am    3.104253      11.70482
+gear  3.815041      22.38229
+carb  6.236250      31.34854</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">varImpPlot</span>(rf_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="machine-learning-r-vs-python_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Partial dependence plots</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">partialPlot</span>(rf_model, mtcars, <span class="st">"wt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="machine-learning-r-vs-python_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="gradient-boosting" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="gradient-boosting"><span class="header-section-number">4.2</span> Gradient Boosting</h3>
+<p>R excels in statistical gradient boosting:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gbm)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Gradient boosting with statistical diagnostics</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Adjusted parameters for small dataset</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>gbm_model <span class="ot">&lt;-</span> <span class="fu">gbm</span>(mpg <span class="sc">~</span> ., <span class="at">data =</span> mtcars, </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">distribution =</span> <span class="st">"gaussian"</span>,</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">n.trees =</span> <span class="dv">100</span>,</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>                 <span class="at">interaction.depth =</span> <span class="dv">2</span>,</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>                 <span class="at">bag.fraction =</span> <span class="fl">0.8</span>,</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>                 <span class="at">n.minobsinnode =</span> <span class="dv">3</span>)</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Variable importance</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gbm_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="machine-learning-r-vs-python_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      var     rel.inf
+wt     wt 35.70104600
+hp     hp 27.16852888
+disp disp 19.69164679
+cyl   cyl 10.94891717
+drat drat  3.35545085
+qsec qsec  2.84382492
+carb carb  0.13914740
+gear gear  0.10830384
+vs     vs  0.04313416
+am     am  0.00000000</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Partial dependence plots</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(gbm_model, <span class="at">i.var =</span> <span class="st">"wt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="machine-learning-r-vs-python_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="model-diagnostics-and-validation" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="model-diagnostics-and-validation"><span class="header-section-number">5</span> Model Diagnostics and Validation</h2>
+<section id="cross-validation" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="cross-validation"><span class="header-section-number">5.1</span> Cross-Validation</h3>
+<p>R provides comprehensive validation tools:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(boot)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Cross-validation with statistical rigor</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>cv_results <span class="ot">&lt;-</span> <span class="fu">cv.glm</span>(mtcars, lm_model, <span class="at">K =</span> <span class="dv">10</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>cv_results<span class="sc">$</span>delta</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NaN NaN</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Caret for systematic model comparison</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>control <span class="ot">&lt;-</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">"cv"</span>, <span class="at">number =</span> <span class="dv">10</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>model_comparison <span class="ot">&lt;-</span> <span class="fu">train</span>(mpg <span class="sc">~</span> ., <span class="at">data =</span> mtcars, </span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>                         <span class="at">method =</span> <span class="st">"rf"</span>,</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>                         <span class="at">trControl =</span> control)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="model-diagnostics" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="model-diagnostics"><span class="header-section-number">5.2</span> Model Diagnostics</h3>
+<p>R excels in model diagnostics:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Comprehensive model diagnostics</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Residual analysis</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">residualPlots</span>(lm_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="machine-learning-r-vs-python_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           Test stat Pr(&gt;|Test stat|)   
+wt            2.6276         0.014007 * 
+cyl           1.6311         0.114476   
+hp            1.8147         0.080701 . 
+Tukey test    3.2103         0.001326 **
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Influence diagnostics</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">influencePlot</span>(lm_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="machine-learning-r-vs-python_files/figure-html/unnamed-chunk-8-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                      StudRes        Hat        CookD
+Lincoln Continental 0.1065775 0.24373270 0.0009486833
+Chrysler Imperial   2.2153833 0.23547715 0.3316313326
+Fiat 128            2.5303244 0.08274176 0.1210330843
+Toyota Corolla      2.7498370 0.09961207 0.1694339333
+Maserati Bora       0.6073374 0.46356582 0.0815260489</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Multicollinearity</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(lm_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>      wt      cyl       hp 
+2.580486 4.757456 3.258481 </code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Normality tests</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(<span class="fu">residuals</span>(lm_model))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  residuals(lm_model)
+W = 0.93455, p-value = 0.05252</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="bayesian-machine-learning" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="bayesian-machine-learning"><span class="header-section-number">6</span> Bayesian Machine Learning</h2>
+<section id="bayesian-models" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="bayesian-models"><span class="header-section-number">6.1</span> Bayesian Models</h3>
+<p>R provides sophisticated Bayesian ML:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rstan)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(brms)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rstanarm)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Bayesian linear regression</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>bayes_model <span class="ot">&lt;-</span> <span class="fu">stan_glm</span>(mpg <span class="sc">~</span> wt <span class="sc">+</span> cyl, <span class="at">data =</span> mtcars,</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>                       <span class="at">family =</span> <span class="fu">gaussian</span>(),</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>                       <span class="at">prior =</span> <span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+SAMPLING FOR MODEL 'continuous' NOW (CHAIN 1).
+Chain 1: 
+Chain 1: Gradient evaluation took 0.001521 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 15.21 seconds.
+Chain 1: Adjust your expectations accordingly!
+Chain 1: 
+Chain 1: 
+Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 1: 
+Chain 1:  Elapsed Time: 0.035 seconds (Warm-up)
+Chain 1:                0.034 seconds (Sampling)
+Chain 1:                0.069 seconds (Total)
+Chain 1: 
+
+SAMPLING FOR MODEL 'continuous' NOW (CHAIN 2).
+Chain 2: 
+Chain 2: Gradient evaluation took 5e-06 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
+Chain 2: Adjust your expectations accordingly!
+Chain 2: 
+Chain 2: 
+Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 2: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 2: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 2: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 2: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 2: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 2: 
+Chain 2:  Elapsed Time: 0.032 seconds (Warm-up)
+Chain 2:                0.028 seconds (Sampling)
+Chain 2:                0.06 seconds (Total)
+Chain 2: 
+
+SAMPLING FOR MODEL 'continuous' NOW (CHAIN 3).
+Chain 3: 
+Chain 3: Gradient evaluation took 4e-06 seconds
+Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+Chain 3: Adjust your expectations accordingly!
+Chain 3: 
+Chain 3: 
+Chain 3: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 3: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 3: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 3: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 3: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 3: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 3: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 3: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 3: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 3: 
+Chain 3:  Elapsed Time: 0.033 seconds (Warm-up)
+Chain 3:                0.033 seconds (Sampling)
+Chain 3:                0.066 seconds (Total)
+Chain 3: 
+
+SAMPLING FOR MODEL 'continuous' NOW (CHAIN 4).
+Chain 4: 
+Chain 4: Gradient evaluation took 3e-06 seconds
+Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
+Chain 4: Adjust your expectations accordingly!
+Chain 4: 
+Chain 4: 
+Chain 4: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 4: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 4: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 4: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 4: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 4: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 4: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 4: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 4: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 4: 
+Chain 4:  Elapsed Time: 0.033 seconds (Warm-up)
+Chain 4:                0.04 seconds (Sampling)
+Chain 4:                0.073 seconds (Total)
+Chain 4: </code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Posterior analysis</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">posterior_interval</span>(bayes_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>                   5%        95%
+(Intercept) 36.778517 42.6913283
+wt          -4.502217 -1.8312259
+cyl         -2.211328 -0.7679713
+sigma        2.153765  3.3148005</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bayes_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="machine-learning-r-vs-python_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="probabilistic-programming" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="probabilistic-programming"><span class="header-section-number">6.2</span> Probabilistic Programming</h3>
+<p>R excels in probabilistic programming:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stan integration for complex models</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Hierarchical models</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - Time series models</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co"># - Spatial models</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Custom likelihoods</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Advanced inference</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="interpretable-machine-learning" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="interpretable-machine-learning"><span class="header-section-number">7</span> Interpretable Machine Learning</h2>
+<section id="model-interpretability" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="model-interpretability"><span class="header-section-number">7.1</span> Model Interpretability</h3>
+<p>R emphasizes model interpretability:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(iml)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DALEX)</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Model interpretability tools</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Partial dependence plots</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Individual conditional expectation</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="co"># - Feature importance</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="co"># - Model explanations</span></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="co"># - Fairness analysis</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="explainable-ai" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="explainable-ai"><span class="header-section-number">7.2</span> Explainable AI</h3>
+<p>R provides explainable AI tools:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Explainable AI capabilities</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - LIME implementation</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - SHAP values</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="co"># - Model-agnostic explanations</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Feature interactions</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Decision paths</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="pythons-ml-limitations" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="pythons-ml-limitations"><span class="header-section-number">8</span> Python’s ML Limitations</h2>
+<section id="engineering-focus" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="engineering-focus"><span class="header-section-number">8.1</span> Engineering Focus</h3>
+<p>Python’s ML is engineering-focused:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python ML emphasizes:</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Scalability</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - Production deployment</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="co"># - Deep learning</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Engineering efficiency</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Less statistical rigor</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="limited-statistical-depth" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="limited-statistical-depth"><span class="header-section-number">8.2</span> Limited Statistical Depth</h3>
+<p>Python lacks statistical depth:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python has limited:</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Statistical diagnostics</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - Model interpretability</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="co"># - Uncertainty quantification</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Research reproducibility</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Academic validation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="performance-comparison" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="performance-comparison"><span class="header-section-number">9</span> Performance Comparison</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>R</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Statistical Foundation</td>
+<td>Excellent</td>
+<td>Limited</td>
+</tr>
+<tr class="even">
+<td>Model Diagnostics</td>
+<td>Comprehensive</td>
+<td>Basic</td>
+</tr>
+<tr class="odd">
+<td>Interpretability</td>
+<td>Advanced</td>
+<td>Limited</td>
+</tr>
+<tr class="even">
+<td>Research Integration</td>
+<td>Strong</td>
+<td>Weak</td>
+</tr>
+<tr class="odd">
+<td>Uncertainty Quantification</td>
+<td>Sophisticated</td>
+<td>Basic</td>
+</tr>
+<tr class="even">
+<td>Academic Validation</td>
+<td>Peer-reviewed</td>
+<td>Variable</td>
+</tr>
+<tr class="odd">
+<td>Deep Learning</td>
+<td>Limited</td>
+<td>Excellent</td>
+</tr>
+<tr class="even">
+<td>Production Deployment</td>
+<td>Limited</td>
+<td>Excellent</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="key-advantages-of-r-for-ml" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="key-advantages-of-r-for-ml"><span class="header-section-number">10</span> Key Advantages of R for ML</h2>
+<section id="statistical-rigor" class="level3" data-number="10.1">
+<h3 data-number="10.1" class="anchored" data-anchor-id="statistical-rigor"><span class="header-section-number">10.1</span> 1. <strong>Statistical Rigor</strong></h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R ensures statistical rigor in ML:</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Proper model diagnostics</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - Uncertainty quantification</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="co"># - Statistical significance testing</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Model validation</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Research reproducibility</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="interpretability-focus" class="level3" data-number="10.2">
+<h3 data-number="10.2" class="anchored" data-anchor-id="interpretability-focus"><span class="header-section-number">10.2</span> 2. <strong>Interpretability Focus</strong></h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R emphasizes interpretability:</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Model explanations</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - Feature importance</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="co"># - Partial dependence plots</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Statistical inference</span></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Research transparency</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="research-integration" class="level3" data-number="10.3">
+<h3 data-number="10.3" class="anchored" data-anchor-id="research-integration"><span class="header-section-number">10.3</span> 3. <strong>Research Integration</strong></h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R's ML packages are:</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Peer-reviewed</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - Published in journals</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="co"># - Used in research</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Well-documented</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Statistically validated</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="complementary-approaches" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="complementary-approaches"><span class="header-section-number">11</span> Complementary Approaches</h2>
+<section id="r-python-integration" class="level3" data-number="11.1">
+<h3 data-number="11.1" class="anchored" data-anchor-id="r-python-integration"><span class="header-section-number">11.1</span> R + Python Integration</h3>
+<p>R and Python can complement each other:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R for:</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Statistical modeling</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - Model diagnostics</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="co"># - Research validation</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Interpretability</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Academic publishing</span></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Python for:</span></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a><span class="co"># - Deep learning</span></span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a><span class="co"># - Production deployment</span></span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a><span class="co"># - Large-scale processing</span></span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a><span class="co"># - Engineering workflows</span></span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a><span class="co"># - Web applications</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="best-of-both-worlds" class="level3" data-number="11.2">
+<h3 data-number="11.2" class="anchored" data-anchor-id="best-of-both-worlds"><span class="header-section-number">11.2</span> Best of Both Worlds</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Optimal workflow:</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. R for exploratory analysis and statistical modeling</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Python for deep learning and production deployment</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. R for model interpretation and validation</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Python for scaling and deployment</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="conclusion" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">12</span> Conclusion</h2>
+<p>R’s machine learning approach provides:</p>
+<ul>
+<li><strong>Statistical rigor</strong> and model diagnostics</li>
+<li><strong>Research-grade implementations</strong> with peer review</li>
+<li><strong>Emphasis on interpretability</strong> and transparency</li>
+<li><strong>Comprehensive validation</strong> and uncertainty quantification</li>
+<li><strong>Academic integration</strong> and reproducibility</li>
+<li><strong>Complementary strengths</strong> to Python’s engineering focus</li>
+</ul>
+<p>While Python excels in deep learning and production deployment, R provides unique advantages for statistical machine learning, research, and interpretable AI applications.</p>
+<hr>
+<p><em>This concludes our series on “R Beats Python” - exploring the specific areas where R provides superior capabilities for data science and statistical analysis.</em></p>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb44" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Machine Learning: R's Statistical Approach"</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "How R's statistical foundation provides unique advantages for machine learning compared to Python's engineering-focused approach"</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2024-03-01</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [machine-learning, statistics, modeling]</span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction</span></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>While Python dominates in deep learning and engineering-focused machine learning, R provides unique advantages through its statistical foundation. R's approach to machine learning emphasizes interpretability, statistical rigor, and research-grade implementations that complement Python's strengths.</span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## R's Statistical ML Foundation</span></span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a><span class="fu">### Built on Statistical Theory</span></span>
+<span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-16"><a href="#cb44-16" aria-hidden="true" tabindex="-1"></a>R's machine learning is grounded in statistical theory:</span>
+<span id="cb44-17"><a href="#cb44-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-20"><a href="#cb44-20" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-21"><a href="#cb44-21" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-22"><a href="#cb44-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-23"><a href="#cb44-23" aria-hidden="true" tabindex="-1"></a><span class="co"># R's ML approach emphasizes:</span></span>
+<span id="cb44-24"><a href="#cb44-24" aria-hidden="true" tabindex="-1"></a><span class="co"># - Statistical interpretability</span></span>
+<span id="cb44-25"><a href="#cb44-25" aria-hidden="true" tabindex="-1"></a><span class="co"># - Model diagnostics</span></span>
+<span id="cb44-26"><a href="#cb44-26" aria-hidden="true" tabindex="-1"></a><span class="co"># - Uncertainty quantification</span></span>
+<span id="cb44-27"><a href="#cb44-27" aria-hidden="true" tabindex="-1"></a><span class="co"># - Research reproducibility</span></span>
+<span id="cb44-28"><a href="#cb44-28" aria-hidden="true" tabindex="-1"></a><span class="co"># - Academic rigor</span></span>
+<span id="cb44-29"><a href="#cb44-29" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-30"><a href="#cb44-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-31"><a href="#cb44-31" aria-hidden="true" tabindex="-1"></a><span class="fu">### Research-Grade Implementations</span></span>
+<span id="cb44-32"><a href="#cb44-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-33"><a href="#cb44-33" aria-hidden="true" tabindex="-1"></a>R provides peer-reviewed machine learning packages:</span>
+<span id="cb44-34"><a href="#cb44-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-37"><a href="#cb44-37" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-38"><a href="#cb44-38" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-39"><a href="#cb44-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-40"><a href="#cb44-40" aria-hidden="true" tabindex="-1"></a><span class="co"># R's ML packages are:</span></span>
+<span id="cb44-41"><a href="#cb44-41" aria-hidden="true" tabindex="-1"></a><span class="co"># - Peer-reviewed</span></span>
+<span id="cb44-42"><a href="#cb44-42" aria-hidden="true" tabindex="-1"></a><span class="co"># - Published in statistical journals</span></span>
+<span id="cb44-43"><a href="#cb44-43" aria-hidden="true" tabindex="-1"></a><span class="co"># - Used in academic research</span></span>
+<span id="cb44-44"><a href="#cb44-44" aria-hidden="true" tabindex="-1"></a><span class="co"># - Well-documented</span></span>
+<span id="cb44-45"><a href="#cb44-45" aria-hidden="true" tabindex="-1"></a><span class="co"># - Statistically validated</span></span>
+<span id="cb44-46"><a href="#cb44-46" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-47"><a href="#cb44-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-48"><a href="#cb44-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## Statistical Learning with R</span></span>
+<span id="cb44-49"><a href="#cb44-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-50"><a href="#cb44-50" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linear and Generalized Linear Models</span></span>
+<span id="cb44-51"><a href="#cb44-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-52"><a href="#cb44-52" aria-hidden="true" tabindex="-1"></a>R excels in statistical learning:</span>
+<span id="cb44-53"><a href="#cb44-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-56"><a href="#cb44-56" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-57"><a href="#cb44-57" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-58"><a href="#cb44-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-59"><a href="#cb44-59" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stats)</span>
+<span id="cb44-60"><a href="#cb44-60" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
+<span id="cb44-61"><a href="#cb44-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-62"><a href="#cb44-62" aria-hidden="true" tabindex="-1"></a><span class="co"># Linear models with comprehensive diagnostics</span></span>
+<span id="cb44-63"><a href="#cb44-63" aria-hidden="true" tabindex="-1"></a>lm_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mpg <span class="sc">~</span> wt <span class="sc">+</span> cyl <span class="sc">+</span> hp, <span class="at">data =</span> mtcars)</span>
+<span id="cb44-64"><a href="#cb44-64" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_model)</span>
+<span id="cb44-65"><a href="#cb44-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-66"><a href="#cb44-66" aria-hidden="true" tabindex="-1"></a><span class="co"># Model diagnostics</span></span>
+<span id="cb44-67"><a href="#cb44-67" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb44-68"><a href="#cb44-68" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(lm_model)</span>
+<span id="cb44-69"><a href="#cb44-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-70"><a href="#cb44-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Stepwise selection</span></span>
+<span id="cb44-71"><a href="#cb44-71" aria-hidden="true" tabindex="-1"></a>step_model <span class="ot">&lt;-</span> <span class="fu">stepAIC</span>(lm_model, <span class="at">direction =</span> <span class="st">"both"</span>)</span>
+<span id="cb44-72"><a href="#cb44-72" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-73"><a href="#cb44-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-74"><a href="#cb44-74" aria-hidden="true" tabindex="-1"></a><span class="fu">### Generalized Additive Models</span></span>
+<span id="cb44-75"><a href="#cb44-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-76"><a href="#cb44-76" aria-hidden="true" tabindex="-1"></a>R provides sophisticated GAM implementations:</span>
+<span id="cb44-77"><a href="#cb44-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-80"><a href="#cb44-80" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-81"><a href="#cb44-81" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-82"><a href="#cb44-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-83"><a href="#cb44-83" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mgcv)</span>
+<span id="cb44-84"><a href="#cb44-84" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gam)</span>
+<span id="cb44-85"><a href="#cb44-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-86"><a href="#cb44-86" aria-hidden="true" tabindex="-1"></a><span class="co"># Generalized additive models</span></span>
+<span id="cb44-87"><a href="#cb44-87" aria-hidden="true" tabindex="-1"></a>gam_model <span class="ot">&lt;-</span> <span class="fu">gam</span>(mpg <span class="sc">~</span> <span class="fu">s</span>(wt) <span class="sc">+</span> <span class="fu">s</span>(hp) <span class="sc">+</span> cyl, <span class="at">data =</span> mtcars)</span>
+<span id="cb44-88"><a href="#cb44-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-89"><a href="#cb44-89" aria-hidden="true" tabindex="-1"></a><span class="co"># Model summary with significance tests</span></span>
+<span id="cb44-90"><a href="#cb44-90" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gam_model)</span>
+<span id="cb44-91"><a href="#cb44-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-92"><a href="#cb44-92" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualization of smooth terms</span></span>
+<span id="cb44-93"><a href="#cb44-93" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(gam_model, <span class="at">residuals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb44-94"><a href="#cb44-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-95"><a href="#cb44-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-96"><a href="#cb44-96" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ensemble Methods</span></span>
+<span id="cb44-97"><a href="#cb44-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-98"><a href="#cb44-98" aria-hidden="true" tabindex="-1"></a><span class="fu">### Random Forests</span></span>
+<span id="cb44-99"><a href="#cb44-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-100"><a href="#cb44-100" aria-hidden="true" tabindex="-1"></a>R provides statistical random forest implementations:</span>
+<span id="cb44-101"><a href="#cb44-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-104"><a href="#cb44-104" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-105"><a href="#cb44-105" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-106"><a href="#cb44-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-107"><a href="#cb44-107" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(randomForest)</span>
+<span id="cb44-108"><a href="#cb44-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-109"><a href="#cb44-109" aria-hidden="true" tabindex="-1"></a><span class="co"># Random forest with statistical output</span></span>
+<span id="cb44-110"><a href="#cb44-110" aria-hidden="true" tabindex="-1"></a>rf_model <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(mpg <span class="sc">~</span> ., <span class="at">data =</span> mtcars, <span class="at">importance =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb44-111"><a href="#cb44-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-112"><a href="#cb44-112" aria-hidden="true" tabindex="-1"></a><span class="co"># Variable importance with statistical significance</span></span>
+<span id="cb44-113"><a href="#cb44-113" aria-hidden="true" tabindex="-1"></a><span class="fu">importance</span>(rf_model)</span>
+<span id="cb44-114"><a href="#cb44-114" aria-hidden="true" tabindex="-1"></a><span class="fu">varImpPlot</span>(rf_model)</span>
+<span id="cb44-115"><a href="#cb44-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-116"><a href="#cb44-116" aria-hidden="true" tabindex="-1"></a><span class="co"># Partial dependence plots</span></span>
+<span id="cb44-117"><a href="#cb44-117" aria-hidden="true" tabindex="-1"></a><span class="fu">partialPlot</span>(rf_model, mtcars, <span class="st">"wt"</span>)</span>
+<span id="cb44-118"><a href="#cb44-118" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-119"><a href="#cb44-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-120"><a href="#cb44-120" aria-hidden="true" tabindex="-1"></a><span class="fu">### Gradient Boosting</span></span>
+<span id="cb44-121"><a href="#cb44-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-122"><a href="#cb44-122" aria-hidden="true" tabindex="-1"></a>R excels in statistical gradient boosting:</span>
+<span id="cb44-123"><a href="#cb44-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-126"><a href="#cb44-126" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-127"><a href="#cb44-127" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-128"><a href="#cb44-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-129"><a href="#cb44-129" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gbm)</span>
+<span id="cb44-130"><a href="#cb44-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-131"><a href="#cb44-131" aria-hidden="true" tabindex="-1"></a><span class="co"># Gradient boosting with statistical diagnostics</span></span>
+<span id="cb44-132"><a href="#cb44-132" aria-hidden="true" tabindex="-1"></a><span class="co"># Adjusted parameters for small dataset</span></span>
+<span id="cb44-133"><a href="#cb44-133" aria-hidden="true" tabindex="-1"></a>gbm_model <span class="ot">&lt;-</span> <span class="fu">gbm</span>(mpg <span class="sc">~</span> ., <span class="at">data =</span> mtcars, </span>
+<span id="cb44-134"><a href="#cb44-134" aria-hidden="true" tabindex="-1"></a>                 <span class="at">distribution =</span> <span class="st">"gaussian"</span>,</span>
+<span id="cb44-135"><a href="#cb44-135" aria-hidden="true" tabindex="-1"></a>                 <span class="at">n.trees =</span> <span class="dv">100</span>,</span>
+<span id="cb44-136"><a href="#cb44-136" aria-hidden="true" tabindex="-1"></a>                 <span class="at">interaction.depth =</span> <span class="dv">2</span>,</span>
+<span id="cb44-137"><a href="#cb44-137" aria-hidden="true" tabindex="-1"></a>                 <span class="at">bag.fraction =</span> <span class="fl">0.8</span>,</span>
+<span id="cb44-138"><a href="#cb44-138" aria-hidden="true" tabindex="-1"></a>                 <span class="at">n.minobsinnode =</span> <span class="dv">3</span>)</span>
+<span id="cb44-139"><a href="#cb44-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-140"><a href="#cb44-140" aria-hidden="true" tabindex="-1"></a><span class="co"># Variable importance</span></span>
+<span id="cb44-141"><a href="#cb44-141" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gbm_model)</span>
+<span id="cb44-142"><a href="#cb44-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-143"><a href="#cb44-143" aria-hidden="true" tabindex="-1"></a><span class="co"># Partial dependence plots</span></span>
+<span id="cb44-144"><a href="#cb44-144" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(gbm_model, <span class="at">i.var =</span> <span class="st">"wt"</span>)</span>
+<span id="cb44-145"><a href="#cb44-145" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-146"><a href="#cb44-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-147"><a href="#cb44-147" aria-hidden="true" tabindex="-1"></a><span class="fu">## Model Diagnostics and Validation</span></span>
+<span id="cb44-148"><a href="#cb44-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-149"><a href="#cb44-149" aria-hidden="true" tabindex="-1"></a><span class="fu">### Cross-Validation</span></span>
+<span id="cb44-150"><a href="#cb44-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-151"><a href="#cb44-151" aria-hidden="true" tabindex="-1"></a>R provides comprehensive validation tools:</span>
+<span id="cb44-152"><a href="#cb44-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-155"><a href="#cb44-155" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-156"><a href="#cb44-156" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-157"><a href="#cb44-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-158"><a href="#cb44-158" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span>
+<span id="cb44-159"><a href="#cb44-159" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(boot)</span>
+<span id="cb44-160"><a href="#cb44-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-161"><a href="#cb44-161" aria-hidden="true" tabindex="-1"></a><span class="co"># Cross-validation with statistical rigor</span></span>
+<span id="cb44-162"><a href="#cb44-162" aria-hidden="true" tabindex="-1"></a>cv_results <span class="ot">&lt;-</span> <span class="fu">cv.glm</span>(mtcars, lm_model, <span class="at">K =</span> <span class="dv">10</span>)</span>
+<span id="cb44-163"><a href="#cb44-163" aria-hidden="true" tabindex="-1"></a>cv_results<span class="sc">$</span>delta</span>
+<span id="cb44-164"><a href="#cb44-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-165"><a href="#cb44-165" aria-hidden="true" tabindex="-1"></a><span class="co"># Caret for systematic model comparison</span></span>
+<span id="cb44-166"><a href="#cb44-166" aria-hidden="true" tabindex="-1"></a>control <span class="ot">&lt;-</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">"cv"</span>, <span class="at">number =</span> <span class="dv">10</span>)</span>
+<span id="cb44-167"><a href="#cb44-167" aria-hidden="true" tabindex="-1"></a>model_comparison <span class="ot">&lt;-</span> <span class="fu">train</span>(mpg <span class="sc">~</span> ., <span class="at">data =</span> mtcars, </span>
+<span id="cb44-168"><a href="#cb44-168" aria-hidden="true" tabindex="-1"></a>                         <span class="at">method =</span> <span class="st">"rf"</span>,</span>
+<span id="cb44-169"><a href="#cb44-169" aria-hidden="true" tabindex="-1"></a>                         <span class="at">trControl =</span> control)</span>
+<span id="cb44-170"><a href="#cb44-170" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-171"><a href="#cb44-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-172"><a href="#cb44-172" aria-hidden="true" tabindex="-1"></a><span class="fu">### Model Diagnostics</span></span>
+<span id="cb44-173"><a href="#cb44-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-174"><a href="#cb44-174" aria-hidden="true" tabindex="-1"></a>R excels in model diagnostics:</span>
+<span id="cb44-175"><a href="#cb44-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-178"><a href="#cb44-178" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-179"><a href="#cb44-179" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-180"><a href="#cb44-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-181"><a href="#cb44-181" aria-hidden="true" tabindex="-1"></a><span class="co"># Comprehensive model diagnostics</span></span>
+<span id="cb44-182"><a href="#cb44-182" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
+<span id="cb44-183"><a href="#cb44-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-184"><a href="#cb44-184" aria-hidden="true" tabindex="-1"></a><span class="co"># Residual analysis</span></span>
+<span id="cb44-185"><a href="#cb44-185" aria-hidden="true" tabindex="-1"></a><span class="fu">residualPlots</span>(lm_model)</span>
+<span id="cb44-186"><a href="#cb44-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-187"><a href="#cb44-187" aria-hidden="true" tabindex="-1"></a><span class="co"># Influence diagnostics</span></span>
+<span id="cb44-188"><a href="#cb44-188" aria-hidden="true" tabindex="-1"></a><span class="fu">influencePlot</span>(lm_model)</span>
+<span id="cb44-189"><a href="#cb44-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-190"><a href="#cb44-190" aria-hidden="true" tabindex="-1"></a><span class="co"># Multicollinearity</span></span>
+<span id="cb44-191"><a href="#cb44-191" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(lm_model)</span>
+<span id="cb44-192"><a href="#cb44-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-193"><a href="#cb44-193" aria-hidden="true" tabindex="-1"></a><span class="co"># Normality tests</span></span>
+<span id="cb44-194"><a href="#cb44-194" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(<span class="fu">residuals</span>(lm_model))</span>
+<span id="cb44-195"><a href="#cb44-195" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-196"><a href="#cb44-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-197"><a href="#cb44-197" aria-hidden="true" tabindex="-1"></a><span class="fu">## Bayesian Machine Learning</span></span>
+<span id="cb44-198"><a href="#cb44-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-199"><a href="#cb44-199" aria-hidden="true" tabindex="-1"></a><span class="fu">### Bayesian Models</span></span>
+<span id="cb44-200"><a href="#cb44-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-201"><a href="#cb44-201" aria-hidden="true" tabindex="-1"></a>R provides sophisticated Bayesian ML:</span>
+<span id="cb44-202"><a href="#cb44-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-205"><a href="#cb44-205" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-206"><a href="#cb44-206" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-207"><a href="#cb44-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-208"><a href="#cb44-208" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rstan)</span>
+<span id="cb44-209"><a href="#cb44-209" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(brms)</span>
+<span id="cb44-210"><a href="#cb44-210" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rstanarm)</span>
+<span id="cb44-211"><a href="#cb44-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-212"><a href="#cb44-212" aria-hidden="true" tabindex="-1"></a><span class="co"># Bayesian linear regression</span></span>
+<span id="cb44-213"><a href="#cb44-213" aria-hidden="true" tabindex="-1"></a>bayes_model <span class="ot">&lt;-</span> <span class="fu">stan_glm</span>(mpg <span class="sc">~</span> wt <span class="sc">+</span> cyl, <span class="at">data =</span> mtcars,</span>
+<span id="cb44-214"><a href="#cb44-214" aria-hidden="true" tabindex="-1"></a>                       <span class="at">family =</span> <span class="fu">gaussian</span>(),</span>
+<span id="cb44-215"><a href="#cb44-215" aria-hidden="true" tabindex="-1"></a>                       <span class="at">prior =</span> <span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">10</span>))</span>
+<span id="cb44-216"><a href="#cb44-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-217"><a href="#cb44-217" aria-hidden="true" tabindex="-1"></a><span class="co"># Posterior analysis</span></span>
+<span id="cb44-218"><a href="#cb44-218" aria-hidden="true" tabindex="-1"></a><span class="fu">posterior_interval</span>(bayes_model)</span>
+<span id="cb44-219"><a href="#cb44-219" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(bayes_model)</span>
+<span id="cb44-220"><a href="#cb44-220" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-221"><a href="#cb44-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-222"><a href="#cb44-222" aria-hidden="true" tabindex="-1"></a><span class="fu">### Probabilistic Programming</span></span>
+<span id="cb44-223"><a href="#cb44-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-224"><a href="#cb44-224" aria-hidden="true" tabindex="-1"></a>R excels in probabilistic programming:</span>
+<span id="cb44-225"><a href="#cb44-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-228"><a href="#cb44-228" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-229"><a href="#cb44-229" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-230"><a href="#cb44-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-231"><a href="#cb44-231" aria-hidden="true" tabindex="-1"></a><span class="co"># Stan integration for complex models</span></span>
+<span id="cb44-232"><a href="#cb44-232" aria-hidden="true" tabindex="-1"></a><span class="co"># - Hierarchical models</span></span>
+<span id="cb44-233"><a href="#cb44-233" aria-hidden="true" tabindex="-1"></a><span class="co"># - Time series models</span></span>
+<span id="cb44-234"><a href="#cb44-234" aria-hidden="true" tabindex="-1"></a><span class="co"># - Spatial models</span></span>
+<span id="cb44-235"><a href="#cb44-235" aria-hidden="true" tabindex="-1"></a><span class="co"># - Custom likelihoods</span></span>
+<span id="cb44-236"><a href="#cb44-236" aria-hidden="true" tabindex="-1"></a><span class="co"># - Advanced inference</span></span>
+<span id="cb44-237"><a href="#cb44-237" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-238"><a href="#cb44-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-239"><a href="#cb44-239" aria-hidden="true" tabindex="-1"></a><span class="fu">## Interpretable Machine Learning</span></span>
+<span id="cb44-240"><a href="#cb44-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-241"><a href="#cb44-241" aria-hidden="true" tabindex="-1"></a><span class="fu">### Model Interpretability</span></span>
+<span id="cb44-242"><a href="#cb44-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-243"><a href="#cb44-243" aria-hidden="true" tabindex="-1"></a>R emphasizes model interpretability:</span>
+<span id="cb44-244"><a href="#cb44-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-247"><a href="#cb44-247" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-248"><a href="#cb44-248" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-249"><a href="#cb44-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-250"><a href="#cb44-250" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(iml)</span>
+<span id="cb44-251"><a href="#cb44-251" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DALEX)</span>
+<span id="cb44-252"><a href="#cb44-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-253"><a href="#cb44-253" aria-hidden="true" tabindex="-1"></a><span class="co"># Model interpretability tools</span></span>
+<span id="cb44-254"><a href="#cb44-254" aria-hidden="true" tabindex="-1"></a><span class="co"># - Partial dependence plots</span></span>
+<span id="cb44-255"><a href="#cb44-255" aria-hidden="true" tabindex="-1"></a><span class="co"># - Individual conditional expectation</span></span>
+<span id="cb44-256"><a href="#cb44-256" aria-hidden="true" tabindex="-1"></a><span class="co"># - Feature importance</span></span>
+<span id="cb44-257"><a href="#cb44-257" aria-hidden="true" tabindex="-1"></a><span class="co"># - Model explanations</span></span>
+<span id="cb44-258"><a href="#cb44-258" aria-hidden="true" tabindex="-1"></a><span class="co"># - Fairness analysis</span></span>
+<span id="cb44-259"><a href="#cb44-259" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-260"><a href="#cb44-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-261"><a href="#cb44-261" aria-hidden="true" tabindex="-1"></a><span class="fu">### Explainable AI</span></span>
+<span id="cb44-262"><a href="#cb44-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-263"><a href="#cb44-263" aria-hidden="true" tabindex="-1"></a>R provides explainable AI tools:</span>
+<span id="cb44-264"><a href="#cb44-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-267"><a href="#cb44-267" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-268"><a href="#cb44-268" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-269"><a href="#cb44-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-270"><a href="#cb44-270" aria-hidden="true" tabindex="-1"></a><span class="co"># Explainable AI capabilities</span></span>
+<span id="cb44-271"><a href="#cb44-271" aria-hidden="true" tabindex="-1"></a><span class="co"># - LIME implementation</span></span>
+<span id="cb44-272"><a href="#cb44-272" aria-hidden="true" tabindex="-1"></a><span class="co"># - SHAP values</span></span>
+<span id="cb44-273"><a href="#cb44-273" aria-hidden="true" tabindex="-1"></a><span class="co"># - Model-agnostic explanations</span></span>
+<span id="cb44-274"><a href="#cb44-274" aria-hidden="true" tabindex="-1"></a><span class="co"># - Feature interactions</span></span>
+<span id="cb44-275"><a href="#cb44-275" aria-hidden="true" tabindex="-1"></a><span class="co"># - Decision paths</span></span>
+<span id="cb44-276"><a href="#cb44-276" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-277"><a href="#cb44-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-278"><a href="#cb44-278" aria-hidden="true" tabindex="-1"></a><span class="fu">## Python's ML Limitations</span></span>
+<span id="cb44-279"><a href="#cb44-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-280"><a href="#cb44-280" aria-hidden="true" tabindex="-1"></a><span class="fu">### Engineering Focus</span></span>
+<span id="cb44-281"><a href="#cb44-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-282"><a href="#cb44-282" aria-hidden="true" tabindex="-1"></a>Python's ML is engineering-focused:</span>
+<span id="cb44-283"><a href="#cb44-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-284"><a href="#cb44-284" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb44-285"><a href="#cb44-285" aria-hidden="true" tabindex="-1"></a><span class="co"># Python ML emphasizes:</span></span>
+<span id="cb44-286"><a href="#cb44-286" aria-hidden="true" tabindex="-1"></a><span class="co"># - Scalability</span></span>
+<span id="cb44-287"><a href="#cb44-287" aria-hidden="true" tabindex="-1"></a><span class="co"># - Production deployment</span></span>
+<span id="cb44-288"><a href="#cb44-288" aria-hidden="true" tabindex="-1"></a><span class="co"># - Deep learning</span></span>
+<span id="cb44-289"><a href="#cb44-289" aria-hidden="true" tabindex="-1"></a><span class="co"># - Engineering efficiency</span></span>
+<span id="cb44-290"><a href="#cb44-290" aria-hidden="true" tabindex="-1"></a><span class="co"># - Less statistical rigor</span></span>
+<span id="cb44-291"><a href="#cb44-291" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-292"><a href="#cb44-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-293"><a href="#cb44-293" aria-hidden="true" tabindex="-1"></a><span class="fu">### Limited Statistical Depth</span></span>
+<span id="cb44-294"><a href="#cb44-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-295"><a href="#cb44-295" aria-hidden="true" tabindex="-1"></a>Python lacks statistical depth:</span>
+<span id="cb44-296"><a href="#cb44-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-297"><a href="#cb44-297" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb44-298"><a href="#cb44-298" aria-hidden="true" tabindex="-1"></a><span class="co"># Python has limited:</span></span>
+<span id="cb44-299"><a href="#cb44-299" aria-hidden="true" tabindex="-1"></a><span class="co"># - Statistical diagnostics</span></span>
+<span id="cb44-300"><a href="#cb44-300" aria-hidden="true" tabindex="-1"></a><span class="co"># - Model interpretability</span></span>
+<span id="cb44-301"><a href="#cb44-301" aria-hidden="true" tabindex="-1"></a><span class="co"># - Uncertainty quantification</span></span>
+<span id="cb44-302"><a href="#cb44-302" aria-hidden="true" tabindex="-1"></a><span class="co"># - Research reproducibility</span></span>
+<span id="cb44-303"><a href="#cb44-303" aria-hidden="true" tabindex="-1"></a><span class="co"># - Academic validation</span></span>
+<span id="cb44-304"><a href="#cb44-304" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-305"><a href="#cb44-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-306"><a href="#cb44-306" aria-hidden="true" tabindex="-1"></a><span class="fu">## Performance Comparison</span></span>
+<span id="cb44-307"><a href="#cb44-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-308"><a href="#cb44-308" aria-hidden="true" tabindex="-1"></a>| Feature | R | Python |</span>
+<span id="cb44-309"><a href="#cb44-309" aria-hidden="true" tabindex="-1"></a>|---------|---|--------|</span>
+<span id="cb44-310"><a href="#cb44-310" aria-hidden="true" tabindex="-1"></a>| Statistical Foundation | Excellent | Limited |</span>
+<span id="cb44-311"><a href="#cb44-311" aria-hidden="true" tabindex="-1"></a>| Model Diagnostics | Comprehensive | Basic |</span>
+<span id="cb44-312"><a href="#cb44-312" aria-hidden="true" tabindex="-1"></a>| Interpretability | Advanced | Limited |</span>
+<span id="cb44-313"><a href="#cb44-313" aria-hidden="true" tabindex="-1"></a>| Research Integration | Strong | Weak |</span>
+<span id="cb44-314"><a href="#cb44-314" aria-hidden="true" tabindex="-1"></a>| Uncertainty Quantification | Sophisticated | Basic |</span>
+<span id="cb44-315"><a href="#cb44-315" aria-hidden="true" tabindex="-1"></a>| Academic Validation | Peer-reviewed | Variable |</span>
+<span id="cb44-316"><a href="#cb44-316" aria-hidden="true" tabindex="-1"></a>| Deep Learning | Limited | Excellent |</span>
+<span id="cb44-317"><a href="#cb44-317" aria-hidden="true" tabindex="-1"></a>| Production Deployment | Limited | Excellent |</span>
+<span id="cb44-318"><a href="#cb44-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-319"><a href="#cb44-319" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Advantages of R for ML</span></span>
+<span id="cb44-320"><a href="#cb44-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-321"><a href="#cb44-321" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. **Statistical Rigor**</span></span>
+<span id="cb44-322"><a href="#cb44-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-325"><a href="#cb44-325" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-326"><a href="#cb44-326" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-327"><a href="#cb44-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-328"><a href="#cb44-328" aria-hidden="true" tabindex="-1"></a><span class="co"># R ensures statistical rigor in ML:</span></span>
+<span id="cb44-329"><a href="#cb44-329" aria-hidden="true" tabindex="-1"></a><span class="co"># - Proper model diagnostics</span></span>
+<span id="cb44-330"><a href="#cb44-330" aria-hidden="true" tabindex="-1"></a><span class="co"># - Uncertainty quantification</span></span>
+<span id="cb44-331"><a href="#cb44-331" aria-hidden="true" tabindex="-1"></a><span class="co"># - Statistical significance testing</span></span>
+<span id="cb44-332"><a href="#cb44-332" aria-hidden="true" tabindex="-1"></a><span class="co"># - Model validation</span></span>
+<span id="cb44-333"><a href="#cb44-333" aria-hidden="true" tabindex="-1"></a><span class="co"># - Research reproducibility</span></span>
+<span id="cb44-334"><a href="#cb44-334" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-335"><a href="#cb44-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-336"><a href="#cb44-336" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. **Interpretability Focus**</span></span>
+<span id="cb44-337"><a href="#cb44-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-340"><a href="#cb44-340" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-341"><a href="#cb44-341" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-342"><a href="#cb44-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-343"><a href="#cb44-343" aria-hidden="true" tabindex="-1"></a><span class="co"># R emphasizes interpretability:</span></span>
+<span id="cb44-344"><a href="#cb44-344" aria-hidden="true" tabindex="-1"></a><span class="co"># - Model explanations</span></span>
+<span id="cb44-345"><a href="#cb44-345" aria-hidden="true" tabindex="-1"></a><span class="co"># - Feature importance</span></span>
+<span id="cb44-346"><a href="#cb44-346" aria-hidden="true" tabindex="-1"></a><span class="co"># - Partial dependence plots</span></span>
+<span id="cb44-347"><a href="#cb44-347" aria-hidden="true" tabindex="-1"></a><span class="co"># - Statistical inference</span></span>
+<span id="cb44-348"><a href="#cb44-348" aria-hidden="true" tabindex="-1"></a><span class="co"># - Research transparency</span></span>
+<span id="cb44-349"><a href="#cb44-349" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-350"><a href="#cb44-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-351"><a href="#cb44-351" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. **Research Integration**</span></span>
+<span id="cb44-352"><a href="#cb44-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-355"><a href="#cb44-355" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-356"><a href="#cb44-356" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-357"><a href="#cb44-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-358"><a href="#cb44-358" aria-hidden="true" tabindex="-1"></a><span class="co"># R's ML packages are:</span></span>
+<span id="cb44-359"><a href="#cb44-359" aria-hidden="true" tabindex="-1"></a><span class="co"># - Peer-reviewed</span></span>
+<span id="cb44-360"><a href="#cb44-360" aria-hidden="true" tabindex="-1"></a><span class="co"># - Published in journals</span></span>
+<span id="cb44-361"><a href="#cb44-361" aria-hidden="true" tabindex="-1"></a><span class="co"># - Used in research</span></span>
+<span id="cb44-362"><a href="#cb44-362" aria-hidden="true" tabindex="-1"></a><span class="co"># - Well-documented</span></span>
+<span id="cb44-363"><a href="#cb44-363" aria-hidden="true" tabindex="-1"></a><span class="co"># - Statistically validated</span></span>
+<span id="cb44-364"><a href="#cb44-364" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-365"><a href="#cb44-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-366"><a href="#cb44-366" aria-hidden="true" tabindex="-1"></a><span class="fu">## Complementary Approaches</span></span>
+<span id="cb44-367"><a href="#cb44-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-368"><a href="#cb44-368" aria-hidden="true" tabindex="-1"></a><span class="fu">### R + Python Integration</span></span>
+<span id="cb44-369"><a href="#cb44-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-370"><a href="#cb44-370" aria-hidden="true" tabindex="-1"></a>R and Python can complement each other:</span>
+<span id="cb44-371"><a href="#cb44-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-374"><a href="#cb44-374" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-375"><a href="#cb44-375" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-376"><a href="#cb44-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-377"><a href="#cb44-377" aria-hidden="true" tabindex="-1"></a><span class="co"># R for:</span></span>
+<span id="cb44-378"><a href="#cb44-378" aria-hidden="true" tabindex="-1"></a><span class="co"># - Statistical modeling</span></span>
+<span id="cb44-379"><a href="#cb44-379" aria-hidden="true" tabindex="-1"></a><span class="co"># - Model diagnostics</span></span>
+<span id="cb44-380"><a href="#cb44-380" aria-hidden="true" tabindex="-1"></a><span class="co"># - Research validation</span></span>
+<span id="cb44-381"><a href="#cb44-381" aria-hidden="true" tabindex="-1"></a><span class="co"># - Interpretability</span></span>
+<span id="cb44-382"><a href="#cb44-382" aria-hidden="true" tabindex="-1"></a><span class="co"># - Academic publishing</span></span>
+<span id="cb44-383"><a href="#cb44-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-384"><a href="#cb44-384" aria-hidden="true" tabindex="-1"></a><span class="co"># Python for:</span></span>
+<span id="cb44-385"><a href="#cb44-385" aria-hidden="true" tabindex="-1"></a><span class="co"># - Deep learning</span></span>
+<span id="cb44-386"><a href="#cb44-386" aria-hidden="true" tabindex="-1"></a><span class="co"># - Production deployment</span></span>
+<span id="cb44-387"><a href="#cb44-387" aria-hidden="true" tabindex="-1"></a><span class="co"># - Large-scale processing</span></span>
+<span id="cb44-388"><a href="#cb44-388" aria-hidden="true" tabindex="-1"></a><span class="co"># - Engineering workflows</span></span>
+<span id="cb44-389"><a href="#cb44-389" aria-hidden="true" tabindex="-1"></a><span class="co"># - Web applications</span></span>
+<span id="cb44-390"><a href="#cb44-390" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-391"><a href="#cb44-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-392"><a href="#cb44-392" aria-hidden="true" tabindex="-1"></a><span class="fu">### Best of Both Worlds</span></span>
+<span id="cb44-393"><a href="#cb44-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-396"><a href="#cb44-396" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-397"><a href="#cb44-397" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb44-398"><a href="#cb44-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-399"><a href="#cb44-399" aria-hidden="true" tabindex="-1"></a><span class="co"># Optimal workflow:</span></span>
+<span id="cb44-400"><a href="#cb44-400" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. R for exploratory analysis and statistical modeling</span></span>
+<span id="cb44-401"><a href="#cb44-401" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Python for deep learning and production deployment</span></span>
+<span id="cb44-402"><a href="#cb44-402" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. R for model interpretation and validation</span></span>
+<span id="cb44-403"><a href="#cb44-403" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Python for scaling and deployment</span></span>
+<span id="cb44-404"><a href="#cb44-404" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-405"><a href="#cb44-405" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-406"><a href="#cb44-406" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusion</span></span>
+<span id="cb44-407"><a href="#cb44-407" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-408"><a href="#cb44-408" aria-hidden="true" tabindex="-1"></a>R's machine learning approach provides:</span>
+<span id="cb44-409"><a href="#cb44-409" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-410"><a href="#cb44-410" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Statistical rigor** and model diagnostics</span>
+<span id="cb44-411"><a href="#cb44-411" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Research-grade implementations** with peer review</span>
+<span id="cb44-412"><a href="#cb44-412" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Emphasis on interpretability** and transparency</span>
+<span id="cb44-413"><a href="#cb44-413" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Comprehensive validation** and uncertainty quantification</span>
+<span id="cb44-414"><a href="#cb44-414" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Academic integration** and reproducibility</span>
+<span id="cb44-415"><a href="#cb44-415" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Complementary strengths** to Python's engineering focus</span>
+<span id="cb44-416"><a href="#cb44-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-417"><a href="#cb44-417" aria-hidden="true" tabindex="-1"></a>While Python excels in deep learning and production deployment, R provides unique advantages for statistical machine learning, research, and interpretable AI applications.</span>
+<span id="cb44-418"><a href="#cb44-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-419"><a href="#cb44-419" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb44-420"><a href="#cb44-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-421"><a href="#cb44-421" aria-hidden="true" tabindex="-1"></a>*This concludes our series on "R Beats Python" - exploring the specific areas where R provides superior capabilities for data science and statistical analysis.* </span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
