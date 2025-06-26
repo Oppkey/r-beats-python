@@ -31,7 +31,7 @@ format:
     link-external-newwindow: true
     html-math-method: katex
     lang: en
-    favicon: favicon.svg
+    favicon: favicon.ico
 
 execute:
   echo: true
