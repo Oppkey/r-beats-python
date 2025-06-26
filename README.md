@@ -1,6 +1,10 @@
 # R Beats Python
 
-A Quarto website exploring where R excels over Python in data science and statistics.
+<https://oppkey.github.io/r-beats-python/>
+
+A Quarto website mockup to explore how content written by Midori AI can be used in content marketing.
+
+The concept is to create a site where R excels over Python in data science and statistics and mix it with content produced from webinars or events.
 
 ## Overview
 
@@ -56,12 +60,14 @@ The site features 10 comprehensive blog posts covering different areas where R e
 ### Installation
 
 1. Clone this repository:
+
    ```bash
    git clone https://github.com/your-username/r-beats-python.git
    cd r-beats-python
    ```
 
 2. Install Quarto dependencies:
+
    ```bash
    quarto install
    ```
@@ -72,6 +78,7 @@ The site features 10 comprehensive blog posts covering different areas where R e
    ```
 
 4. Preview the site:
+
    ```bash
    quarto preview
    ```
@@ -133,32 +140,7 @@ Each blog post follows a consistent structure:
 4. **Performance Comparison** - Side-by-side comparison table
 5. **Key Advantages** - Summary of R's strengths
 6. **Conclusion** - Wrap-up and next steps
-
-## Contributing
-
-We welcome contributions to improve the site:
-
-### Content Contributions
-
-- **New Blog Posts** - Add posts on additional R advantages
-- **Code Examples** - Improve or expand existing examples
-- **Comparisons** - Add new comparison tables or metrics
-- **References** - Add academic or industry references
-
-### Technical Contributions
-
-- **Styling** - Improve CSS and visual design
-- **Functionality** - Add new Quarto features
-- **Performance** - Optimize site loading and rendering
-- **Accessibility** - Improve site accessibility
-
-### Guidelines
-
-1. Follow the existing style and structure
-2. Ensure code examples are working and tested
-3. Maintain objective, evidence-based approach
-4. Include proper citations and references
-5. Test changes locally before submitting
+ changes locally before submitting
 
 ## Deployment
 
@@ -188,25 +170,6 @@ The site can be deployed to any static hosting platform:
 - AWS S3
 - Azure Static Web Apps
 - Any web server
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- **R Community** - For the excellent packages and documentation
-- **Quarto Team** - For the powerful publishing platform
-- **Contributors** - For feedback and improvements
-- **Academic Community** - For research and statistical methods
-
-## Contact
-
-For questions, suggestions, or contributions:
-
-- **GitHub Issues** - Report bugs or request features
-- **Discussions** - Join community discussions
-- **Email** - contact@r-beats-python.com
 
 ---
 
