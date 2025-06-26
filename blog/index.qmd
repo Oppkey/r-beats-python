@@ -6,6 +6,9 @@ listing:
   type: "default"
   fields: [date, title, description]
   page-size: 20
+publish:
+  provider: gh-pages
+  branch: gh-pages
 ---
 
 Welcome to the R Beats Python blog! Here you'll find articles comparing R and Python in various domains. 

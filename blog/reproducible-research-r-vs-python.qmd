@@ -1,7 +1,7 @@
 ---
 title: "Reproducible Research: R Markdown vs Jupyter"
 description: "How R's literate programming tools provide superior reproducible research capabilities compared to Python's Jupyter notebooks"
-date: 2024-01-25
+date: 2025-01-25
 categories: [reproducible-research, rmarkdown, quarto]
 ---
 

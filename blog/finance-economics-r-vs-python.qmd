@@ -1,7 +1,7 @@
 ---
 title: "Finance and Economics: R's Quantitative Tools"
 description: "How R's finance and economics packages provide superior quantitative analysis capabilities compared to Python"
-date: 2024-02-20
+date: 2025-02-20
 categories: [finance, economics, quantitative]
 ---
 

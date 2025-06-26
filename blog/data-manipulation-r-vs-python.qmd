@@ -1,7 +1,7 @@
 ---
 title: "Data Manipulation: dplyr vs pandas"
 description: "How R's dplyr provides more intuitive and powerful data manipulation compared to Python's pandas"
-date: 2024-02-05
+date: 2025-02-05
 categories: [data-manipulation, dplyr, pandas]
 ---
 

@@ -30,4 +30,5 @@ Thumbs.db
 *.log
 
 # VSCode settings
-.vscode/ 
+.vscode/
+/.quarto/
