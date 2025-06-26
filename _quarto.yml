@@ -1,0 +1,39 @@
+project:
+  title: "R Beats Python"
+  type: website
+
+site:
+  title: "R Beats Python"
+  description: "Exploring where R excels over Python in data science and statistics"
+  url: "https://r-beats-python.netlify.app"
+  author:
+    name: "Data Science Team"
+    email: "contact@r-beats-python.com"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: blog/
+        text: Blog
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-location: left
+    number-sections: true
+    code-fold: true
+    code-tools: true
+    fig-cap-location: bottom
+    link-external-newwindow: true
+    html-math-method: katex
+    lang: en
+
+execute:
+  echo: true
+  eval: true  # Set to false to avoid package dependency issues
+  warning: false
+  error: false

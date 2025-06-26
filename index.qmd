@@ -1,0 +1,96 @@
+<div class="hero">
+  <span class="hero-svg">
+    <!-- Modern SVG data visualization icon -->
+    <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="15" y="60" width="15" height="45" rx="4" fill="#4fc3f7"/>
+      <rect x="35" y="40" width="15" height="65" rx="4" fill="#66bb6a"/>
+      <rect x="55" y="20" width="15" height="85" rx="4" fill="#ffb300"/>
+      <rect x="75" y="50" width="15" height="55" rx="4" fill="#e57373"/>
+      <rect x="95" y="70" width="15" height="35" rx="4" fill="#ba68c8"/>
+      <circle cx="60" cy="60" r="40" stroke="#ffb300" stroke-width="6" stroke-dasharray="60 40 60 40"/>
+      <polyline points="20,100 40,80 60,90 80,60 100,80" fill="none" stroke="#4fc3f7" stroke-width="3"/>
+      <polyline points="20,90 40,60 60,70 80,40 100,60" fill="none" stroke="#66bb6a" stroke-width="3"/>
+    </svg>
+  </span>
+  <div class="hero-title">R Beats Python</div>
+  <div class="hero-subtitle">Where R Excels in Data Science and Statistics</div>
+</div>
+
+---
+
+## Why R Beats Python in Key Areas
+
+R was designed specifically for statistical computing and data analysis, giving it significant advantages over Python in many domains. While Python is excellent for general-purpose programming and machine learning, R shines in specialized areas that matter most to statisticians, researchers, and data analysts.
+
+### Statistical Analysis & Modeling
+
+R's core strength lies in its statistical capabilities:
+
+- **Built for Statistics**: R was created by statisticians, for statisticians
+- **Comprehensive Statistical Packages**: CRAN hosts over 18,000 packages specifically designed for statistical analysis
+- **Advanced Modeling**: Superior implementations of GLMs, mixed models, time series, and survival analysis
+- **Statistical Graphics**: ggplot2 and base R provide publication-ready statistical visualizations
+
+### Data Visualization
+
+R's visualization ecosystem is unmatched:
+
+- **ggplot2**: Grammar of graphics implementation for elegant, reproducible plots
+- **Interactive Graphics**: plotly, shiny, and other packages for dynamic visualizations
+- **Publication Quality**: Default output is publication-ready with proper typography
+- **Statistical Plots**: Built-in support for diagnostic plots, Q-Q plots, residual analysis
+
+### Reproducible Research
+
+R excels at reproducible research workflows:
+
+- **R Markdown**: Seamless integration of code, output, and narrative
+- **Quarto**: Next-generation scientific and technical publishing
+- **Literate Programming**: Code and documentation in one place
+- **Version Control**: Excellent integration with Git for collaborative research
+
+### Academic & Research Applications
+
+R dominates in academic settings:
+
+- **Peer-Reviewed Packages**: Many packages are published in statistical journals
+- **Research Community**: Strong presence in statistics, biostatistics, and social sciences
+- **Teaching Statistics**: Standard tool in statistics education worldwide
+- **Clinical Trials**: Industry standard for pharmaceutical and medical research
+
+### Data Manipulation & Wrangling
+
+Modern R packages provide powerful data manipulation:
+
+- **dplyr**: Intuitive grammar for data manipulation
+- **tidyr**: Tools for tidying data
+- **data.table**: High-performance data manipulation
+- **pipe operator**: Clean, readable data workflows
+
+### Domain-Specific Applications
+
+R excels in specialized domains:
+
+- **Bioinformatics**: Bioconductor ecosystem with 2,000+ packages
+- **Finance**: Quantitative finance and risk management packages
+- **Social Sciences**: Survey analysis, psychometrics, and social statistics
+- **Epidemiology**: Public health and epidemiological research tools
+
+## When to Choose R Over Python
+
+Choose R when you need:
+
+- Advanced statistical modeling and analysis
+- Publication-quality data visualization
+- Reproducible research workflows
+- Academic or research-focused projects
+- Domain-specific statistical applications
+- Rapid statistical prototyping
+
+## Getting Started with R
+
+Ready to explore R's capabilities? Check out our blog posts below for detailed comparisons and tutorials on specific topics where R outperforms Python.
+
+---
+
+*This site explores the specific areas where R provides superior capabilities compared to Python, helping you make informed decisions about which tool to use for your data science projects.* 

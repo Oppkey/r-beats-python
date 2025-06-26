@@ -1,0 +1,11 @@
+---
+title: "Blog"
+listing:
+  contents: .
+  sort: "date desc"
+  type: "default"
+  fields: [date, title, description]
+  page-size: 20
+---
+
+Welcome to the R Beats Python blog! Here you'll find articles comparing R and Python in various domains. 

@@ -1,0 +1,67 @@
+---
+title: "About"
+---
+
+## About This Site
+
+**R Beats Python** is dedicated to exploring and highlighting the specific areas where R programming language excels over Python in data science, statistics, and research applications.
+
+### Our Mission
+
+We believe that both R and Python are excellent tools, each with their own strengths. However, R often gets overlooked in favor of Python's general-purpose capabilities. Our goal is to:
+
+- Showcase R's superior capabilities in statistical computing
+- Provide practical comparisons between R and Python approaches
+- Help data scientists choose the right tool for their specific needs
+- Promote R's strengths in academic and research settings
+
+### Why This Matters
+
+In today's data science landscape, Python has become the default choice for many projects. While Python is excellent for machine learning, web development, and general programming, R offers distinct advantages in:
+
+- Statistical modeling and analysis
+- Data visualization and graphics
+- Reproducible research workflows
+- Academic and research applications
+- Domain-specific statistical packages
+
+### What You'll Find Here
+
+This site features:
+
+- **Detailed Comparisons**: Side-by-side analysis of R vs Python approaches
+- **Practical Examples**: Real-world code examples demonstrating R's advantages
+- **Domain-Specific Insights**: Focus on areas where R truly shines
+- **Best Practices**: Tips for leveraging R's strengths effectively
+
+### Our Approach
+
+We take a balanced, evidence-based approach:
+
+- **Objective Analysis**: We present facts and practical comparisons
+- **Real Examples**: All comparisons include working code examples
+- **Context Matters**: We acknowledge that tool choice depends on specific use cases
+- **Learning Focus**: Our goal is education, not tool advocacy
+
+### Who This Site Is For
+
+This site is designed for:
+
+- **Data Scientists** evaluating tools for statistical projects
+- **Researchers** looking for the best tools for their analysis
+- **Students** learning about statistical computing options
+- **Teams** deciding on technology stacks for data projects
+- **Anyone** interested in understanding R's unique strengths
+
+### Get Involved
+
+We welcome contributions and feedback:
+
+- **Share Your Experience**: Have examples where R outperformed Python?
+- **Suggest Topics**: What comparisons would you like to see?
+- **Contribute Code**: Help improve our examples and comparisons
+- **Join the Discussion**: Engage with the community
+
+---
+
+*R Beats Python is created by data scientists who appreciate both languages but recognize R's unique strengths in statistical computing and research applications.* 

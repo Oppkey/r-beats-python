@@ -1,0 +1,33 @@
+# Quarto build output
+_site/
+
+# R and RStudio files
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+.Rproj.user
+.Rapp.history
+.Rapp.history
+.Rhistory
+.Rdata
+.Ruserdata
+
+# Python virtual environments
+venv/
+.env/
+__pycache__/
+*.pyc
+
+# Quarto cache
+*/_cache/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# VSCode settings
+.vscode/ 

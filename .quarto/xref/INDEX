@@ -1,0 +1,41 @@
+{
+  "index.qmd": {
+    "index.html": "41dc4e31"
+  },
+  "blog/data-visualization-r-vs-python.qmd": {
+    "data-visualization-r-vs-python.html": "1dd3f22a"
+  },
+  "blog/bioinformatics-r-vs-python.qmd": {
+    "bioinformatics-r-vs-python.html": "37bad527"
+  },
+  "blog/data-manipulation-r-vs-python.qmd": {
+    "data-manipulation-r-vs-python.html": "4f474fdd"
+  },
+  "blog/finance-economics-r-vs-python.qmd": {
+    "finance-economics-r-vs-python.html": "679e89e3"
+  },
+  "blog/reproducible-research-r-vs-python.qmd": {
+    "reproducible-research-r-vs-python.html": "8402546d"
+  },
+  "blog/social-sciences-r-vs-python.qmd": {
+    "social-sciences-r-vs-python.html": "01a49eac"
+  },
+  "blog/statistical-modeling-r-vs-python.qmd": {
+    "statistical-modeling-r-vs-python.html": "2f121efc"
+  },
+  "blog/academic-research-r-vs-python.qmd": {
+    "academic-research-r-vs-python.html": "7f241a0d"
+  },
+  "blog/machine-learning-r-vs-python.qmd": {
+    "machine-learning-r-vs-python.html": "bd8ea5db"
+  },
+  "blog/time-series-analysis-r-vs-python.qmd": {
+    "time-series-analysis-r-vs-python.html": "0f3cd6b1"
+  },
+  "about.qmd": {
+    "about.html": "8af06912"
+  },
+  "blog/index.qmd": {
+    "index.html": "61fad1f7"
+  }
+}
