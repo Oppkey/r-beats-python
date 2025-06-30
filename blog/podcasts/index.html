@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="R Consortium">
-<meta name="dcterms.date" content="2025-05-12">
-<meta name="description" content="Explore the MIIPW R package for tackling missing data in longitudinal studies using advanced statistical methods.">
 
-<title>MIIPW: An R package for Generalized Estimating Equations with missing data integration – R Beats Python</title>
+<title>Podcasts – R Beats Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -104,7 +103,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-href','listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-href","listing-image","listing-title","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -139,7 +210,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://soundcloud.com/r-beats-python" target="_blank"> 
+    <a class="nav-link active" href="../../blog/podcasts/index.html" aria-current="page"> 
 <span class="menu-text">Podcasts</span></a>
   </li>  
 </ul>
@@ -150,65 +221,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tackling-missing-data-in-longitudinal-studies-with-the-miipw-r-package" id="toc-tackling-missing-data-in-longitudinal-studies-with-the-miipw-r-package" class="nav-link active" data-scroll-target="#tackling-missing-data-in-longitudinal-studies-with-the-miipw-r-package"><span class="header-section-number">1</span> Tackling Missing Data in Longitudinal Studies with the MIIPW R Package</a>
-  <ul class="collapse">
-  <li><a href="#introduction-to-longitudinal-data" id="toc-introduction-to-longitudinal-data" class="nav-link" data-scroll-target="#introduction-to-longitudinal-data"><span class="header-section-number">1.1</span> Introduction to Longitudinal Data</a></li>
-  <li><a href="#addressing-missing-data-in-longitudinal-studies" id="toc-addressing-missing-data-in-longitudinal-studies" class="nav-link" data-scroll-target="#addressing-missing-data-in-longitudinal-studies"><span class="header-section-number">1.2</span> Addressing Missing Data in Longitudinal Studies</a></li>
-  <li><a href="#the-miipw-r-package" id="toc-the-miipw-r-package" class="nav-link" data-scroll-target="#the-miipw-r-package"><span class="header-section-number">1.3</span> The MIIPW R Package</a>
-  <ul class="collapse">
-  <li><a href="#key-features-of-miipw" id="toc-key-features-of-miipw" class="nav-link" data-scroll-target="#key-features-of-miipw"><span class="header-section-number">1.3.1</span> Key Features of MIIPW</a></li>
-  </ul></li>
-  <li><a href="#practical-application-of-miipw" id="toc-practical-application-of-miipw" class="nav-link" data-scroll-target="#practical-application-of-miipw"><span class="header-section-number">1.4</span> Practical Application of MIIPW</a></li>
-  <li><a href="#conclusion-and-future-directions" id="toc-conclusion-and-future-directions" class="nav-link" data-scroll-target="#conclusion-and-future-directions"><span class="header-section-number">1.5</span> Conclusion and Future Directions</a></li>
-  </ul></li>
+  <li><a href="#podcasts" id="toc-podcasts" class="nav-link active" data-scroll-target="#podcasts"><span class="header-section-number">1</span> Podcasts</a></li>
   </ul>
 </nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">MIIPW: An R package for Generalized Estimating Equations with missing data integration</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-  <div class="quarto-categories">
-    <div class="quarto-category">R/Medicine 2025</div>
-    <div class="quarto-category">Clinical Research</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    Explore the MIIPW R package for tackling missing data in longitudinal studies using advanced statistical methods.
-  </div>
+<div class="quarto-title-block"><div><h1 class="title">Podcasts</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
+
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>R Consortium </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 12, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -218,53 +255,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/4OslUevy6AQ" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<section id="tackling-missing-data-in-longitudinal-studies-with-the-miipw-r-package" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Tackling Missing Data in Longitudinal Studies with the MIIPW R Package</h1>
-<section id="introduction-to-longitudinal-data" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="introduction-to-longitudinal-data"><span class="header-section-number">1.1</span> Introduction to Longitudinal Data</h2>
-<p>Longitudinal data, a cornerstone of numerous scientific fields, captures repeated measurements from the same subjects over time. This approach allows researchers to delve into changes within subjects, uncover trends, and identify temporal patterns. Such data is pivotal in biomedical, social, and behavioral sciences, enabling insights into patient biomarker levels, treatment responses, and disease progression. However, longitudinal data often presents challenges related to correlated measurements, rendering standard statistical methods insufficient.</p>
-</section>
-<section id="addressing-missing-data-in-longitudinal-studies" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="addressing-missing-data-in-longitudinal-studies"><span class="header-section-number">1.2</span> Addressing Missing Data in Longitudinal Studies</h2>
-<p>Missing data is a pervasive issue in longitudinal studies, often resulting from dropouts, loss to follow-up, or nonresponse. Traditional methods in R’s generalized estimating equations (GEE) packages tend to ignore or exclude these missing cases, potentially biasing results and diminishing statistical power. This is where the MIIPW package steps in, offering a robust solution for handling missing data through a combination of multiple imputation and inverse probability weighting techniques.</p>
-</section>
-<section id="the-miipw-r-package" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="the-miipw-r-package"><span class="header-section-number">1.3</span> The MIIPW R Package</h2>
-<p>The MIIPW (Multiple Imputation and Inverse Probability Weighting) package is specifically designed to address missing data in marginal models used in longitudinal studies. Developed by Bhrigu Rajbongshi and his team at the Indian Institute of Technology (Indian School of Mines) Dhanbad, this package integrates advanced statistical techniques to provide accurate parameter estimation in the presence of incomplete data.</p>
-<section id="key-features-of-miipw" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="key-features-of-miipw"><span class="header-section-number">1.3.1</span> Key Features of MIIPW</h3>
-<ul>
-<li><p><strong>Multiple Imputation and Inverse Probability Weighting</strong>: MIIPW combines these two techniques to correct biases and provide reliable estimates. The package supports five different methods for parameter estimation: mean score, SIPW, AIPW, miSIPW, and miAIPW.</p></li>
-<li><p><strong>Covariance Structures</strong>: The package accommodates four covariance structures: AR-1, Exchangeable, Unstructured, and Independent, allowing users to model data appropriately.</p></li>
-<li><p><strong>Model Selection using QIC</strong>: For model selection, MIIPW employs the Quasi-Information Criterion (QIC), helping researchers identify the best-fitting model for their data.</p></li>
-<li><p><strong>Comprehensive Documentation and CRAN Availability</strong>: MIIPW is available on CRAN, complete with detailed documentation to assist users in effectively implementing its features.</p></li>
-</ul>
-</section>
-</section>
-<section id="practical-application-of-miipw" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="practical-application-of-miipw"><span class="header-section-number">1.4</span> Practical Application of MIIPW</h2>
-<p>Using the MIIPW package involves several steps, from data preparation to model fitting and comparison. Here’s a brief overview of how to implement MIIPW in a real-world scenario:</p>
-<ol type="1">
-<li><p><strong>Data Preparation</strong>: Load the MIIPW package and your dataset. Define the longitudinal model formula and predictor matrix using the <code>make.predictorMatrix</code> function from the <code>mice</code> package.</p></li>
-<li><p><strong>Model Fitting</strong>: Use functions like <code>mean_score</code>, <code>SIPW</code>, and <code>AIPW</code> to fit your model. Specify the number of imputations and the desired covariance structure.</p></li>
-<li><p><strong>Model Comparison</strong>: Utilize the <code>QICw</code> function to compare models based on different covariance structures, selecting the one with the lowest QIC value as the best fit.</p></li>
-</ol>
-<p>The package’s integration with the <code>mice</code> package ensures flexibility and ease of use, making MIIPW a valuable tool for researchers dealing with complex longitudinal data.</p>
-</section>
-<section id="conclusion-and-future-directions" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="conclusion-and-future-directions"><span class="header-section-number">1.5</span> Conclusion and Future Directions</h2>
-<p>The MIIPW package is a significant advancement in handling missing data within longitudinal studies. While it currently focuses on generalized estimating equations, there is potential for extending these methods to mixed-effect models, which would further enhance its applicability. The ongoing development aims to address computational challenges associated with random effects in mixed models, promising even greater utility for the research community.</p>
-<p>The MIIPW package is a testament to the innovative work being done in the R community, providing researchers with robust tools to tackle the intricacies of longitudinal data analysis. By integrating state-of-the-art statistical techniques, MIIPW empowers researchers to derive meaningful insights from their data, ultimately advancing knowledge across various scientific domains.</p>
-<p>For more information and to download the MIIPW package, visit <a href="https://CRAN.R-project.org/package=MIIPW">CRAN</a>.</p>
+<section id="podcasts" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Podcasts</h1>
+<p>Welcome to the R Beats Python podcast section! Explore our episodes below:</p>
+
 
 
 <!-- -->
-
+<div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label" data-anchor-id="podcasts">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Podcasts"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  type: grid</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  contents:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    - href: https://soundcloud.com/r-beats-python/rs-visualization-superiority?si=818af73cf5f6441b91cf386c6b161bb3&amp;utm_source=clipboard&amp;utm_medium=text&amp;utm_campaign=social_sharing</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">      image: r-data-visualization.png</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">      title: "Why R is Better for Data Visualization"</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">      description: |</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">        Dive into the world of data visualization! This podcast explores why R's ggplot2 offers superior capabilities for statistical graphics, standing out with its elegant Grammar of Graphics. Discover how R provides consistent syntax, built-in statistical plots, and publication-ready output by default, contrasting with Python's more complex matplotlib and seaborn approaches for similar results. Tune in to understand why R remains the gold standard for statistical visualization and research publications.</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> custom</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">    main-content-class: blog-podcasts-grid</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu"># Podcasts</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Welcome to the R Beats Python podcast section! Explore our episodes below: </span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </section>
-</section>
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -408,7 +429,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/Oppkey\.github\.io\/r-beats-python\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -740,66 +761,41 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">--- </span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "MIIPW: An R package for Generalized Estimating Equations with missing data integration" </span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">unpublished:</span><span class="co"> true </span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">url:</span><span class="co"> "https://r-consortium.org/posts/miipw-an-r-package-for-generalized-estimating-equations-with-missing-data-integration/"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Explore the MIIPW R package for tackling missing data in longitudinal studies using advanced statistical methods." </span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [R/Medicine 2025, Clinical Research]</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "R Consortium" </span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "thumbnail-MIIPW-bhrigu.png" </span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="an">image-alt:</span><span class="co"> "MIIPW: An R package for Generalized Estimating Equations with missing data integration - Bhrigu Rajbongshi" </span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "05/12/2025" </span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>{{&lt; video https://www.youtube.com/embed/4OslUevy6AQ &gt;}}</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu"># Tackling Missing Data in Longitudinal Studies with the MIIPW R Package</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction to Longitudinal Data</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Longitudinal data, a cornerstone of numerous scientific fields, captures repeated measurements from the same subjects over time. This approach allows researchers to delve into changes within subjects, uncover trends, and identify temporal patterns. Such data is pivotal in biomedical, social, and behavioral sciences, enabling insights into patient biomarker levels, treatment responses, and disease progression. However, longitudinal data often presents challenges related to correlated measurements, rendering standard statistical methods insufficient.</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Addressing Missing Data in Longitudinal Studies</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Missing data is a pervasive issue in longitudinal studies, often resulting from dropouts, loss to follow-up, or nonresponse. Traditional methods in R's generalized estimating equations (GEE) packages tend to ignore or exclude these missing cases, potentially biasing results and diminishing statistical power. This is where the MIIPW package steps in, offering a robust solution for handling missing data through a combination of multiple imputation and inverse probability weighting techniques.</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## The MIIPW R Package</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>The MIIPW (Multiple Imputation and Inverse Probability Weighting) package is specifically designed to address missing data in marginal models used in longitudinal studies. Developed by Bhrigu Rajbongshi and his team at the Indian Institute of Technology (Indian School of Mines) Dhanbad, this package integrates advanced statistical techniques to provide accurate parameter estimation in the presence of incomplete data.</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">### Key Features of MIIPW</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Multiple Imputation and Inverse Probability Weighting**: MIIPW combines these two techniques to correct biases and provide reliable estimates. The package supports five different methods for parameter estimation: mean score, SIPW, AIPW, miSIPW, and miAIPW.</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Covariance Structures**: The package accommodates four covariance structures: AR-1, Exchangeable, Unstructured, and Independent, allowing users to model data appropriately.</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Model Selection using QIC**: For model selection, MIIPW employs the Quasi-Information Criterion (QIC), helping researchers identify the best-fitting model for their data.</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Comprehensive Documentation and CRAN Availability**: MIIPW is available on CRAN, complete with detailed documentation to assist users in effectively implementing its features.</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practical Application of MIIPW</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>Using the MIIPW package involves several steps, from data preparation to model fitting and comparison. Here's a brief overview of how to implement MIIPW in a real-world scenario:</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Data Preparation**: Load the MIIPW package and your dataset. Define the longitudinal model formula and predictor matrix using the <span class="in">`make.predictorMatrix`</span> function from the <span class="in">`mice`</span> package.</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Model Fitting**: Use functions like <span class="in">`mean_score`</span>, <span class="in">`SIPW`</span>, and <span class="in">`AIPW`</span> to fit your model. Specify the number of imputations and the desired covariance structure.</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Model Comparison**: Utilize the <span class="in">`QICw`</span> function to compare models based on different covariance structures, selecting the one with the lowest QIC value as the best fit.</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>The package's integration with the <span class="in">`mice`</span> package ensures flexibility and ease of use, making MIIPW a valuable tool for researchers dealing with complex longitudinal data.</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusion and Future Directions</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>The MIIPW package is a significant advancement in handling missing data within longitudinal studies. While it currently focuses on generalized estimating equations, there is potential for extending these methods to mixed-effect models, which would further enhance its applicability. The ongoing development aims to address computational challenges associated with random effects in mixed models, promising even greater utility for the research community.</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>The MIIPW package is a testament to the innovative work being done in the R community, providing researchers with robust tools to tackle the intricacies of longitudinal data analysis. By integrating state-of-the-art statistical techniques, MIIPW empowers researchers to derive meaningful insights from their data, ultimately advancing knowledge across various scientific domains.</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>For more information and to download the MIIPW package, visit <span class="co">[</span><span class="ot">CRAN</span><span class="co">](https://CRAN.R-project.org/package=MIIPW)</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
-</div></div></div></div></div>
-</div> <!-- /content -->
+</script>
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0">
+<a href="" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="r-data-visualization.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Why R is Better for Data Visualization
+</h5>
+<div class="card-text listing-description">
+Dive into the world of data visualization! This podcast explores why R’s ggplot2 offers superior capabilities for statistical graphics, standing out with its elegant Grammar…
+</div>
+<table class="card-other-values">
+<tbody><tr>
+<td>
+href
+</td>
+<td class="href">
+https://soundcloud.com/r-beats-python/rs-visualization-superiority?si=818af73cf5f6441b91cf386c6b161bb3&amp;utm_source=clipboard&amp;utm_medium=text&amp;utm_campaign=social_sharing
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></div> <!-- /content -->
 
 
 

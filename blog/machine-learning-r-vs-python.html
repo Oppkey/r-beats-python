@@ -137,6 +137,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../blog/"> 
 <span class="menu-text">Blog</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://soundcloud.com/r-beats-python" target="_blank"> 
+<span class="menu-text">Podcasts</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -445,16 +449,16 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>       %IncMSE IncNodePurity
-cyl  11.878873     186.46908
-disp 13.359825     252.99104
-hp   12.154208     202.07657
-drat  5.078674      55.30907
-wt   12.824792     234.53007
-qsec  2.022055      33.37127
-vs    4.343117      33.48525
-am    2.063919      10.79772
-gear  2.482145      20.31725
-carb  5.693072      27.72464</code></pre>
+cyl  12.283370     168.04123
+disp 13.012950     253.14488
+hp   12.724156     185.80571
+drat  5.783625      55.55582
+wt   13.691959     249.72476
+qsec  2.666842      37.62357
+vs    3.707036      34.14196
+am    3.858630      15.34979
+gear  3.438790      16.30908
+carb  5.787084      30.39639</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -510,16 +514,16 @@ carb  5.693072      27.72464</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      var     rel.inf
-hp     hp 37.04951282
-wt     wt 29.80860859
-disp disp 16.41651067
-cyl   cyl 10.50794084
-drat drat  3.30015030
-qsec qsec  2.49705116
-gear gear  0.25728411
-carb carb  0.09658471
-vs     vs  0.04329877
-am     am  0.02305803</code></pre>
+wt     wt 30.01917573
+hp     hp 23.02824905
+cyl   cyl 20.65261358
+disp disp 19.13884534
+drat drat  3.25365602
+qsec qsec  2.62682366
+carb carb  0.80145034
+gear gear  0.44606566
+am     am  0.02180460
+vs     vs  0.01131602</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -657,8 +661,8 @@ W = 0.93455, p-value = 0.05252</code></pre>
 <pre><code>
 SAMPLING FOR MODEL 'continuous' NOW (CHAIN 1).
 Chain 1: 
-Chain 1: Gradient evaluation took 0.001418 seconds
-Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 14.18 seconds.
+Chain 1: Gradient evaluation took 0.00174 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 17.4 seconds.
 Chain 1: Adjust your expectations accordingly!
 Chain 1: 
 Chain 1: 
@@ -676,14 +680,14 @@ Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 1: 
 Chain 1:  Elapsed Time: 0.033 seconds (Warm-up)
-Chain 1:                0.03 seconds (Sampling)
-Chain 1:                0.063 seconds (Total)
+Chain 1:                0.033 seconds (Sampling)
+Chain 1:                0.066 seconds (Total)
 Chain 1: 
 
 SAMPLING FOR MODEL 'continuous' NOW (CHAIN 2).
 Chain 2: 
-Chain 2: Gradient evaluation took 4e-06 seconds
-Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+Chain 2: Gradient evaluation took 5e-06 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
 Chain 2: Adjust your expectations accordingly!
 Chain 2: 
 Chain 2: 
@@ -700,15 +704,15 @@ Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 2: 
-Chain 2:  Elapsed Time: 0.033 seconds (Warm-up)
-Chain 2:                0.033 seconds (Sampling)
-Chain 2:                0.066 seconds (Total)
+Chain 2:  Elapsed Time: 0.032 seconds (Warm-up)
+Chain 2:                0.029 seconds (Sampling)
+Chain 2:                0.061 seconds (Total)
 Chain 2: 
 
 SAMPLING FOR MODEL 'continuous' NOW (CHAIN 3).
 Chain 3: 
-Chain 3: Gradient evaluation took 4e-06 seconds
-Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+Chain 3: Gradient evaluation took 3e-06 seconds
+Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
 Chain 3: Adjust your expectations accordingly!
 Chain 3: 
 Chain 3: 
@@ -725,9 +729,9 @@ Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 3: 
-Chain 3:  Elapsed Time: 0.032 seconds (Warm-up)
+Chain 3:  Elapsed Time: 0.031 seconds (Warm-up)
 Chain 3:                0.032 seconds (Sampling)
-Chain 3:                0.064 seconds (Total)
+Chain 3:                0.063 seconds (Total)
 Chain 3: 
 
 SAMPLING FOR MODEL 'continuous' NOW (CHAIN 4).
@@ -750,9 +754,9 @@ Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 4: 
-Chain 4:  Elapsed Time: 0.033 seconds (Warm-up)
-Chain 4:                0.034 seconds (Sampling)
-Chain 4:                0.067 seconds (Total)
+Chain 4:  Elapsed Time: 0.035 seconds (Warm-up)
+Chain 4:                0.036 seconds (Sampling)
+Chain 4:                0.071 seconds (Total)
 Chain 4: </code></pre>
 </div>
 <details class="code-fold">
@@ -762,10 +766,10 @@ Chain 4: </code></pre>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>                   5%        95%
-(Intercept) 36.686429 42.6756084
-wt          -4.466409 -1.8465603
-cyl         -2.240099 -0.8082822
-sigma        2.118570  3.3467524</code></pre>
+(Intercept) 36.862081 42.5781695
+wt          -4.498006 -1.8620515
+cyl         -2.238490 -0.8082478
+sigma        2.138090  3.2900317</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>

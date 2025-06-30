@@ -447,4 +447,71 @@ h2::before, h3::before {
 
 .quarto-listing .quarto-post hr {
   border-color: #444 !important;
-} 
+}
+
+/* --- Podcast Card Custom Styles --- */
+.blog-podcasts-grid .quarto-listing-container .card,
+.blog-podcasts-grid .quarto-listing-container .listing-block {
+  max-width: 480px;
+  min-width: 340px;
+  width: 100%;
+  margin: 2rem auto;
+  background: #181818 !important;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+.blog-podcasts-grid .quarto-listing-container img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  background: #232323;
+}
+
+.blog-podcasts-grid .quarto-listing-container .listing-title,
+.blog-podcasts-grid .quarto-listing-container .card-title {
+  color: #fff !important;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.blog-podcasts-grid .quarto-listing-container .listing-description,
+.blog-podcasts-grid .quarto-listing-container .card-text {
+  color: #f5f5f5 !important;
+  font-size: 1.08rem;
+}
+
+/* Hide the Quarto listing header in the podcast grid */
+.blog-podcasts-grid .quarto-listing-header {
+  display: none !important;
+}
+
+/* Force podcast card text to be fully white and visible */
+.blog-podcasts-grid .quarto-listing-container .listing-title,
+.blog-podcasts-grid .quarto-listing-container .card-title,
+.blog-podcasts-grid .quarto-listing-container .listing-description,
+.blog-podcasts-grid .quarto-listing-container .card-text {
+  color: #fff !important;
+  text-shadow: 0 2px 8px #000a;
+}
+
+/* Force podcast image to be a perfect 1:1 square */
+.blog-podcasts-grid .quarto-listing-container img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  height: auto;
+  max-height: 340px;
+  min-height: 180px;
+  background: #232323;
+  display: block;
+}
+
+/* Optional: Add a dark overlay under text for contrast if text overlays image (uncomment if needed) */
+/*
+.blog-podcasts-grid .quarto-listing-container .card-body {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+  border-radius: 0 0 18px 18px;
+}
+*/ 
