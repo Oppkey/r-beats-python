@@ -8,7 +8,7 @@ R Beats Python works with a community of people to validate, improve, create and
 
 ### Here's what people had to say.
 
-![Simisani Ndaba, University of Botswana, co-founder and co-organizer of the R-Ladies Gaborone group](community-images/simisani_ndaba.jpeg)
+![Simisani Ndaba, University of Botswana, co-founder and co-organizer of the R-Ladies Gaborone group](community-images/simisani_ndaba.png)
 
 **Simisani Ndaba**  
 University of Botswana, co-founder and co-organizer of the R-Ladies Gaborone group
@@ -21,7 +21,32 @@ University of Botswana, co-founder and co-organizer of the R-Ladies Gaborone gro
 
 **Her opinion on the podcast:**
 
-> The hosts have a solid grasp of R, not just in terms of its technical capabilities, but also more importantly, how and when it should be used in academia, providing great examples of situations in which R is and will remain necessary to many scholars. The discussion is at a sweet spot along the technical-to-accessible spectrum; it is technical enough to convey the message that R is good for specific things but does not imply that Python is uninviting. In summary, it is a well-produced and well-paced podcast that makes the case for R’s continued place in the statistics academy in an interesting way.
+> The hosts have a solid grasp of R, not just in terms of its technical capabilities, but also more importantly, how and when it should be used in academia, providing great examples of situations in which R is and will remain necessary to many scholars. The discussion is at a sweet spot along the technical-to-accessible spectrum; it is technical enough to convey the message that R is good for specific things but does not imply that Python is uninviting. In summary, it is a well-produced and well-paced podcast that makes the case for R's continued place in the statistics academy in an interesting way.
+
+---
+
+![Ridwan Suleiman Adejumo, College of Nursing Science, Federal Teaching Hospital, Gombe, Data Scientist and Biostatistician](community-images/ridwan_adejumo.png)
+
+**Ridwan Suleiman Adejumo**  
+College of Nursing Science, Federal Teaching Hospital, Gombe  
+Data Scientist and Biostatistician
+
+> This is great, as the number of individuals trying to learn R is declining, and most people think R is meant for those in academia or Pharma. I think instead of showing R strengths, places where Python excel like llm development, prompt engineering, and AI agent development should be emphasized in R. Most individuals are not familiar that R can also do a lot of these things.
+>
+> Web development should not also be left behind, like developing APIs and backend applications with R.
+
+---
+
+**His recommendations to improve content:**
+
+> Statistical Modeling: Why R Outperforms Python
+> The article lacks proper explanation of what's happening in the code, and there is not test to actually measure the strengths and weakness of Python and R.
+
+---
+
+**His opinion on the podcast:**
+
+> I like the podcast, and it's clear and interactive. The presenters explained a lot of the strengths of R.
 
 *More community testimonials and feedback will be added here as we grow.*
 
