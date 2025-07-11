@@ -1,0 +1,30 @@
+---
+title: "Community"
+---
+
+## Our Community
+
+R Beats Python works with a community of people to validate, improve, create and set the direction for content. People are a key part of working with different types of technology, including AI. R Beats Python is more than a site to debate about the merits of R versus Python, it is an experiment on how people can augment their communication with AI and get the help of other people to validate their ideas. To be clear and open, we are using AI to improve content and expand human ideas. Our philosophy is people-first, but augment people with AI whenever possible.
+
+### Here's what people had to say.
+
+![Simisani Ndaba, University of Botswana, co-founder and co-organizer of the R-Ladies Gaborone group](community-images/simisani_ndaba.jpeg)
+
+**Simisani Ndaba**  
+University of Botswana, co-founder and co-organizer of the R-Ladies Gaborone group
+
+> Overall the R Beats Python site has a clear and thoughtful mission which is to “provide a reasoned and evidence-based comparison of R vs. python”. It argues, and makes a compelling case, for the future of R in statistical computing and research in the industries and academia with some examples and insights into specific areas. In general, the site seems well placed to serve as a resource for data professionals looking for more sophisticated options for picking tools.
+>
+> I think the article is a technically capable and well written discussion of statistical modeling in R versus Python. It makes a case for R’s primacy in inferential statistics and somewhat acknowledges Python’s advancements. The Python-side would be more complete with some executable code snippets as well as a more thorough discussion of performance and specialized modeling scenarios, which would appeal to technically-oriented data professionals.
+
+---
+
+**Her opinion on the podcast:**
+
+> The hosts have a solid grasp of R, not just in terms of its technical capabilities, but also more importantly, how and when it should be used in academia, providing great examples of situations in which R is and will remain necessary to many scholars. The discussion is at a sweet spot along the technical-to-accessible spectrum; it is technical enough to convey the message that R is good for specific things but does not imply that Python is uninviting. In summary, it is a well-produced and well-paced podcast that makes the case for R’s continued place in the statistics academy in an interesting way.
+
+*More community testimonials and feedback will be added here as we grow.*
+
+---
+
+*Join our community and help shape the future of R Beats Python.* 

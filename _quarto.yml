@@ -12,6 +12,8 @@ website:
         text: Home
       - href: about.qmd
         text: About
+      - href: community.qmd
+        text: Community
       - href: blog/
         text: Blog
       - href: https://soundcloud.com/r-beats-python
