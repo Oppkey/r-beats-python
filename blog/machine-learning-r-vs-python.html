@@ -134,6 +134,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../community.html"> 
+<span class="menu-text">Community</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../blog/"> 
 <span class="menu-text">Blog</span></a>
   </li>  
@@ -449,16 +453,16 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>       %IncMSE IncNodePurity
-cyl  12.283370     168.04123
-disp 13.012950     253.14488
-hp   12.724156     185.80571
-drat  5.783625      55.55582
-wt   13.691959     249.72476
-qsec  2.666842      37.62357
-vs    3.707036      34.14196
-am    3.858630      15.34979
-gear  3.438790      16.30908
-carb  5.787084      30.39639</code></pre>
+cyl  12.134487     170.33201
+disp 13.052545     250.86295
+hp   13.021719     197.30288
+drat  5.245454      61.08100
+wt   14.012262     255.72348
+qsec  3.774548      35.37813
+vs    3.850112      28.46070
+am    3.350220      12.63276
+gear  3.137300      15.73011
+carb  5.671200      24.41823</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -514,16 +518,16 @@ carb  5.787084      30.39639</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      var     rel.inf
-wt     wt 30.01917573
-hp     hp 23.02824905
-cyl   cyl 20.65261358
-disp disp 19.13884534
-drat drat  3.25365602
-qsec qsec  2.62682366
-carb carb  0.80145034
-gear gear  0.44606566
-am     am  0.02180460
-vs     vs  0.01131602</code></pre>
+disp disp 39.99942971
+wt     wt 19.79558782
+hp     hp 18.27428815
+cyl   cyl 14.76386803
+qsec qsec  2.98962306
+drat drat  2.59317982
+carb carb  1.23475372
+gear gear  0.26204316
+vs     vs  0.08722652
+am     am  0.00000000</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -661,8 +665,8 @@ W = 0.93455, p-value = 0.05252</code></pre>
 <pre><code>
 SAMPLING FOR MODEL 'continuous' NOW (CHAIN 1).
 Chain 1: 
-Chain 1: Gradient evaluation took 0.00174 seconds
-Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 17.4 seconds.
+Chain 1: Gradient evaluation took 0.000214 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 2.14 seconds.
 Chain 1: Adjust your expectations accordingly!
 Chain 1: 
 Chain 1: 
@@ -679,15 +683,15 @@ Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 1: 
-Chain 1:  Elapsed Time: 0.033 seconds (Warm-up)
-Chain 1:                0.033 seconds (Sampling)
-Chain 1:                0.066 seconds (Total)
+Chain 1:  Elapsed Time: 0.04 seconds (Warm-up)
+Chain 1:                0.03 seconds (Sampling)
+Chain 1:                0.07 seconds (Total)
 Chain 1: 
 
 SAMPLING FOR MODEL 'continuous' NOW (CHAIN 2).
 Chain 2: 
-Chain 2: Gradient evaluation took 5e-06 seconds
-Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
+Chain 2: Gradient evaluation took 4e-06 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
 Chain 2: Adjust your expectations accordingly!
 Chain 2: 
 Chain 2: 
@@ -705,8 +709,8 @@ Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 2: 
 Chain 2:  Elapsed Time: 0.032 seconds (Warm-up)
-Chain 2:                0.029 seconds (Sampling)
-Chain 2:                0.061 seconds (Total)
+Chain 2:                0.03 seconds (Sampling)
+Chain 2:                0.062 seconds (Total)
 Chain 2: 
 
 SAMPLING FOR MODEL 'continuous' NOW (CHAIN 3).
@@ -729,9 +733,9 @@ Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 3: 
-Chain 3:  Elapsed Time: 0.031 seconds (Warm-up)
-Chain 3:                0.032 seconds (Sampling)
-Chain 3:                0.063 seconds (Total)
+Chain 3:  Elapsed Time: 0.029 seconds (Warm-up)
+Chain 3:                0.035 seconds (Sampling)
+Chain 3:                0.064 seconds (Total)
 Chain 3: 
 
 SAMPLING FOR MODEL 'continuous' NOW (CHAIN 4).
@@ -755,8 +759,8 @@ Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 4: 
 Chain 4:  Elapsed Time: 0.035 seconds (Warm-up)
-Chain 4:                0.036 seconds (Sampling)
-Chain 4:                0.071 seconds (Total)
+Chain 4:                0.031 seconds (Sampling)
+Chain 4:                0.066 seconds (Total)
 Chain 4: </code></pre>
 </div>
 <details class="code-fold">
@@ -766,10 +770,10 @@ Chain 4: </code></pre>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>                   5%        95%
-(Intercept) 36.862081 42.5781695
-wt          -4.498006 -1.8620515
-cyl         -2.238490 -0.8082478
-sigma        2.138090  3.2900317</code></pre>
+(Intercept) 36.634059 42.7738202
+wt          -4.467680 -1.8271259
+cyl         -2.264268 -0.8025825
+sigma        2.138169  3.3432458</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
