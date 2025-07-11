@@ -355,10 +355,10 @@ h2::before, h3::before {
 
 /* Hero section styles */
 .hero {
-  background: #232323;
+  background: #fff;
   padding: 48px 0 32px 0;
   text-align: center;
-  border-bottom: 2px solid #444;
+  border-bottom: 2px solid #e9ecef;
 }
 .hero-svg {
   width: 120px;
@@ -368,13 +368,13 @@ h2::before, h3::before {
 }
 .hero-title {
   font-size: 2.8rem;
-  color: #fff;
+  color: #2C3E50;
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
 .hero-subtitle {
   font-size: 1.3rem;
-  color: #bdbdbd;
+  color: #7F8C8D;
   margin-bottom: 0;
   font-weight: 400;
 }
