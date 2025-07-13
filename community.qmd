@@ -1,21 +1,27 @@
 ---
 title: "Community"
+number-sections: false
 ---
 
 ## Our Community
 
-R Beats Python works with a community of people to validate, improve, create and set the direction for content. People are a key part of working with different types of technology, including AI. R Beats Python is more than a site to debate about the merits of R versus Python, it is an experiment on how people can augment their communication with AI and get the help of other people to validate their ideas. To be clear and open, we are using AI to improve content and expand human ideas. Our philosophy is people-first, but augment people with AI whenever possible.
+This site uses AI. But it is connected with the R Community and actively asks for comments, feedback, and contributions. The site is an experiment. We are leveraging AI to scale usable information and education around R. But by fully including the community, this information has confidence and authority that only comes from true human expertise.
+
+AI is generating content at an unprecedented scale, but there's a major problem: it's often wrong. For technical content, 'wrong' isn't just embarrassing, it's negative value. A waste of time. In this experiment, we are solving this major issue by treating errors in AI content like bugs in software. We've essentially built a 'bug bounty' platform for content, connecting AI-generated articles to the global R community of vetted developers who get paid to find and fix inaccuracies.
+
+The scale of AI with the trust of human verification, with the goal of creating scalable quality assurance in the AI era.
+
 
 ### Here's what people had to say.
 
-![Simisani Ndaba, University of Botswana, co-founder and co-organizer of the R-Ladies Gaborone group](community-images/simisani_ndaba.png)
+![](community-images/simisani_ndaba2.png){width=40%}
 
 **Simisani Ndaba**  
 University of Botswana, co-founder and co-organizer of the R-Ladies Gaborone group
 
 > Overall the R Beats Python site has a clear and thoughtful mission which is to “provide a reasoned and evidence-based comparison of R vs. python”. It argues, and makes a compelling case, for the future of R in statistical computing and research in the industries and academia with some examples and insights into specific areas. In general, the site seems well placed to serve as a resource for data professionals looking for more sophisticated options for picking tools.
 >
-> I think the article is a technically capable and well written discussion of statistical modeling in R versus Python. It makes a case for R’s primacy in inferential statistics and somewhat acknowledges Python’s advancements. The Python-side would be more complete with some executable code snippets as well as a more thorough discussion of performance and specialized modeling scenarios, which would appeal to technically-oriented data professionals.
+> I think the article ([Statistical Modeling: Why R Outperforms Python](https://oppkey.github.io/r-beats-python/blog/statistical-modeling-r-vs-python.html)) is a technically capable and well written discussion of statistical modeling in R versus Python. It makes a case for R’s primacy in inferential statistics and somewhat acknowledges Python’s advancements. The Python-side would be more complete with some executable code snippets as well as a more thorough discussion of performance and specialized modeling scenarios, which would appeal to technically-oriented data professionals.
 
 ---
 
@@ -25,11 +31,10 @@ University of Botswana, co-founder and co-organizer of the R-Ladies Gaborone gro
 
 ---
 
-![Ridwan Suleiman Adejumo, College of Nursing Science, Federal Teaching Hospital, Gombe, Data Scientist and Biostatistician](community-images/ridwan_adejumo.png)
+![](community-images/ridwan_adejumo.png)
 
 **Ridwan Suleiman Adejumo**  
-College of Nursing Science, Federal Teaching Hospital, Gombe  
-Data Scientist and Biostatistician
+College of Nursing Science, Federal Teaching Hospital, Gombe, Nigeria - Data Scientist and Biostatistician
 
 > This is great, as the number of individuals trying to learn R is declining, and most people think R is meant for those in academia or Pharma. I think instead of showing R strengths, places where Python excel like llm development, prompt engineering, and AI agent development should be emphasized in R. Most individuals are not familiar that R can also do a lot of these things.
 >
@@ -39,8 +44,7 @@ Data Scientist and Biostatistician
 
 **His recommendations to improve content:**
 
-> Statistical Modeling: Why R Outperforms Python
-> The article lacks proper explanation of what's happening in the code, and there is not test to actually measure the strengths and weakness of Python and R.
+> The article ([Statistical Modeling: Why R Outperforms Python](https://oppkey.github.io/r-beats-python/blog/statistical-modeling-r-vs-python.html)) lacks proper explanation of what's happening in the code, and there is not test to actually measure the strengths and weakness of Python and R.
 
 ---
 
@@ -52,4 +56,4 @@ Data Scientist and Biostatistician
 
 ---
 
-*Join our community and help shape the future of R Beats Python.* 
+*Join our community and help shape the future of R Beats Python. If you are interested, please [fill out this form](https://docs.google.com/forms/d/195cDbf52GbMJmH1bbM5iiwb0RJFfEBKFu-Nb2h6LYK8/edit) to provide your opinion.* 
