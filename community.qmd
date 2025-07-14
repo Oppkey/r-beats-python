@@ -5,14 +5,14 @@ number-sections: false
 
 ## Our Community
 
-This site uses AI. But it is connected with the R Community and actively asks for comments, feedback, and contributions. The site is an experiment. We are leveraging AI to scale usable information and education around R. But by fully including the community, this information has confidence and authority that only comes from true human expertise.
+This site uses AI. But it is connected with the community and actively asks for comments, feedback, and contributions. The site is an experiment. We are leveraging AI to scale usable information and education around R. But by fully including the community, this information has confidence and authority that only comes from true human expertise.
 
 AI is generating content at an unprecedented scale, but there's a major problem: it's often wrong. For technical content, 'wrong' isn't just embarrassing, it's negative value. A waste of time. In this experiment, we are solving this major issue by treating errors in AI content like bugs in software. We've essentially built a 'bug bounty' platform for content, connecting AI-generated articles to the global R community of vetted developers who get paid to find and fix inaccuracies.
 
 The scale of AI with the trust of human verification, with the goal of creating scalable quality assurance in the AI era.
 
 
-### Here's what people had to say.
+### Here's what developers have to say!
 
 ![](community-images/simisani_ndaba2.png){width=40%}
 
@@ -51,6 +51,31 @@ College of Nursing Science, Federal Teaching Hospital, Gombe, Nigeria - Data Sci
 **His opinion on the podcast:**
 
 > I like the podcast, and it's clear and interactive. The presenters explained a lot of the strengths of R.
+
+---
+
+![](community-images/LitoCruz.png){width=40%}
+
+**Lito Cruz**  
+Sleekersoft Pty/Ltd
+
+> Referring to the article ([Statistical Modeling: Why R Outperforms Python](https://oppkey.github.io/r-beats-python/blog/statistical-modeling-r-vs-python.html))... indeed, the statistical side and maturity of R over Python in the field of statistical modeling should be obvious to one who is using both R and Python, unless one is a fanatically bigotted to Python. From a personal experience I can attest to this. For example I used latent class modeling one time and the packages here in R is quite sophisticated and well developed. Python has 1 while R has about 3 you can choose from. For people who have statistics and machine learning on their belt this advantage of R should not be overlooked and in fact it is precisely the reason why I personally choose R. For just in case my problem may be better solved by statistical methods, I got R already right there to catch my need.
+
+About statistical tools
+
+> The present crop of data scientists are weak when it comes to statistical methods. Their focus of education is on machine learning and this makes them woefully at a disadvantage because some problems are better solved statistically - not everything is about prediction. In this regard when it comes to unsupervised learning, there are more statistical tools in this area than there are in ML. However, R covers this side quite healthily. To illustrate, try comparing the number of mix model packages in R vs Python, R beats Python here.
+
+---
+
+**His recommendations to improve content:**
+
+> The About section is very informative and gives the reader what to expect from the site. In this way it is well appreciated - just a reminder though that the site should indeed provide examples what it is saying it will supply, ie for example the items in 1.3 - hopefully there is at least 1 example in the website before it is launched and made public.
+
+---
+
+**His opinion on the podcast:**
+
+> Very impressive arguments and establishes the point of the title of the talk. The arguments proves the thesis of the talk. 
 
 *More community testimonials and feedback will be added here as we grow.*
 
