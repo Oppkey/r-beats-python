@@ -13,6 +13,14 @@ _site/
 .Rdata
 .Ruserdata
 
+# renv - R environment management
+renv/library/
+renv/local/
+renv/cellar/
+renv/python/
+renv/sandbox/
+renv/staging/
+
 # Python virtual environments
 venv/
 .env/

@@ -71,18 +71,25 @@ session descriptions submitted by the human speaker.
    cd r-beats-python
    ```
 
-2. Install Quarto dependencies:
+2. Install R dependencies using renv:
+
+   ```r
+   # Restore the project environment
+   renv::restore()
+   ```
+
+3. Install Quarto dependencies:
 
    ```bash
    quarto install
    ```
 
-3. Render the site:
+4. Render the site:
    ```bash
    quarto render
    ```
 
-4. Preview the site:
+5. Preview the site:
 
    ```bash
    quarto preview
@@ -96,6 +103,17 @@ To add new content or modify existing posts:
 2. Follow the existing front matter format
 3. Use the established structure and styling
 4. Test locally before committing
+
+#### Managing R Dependencies
+
+This project uses `renv` for reproducible R package management:
+
+- **Restore environment**: `renv::restore()` - Installs all packages from `renv.lock`
+- **Add new packages**: `renv::install("package_name")` - Installs and records new packages
+- **Snapshot changes**: `renv::snapshot()` - Updates `renv.lock` with current environment
+- **Check status**: `renv::status()` - Shows differences between lock file and current environment
+
+The `.Rprofile` file automatically activates the renv environment when you open the project in RStudio.
 
 ## Site Configuration
 
