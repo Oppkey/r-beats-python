@@ -14,10 +14,10 @@ The scale of AI with the trust of human verification, with the goal of creating 
 
 ### Here's what developers have to say!
 
-![](community-images/simisani_ndaba2.png){width=40%}
-
 **Simisani Ndaba**  
 University of Botswana, co-founder and co-organizer of the R-Ladies Gaborone group
+
+![](community-images/simisani_ndaba2.png){width=40%}
 
 > Overall the R Beats Python site has a clear and thoughtful mission which is to “provide a reasoned and evidence-based comparison of R vs. python”. It argues, and makes a compelling case, for the future of R in statistical computing and research in the industries and academia with some examples and insights into specific areas. In general, the site seems well placed to serve as a resource for data professionals looking for more sophisticated options for picking tools.
 >
@@ -31,10 +31,10 @@ University of Botswana, co-founder and co-organizer of the R-Ladies Gaborone gro
 
 ---
 
-![](community-images/ridwan_adejumo.png)
-
 **Ridwan Suleiman Adejumo**  
 College of Nursing Science, Federal Teaching Hospital, Gombe, Nigeria - Data Scientist and Biostatistician
+
+![](community-images/ridwan_adejumo.png)
 
 > This is great, as the number of individuals trying to learn R is declining, and most people think R is meant for those in academia or Pharma. I think instead of showing R strengths, places where Python excel like llm development, prompt engineering, and AI agent development should be emphasized in R. Most individuals are not familiar that R can also do a lot of these things.
 >
@@ -54,10 +54,10 @@ College of Nursing Science, Federal Teaching Hospital, Gombe, Nigeria - Data Sci
 
 ---
 
-![](community-images/LitoCruz.png){width=40%}
-
 **Lito Cruz**  
 Sleekersoft Pty/Ltd
+
+![](community-images/LitoCruz.png){width=40%}
 
 > Referring to the article ([Statistical Modeling: Why R Outperforms Python](https://oppkey.github.io/r-beats-python/blog/statistical-modeling-r-vs-python.html))... indeed, the statistical side and maturity of R over Python in the field of statistical modeling should be obvious to one who is using both R and Python, unless one is a fanatically bigotted to Python. From a personal experience I can attest to this. For example I used latent class modeling one time and the packages here in R is quite sophisticated and well developed. Python has 1 while R has about 3 you can choose from. For people who have statistics and machine learning on their belt this advantage of R should not be overlooked and in fact it is precisely the reason why I personally choose R. For just in case my problem may be better solved by statistical methods, I got R already right there to catch my need.
 
