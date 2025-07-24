@@ -428,16 +428,16 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>       %IncMSE IncNodePurity
-cyl  11.158590     144.52790
-disp 12.823190     231.74934
-hp   14.555000     223.01764
-drat  3.818485      64.99185
-wt   13.473035     276.12985
-qsec  2.727211      31.40021
-vs    3.284511      19.16810
-am    4.051135      15.76650
-gear  3.332445      10.45265
-carb  5.199508      33.49232</code></pre>
+cyl  12.125345     162.31503
+disp 13.048088     228.11918
+hp   12.870479     201.28106
+drat  5.735561      58.50235
+wt   13.589604     263.24172
+qsec  3.659191      33.77266
+vs    3.790125      23.03365
+am    3.752571      11.57492
+gear  2.926445      19.75952
+carb  5.073329      39.23015</code></pre>
 </div>
 <details>
 <summary>Code</summary>
@@ -480,17 +480,17 @@ carb  5.199508      33.49232</code></pre>
 <p><img src="machine-learning-r-vs-python_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>      var    rel.inf
-wt     wt 42.1918490
-disp disp 20.3263084
-hp     hp 18.8949868
-cyl   cyl 12.0417598
-drat drat  3.3418397
-qsec qsec  2.4035619
-carb carb  0.4529796
-gear gear  0.3467148
-vs     vs  0.0000000
-am     am  0.0000000</code></pre>
+<pre><code>      var     rel.inf
+hp     hp 26.06952015
+cyl   cyl 24.80280017
+disp disp 23.09724151
+wt     wt 18.27417514
+drat drat  4.57806192
+qsec qsec  2.70445942
+gear gear  0.39012258
+carb carb  0.06125475
+vs     vs  0.02236437
+am     am  0.00000000</code></pre>
 </div>
 <details>
 <summary>Code</summary>
@@ -616,8 +616,8 @@ W = 0.93455, p-value = 0.05252</code></pre>
 <pre><code>
 SAMPLING FOR MODEL 'continuous' NOW (CHAIN 1).
 Chain 1: 
-Chain 1: Gradient evaluation took 0.000214 seconds
-Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 2.14 seconds.
+Chain 1: Gradient evaluation took 0.001541 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 15.41 seconds.
 Chain 1: Adjust your expectations accordingly!
 Chain 1: 
 Chain 1: 
@@ -634,15 +634,15 @@ Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 1: 
-Chain 1:  Elapsed Time: 0.024 seconds (Warm-up)
+Chain 1:  Elapsed Time: 0.023 seconds (Warm-up)
 Chain 1:                0.024 seconds (Sampling)
-Chain 1:                0.048 seconds (Total)
+Chain 1:                0.047 seconds (Total)
 Chain 1: 
 
 SAMPLING FOR MODEL 'continuous' NOW (CHAIN 2).
 Chain 2: 
-Chain 2: Gradient evaluation took 3e-06 seconds
-Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
+Chain 2: Gradient evaluation took 4e-06 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
 Chain 2: Adjust your expectations accordingly!
 Chain 2: 
 Chain 2: 
@@ -659,15 +659,15 @@ Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 2: 
-Chain 2:  Elapsed Time: 0.025 seconds (Warm-up)
+Chain 2:  Elapsed Time: 0.027 seconds (Warm-up)
 Chain 2:                0.022 seconds (Sampling)
-Chain 2:                0.047 seconds (Total)
+Chain 2:                0.049 seconds (Total)
 Chain 2: 
 
 SAMPLING FOR MODEL 'continuous' NOW (CHAIN 3).
 Chain 3: 
-Chain 3: Gradient evaluation took 2e-06 seconds
-Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.02 seconds.
+Chain 3: Gradient evaluation took 3e-06 seconds
+Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
 Chain 3: Adjust your expectations accordingly!
 Chain 3: 
 Chain 3: 
@@ -684,9 +684,9 @@ Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 3: 
-Chain 3:  Elapsed Time: 0.023 seconds (Warm-up)
-Chain 3:                0.02 seconds (Sampling)
-Chain 3:                0.043 seconds (Total)
+Chain 3:  Elapsed Time: 0.024 seconds (Warm-up)
+Chain 3:                0.026 seconds (Sampling)
+Chain 3:                0.05 seconds (Total)
 Chain 3: 
 
 SAMPLING FOR MODEL 'continuous' NOW (CHAIN 4).
@@ -709,9 +709,9 @@ Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 4: 
-Chain 4:  Elapsed Time: 0.023 seconds (Warm-up)
-Chain 4:                0.064 seconds (Sampling)
-Chain 4:                0.087 seconds (Total)
+Chain 4:  Elapsed Time: 0.024 seconds (Warm-up)
+Chain 4:                0.025 seconds (Sampling)
+Chain 4:                0.049 seconds (Total)
 Chain 4: </code></pre>
 </div>
 <details>
@@ -720,11 +720,11 @@ Chain 4: </code></pre>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">posterior_interval</span>(bayes_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>                   5%        95%
-(Intercept) 36.837538 42.6016202
-wt          -4.478444 -1.8722380
-cyl         -2.238384 -0.8170185
-sigma        2.129834  3.3143021</code></pre>
+<pre><code>                   5%       95%
+(Intercept) 36.738587 42.598592
+wt          -4.470188 -1.893146
+cyl         -2.217332 -0.820590
+sigma        2.139593  3.311828</code></pre>
 </div>
 <details>
 <summary>Code</summary>
