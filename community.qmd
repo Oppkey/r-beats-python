@@ -104,6 +104,26 @@ College of Nursing Science, Federal Teaching Hospital, Gombe, Nigeria - Data Sci
 
 ---
 
+**Florian Schwendinger**  
+Vienna R User Group organizer
+
+![](community-images/florian.jpg){width=40%}
+
+** His opinion on the main message
+
+> In general I would not claim R beats Python, they are different tools for different tasks and audiences. Therefore I would advise all young data scientists to learn both languages.
+
+**His opinion of the main advantages of R**
+
+> The main advantages of R over Python which immediately come to my mind are:
+>
+>From the language design perspective:
+>
+>1. R has builtin NA for all of its vectors, in Python numpy is typically used which has no NA support, but only NaN for floats. This has the consequence that if you use pandas with numpy and you have an integer column with missing values, pandas will convert it to a float column so it can represent the missing values.
+2. R has builtin objects for the support of categorical and ordinal variables, via factor and ordered factor. Therefore, R can make more informed decisions when building model matrices and graphics. One can observe this by reading a machine learning book in Python, where they always explain at length one hot encoding and how to do it right. In R it is not a big topic since it is done automatically when you build the model matrix.
+3. R is much more high level, often you can do in R with one line what in Python takes you at least 3 lines.
+4. In R generics are common practice which makes it easier to write extensions for existing packages.
+5. In R packages are loaded into a special environment not stored as variable the global environment. This prevents name collisions.
 
 
 *More community testimonials and feedback will be added here as we grow.*
